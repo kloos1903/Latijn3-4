@@ -264,10 +264,27 @@ button:hover {
     margin: 1cm;
   }
 
-  .card {
-    background: var(--card);
-    box-shadow: none;
+  .grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* forceert verticale stapeling */
+    gap: 0.75rem !important;
   }
+
+  .card {
+    width: 100% !important;
+    box-shadow: none !important; /* schaduwen printen slecht */
+    background: transparent !important;
+    margin: 0 0 1rem 0 !important;
+    page-break-inside: avoid; /* voorkom dat een kaart in tweeën breekt */
+    break-inside: avoid;
+    background: var(--card);
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+
   .muted {
     color: var(--muted);
     font-size: small;
