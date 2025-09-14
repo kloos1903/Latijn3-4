@@ -1,1171 +1,197 @@
 <!doctype html>
 <html lang="nl">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Punische oorlogen — overzicht & bronnen</title>
-    S<link rel="stylesheet" href="style.css?v=1" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:wght@400;500;600&display=swap"
-      rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <title>Woordenlijst – Knoppenfilters + Zoeken</title>
+
+    <!-- Je eigen CSS -->
+    <link rel="stylesheet" href="style.css?v=1" />
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
+    <!-- PapaParse -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <style>
+      .filter-row {
+        margin-bottom: 1em;
+      }
+      .filter-button {
+        display: inline-block;
+        margin: 2px;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
+      .filter-button.active {
+        background-color: #007bff;
+        color: white;
+        border-color: #007bff;
+      }
+      .search-box {
+        margin-bottom: 1em;
+      }
+    </style>
   </head>
   <body>
-    <!-- plak de volledige CSV tussen de tags: -->
-    <script id="embedded-csv" type="text/plain">
-      Grondwoord,Betekenis,Extra info,Woordsoort,Extra,Sorteerregel
-altus,"hoog, diep",,adj.,1e klasse,
-antiquus,"oud, vroeger",,adj.,1e klasse,
-argenteus,zilveren,,adj.,1e klasse,
-attentus,"gespannen, aandachtig",,adj.,1e klasse,
-aureus,gouden,,adj.,1e klasse,
-beatus,gelukkig,,adj.,1e klasse,
-caecus,blind,,adj.,1e klasse,
-ceterus,overig,,adj.,1e klasse,
-dignus,waardig (+ abl.),,adj.,1e klasse,
-divinus,goddelijk,,adj.,1e klasse,
-durus,hard,,adj.,1e klasse,
-exquisitus,voortreffelijk,,adj.,1e klasse,
-formosus,"mooi, welgevormd",,adj.,1e klasse,
-frigidus,koud,,adj.,1e klasse,
-geminus,tweeling-,,adj.,1e klasse,
-hospitus,"gastvrij, vreemd, buitenlands",,adj.,1e klasse,
-humanus,menselijk,,adj.,1e klasse,
-immensus,"onmetelijk groot, oneindig",,adj.,1e klasse,
-incognitus,onbekend,,adj.,1e klasse,
-infestus,"onveilig, verontrust, gevaarlijk, vijandig",,adj.,1e klasse,
-laudatus,prijzenswaardig,,adj.,1e klasse,
-magnus,groot,,adj.,1e klasse,
-multi,veel,enkel mv.,adj.,1e klasse,
-novus,nieuw,,adj.,1e klasse,
-pauci,"weinig, enkel",enkel mv.,adj.,1e klasse,
-placidus,"kalm, rustig",,adj.,1e klasse,
-planus,"vlak, duidelijk, eenvoudig",,adj.,1e klasse,
-posterus,"volgend, komend, laat",,adj.,1e klasse,
-pulcher,"mooi, prachtig","pulchra, pulchrum",adj.,1e klasse,
-rapidus,"snel, wild",,adj.,1e klasse,
-reliquus,"overgebleven, overig, ander",,adj.,1e klasse,
-sacer,heilig,,adj.,1e klasse,
-sanus,gezond,,adj.,1e klasse,
-securus,veilig,,adj.,1e klasse,
-serius,"ernstig, serieus, belangrijk",,adj.,1e klasse,
-sinister,"linker-, verkeerd, ongunstig","sinistra, sinistrum",adj.,1e klasse,
-solus,"enkel, alleen",,adj.,1e klasse,
-stultus,"dom, dwaas, gek",,adj.,1e klasse,
-tener,"fijn, zacht, jong","tenera, tenerum",adj.,1e klasse,
-timidus,angstig,,adj.,1e klasse,
-totus,"heel, totaal, helemaal, (mv.) alle",,adj.,1e klasse,
-ultimus,laatst,,adj.,1e klasse,
-vanus,"leeg, ijdel, hoogmoedig",,adj.,1e klasse,
-varius,"verschillend, afwisselend",,adj.,1e klasse,
-verus,"echt, waar",,adj.,1e klasse,
-vivus,levend,,adj.,1e klasse,
-acer,"scherp, hevig",,adj.,2e klasse,
-crudelis,gruwelijk,,adj.,2e klasse,
-dives,"rijk, welvoorzien, vruchtbaar",divitis,adj.,2e klasse,
-felix,gelukkig,felicis,adj.,2e klasse,
-ferox,"wild, ontstuimig, strijdlustig",ferocis,adj.,2e klasse,
-fortis,"dapper, sterk",,adj.,2e klasse,
-grandis,"groot, gewichtig, omvangrijk",,adj.,2e klasse,
-gravis,zwaar,,adj.,2e klasse,
-immortalis,onsterfelijk,,adj.,2e klasse,
-immanis,"reusachtig, onmetelijk",,adj.,2e klasse,
-ingens,reusachtig,ingentis,adj.,2e klasse,
-instabilis,"onvast, onbegaanbaar, wankel",,adj.,2e klasse,
-liberalis,"beschaafd, vriendelijk, vrijgevig",,adj.,2e klasse,
-mortalis,sterfelijk,,adj.,2e klasse,
-necesse,"noodzakelijk, onvermijdbaar",onverbuigbaar,adj.,2e klasse,
-nobilis,"duidelijk, bekend, beroemd, voortreffelijk, nobel",,adj.,2e klasse,
-omnis,"ieder, elk",,adj.,2e klasse,
-par,"gelijk aan, gelijkend op",paris,adj.,2e klasse,
-prior,"voorst, eerder, voortreffelijker","prior, prius",adj.,2e klasse,
-rudis,"ruw, onbewerkt; onervaren",,adj.,2e klasse,
-tristis,treurig,,adj.,2e klasse,
-velox,"snel, vlug, behendig",velocis,adj.,2e klasse,
-vetus,oud,veteris,adj.,2e klasse,
-adhuc,nog,,bw.,,
-ante,voorheen,,bw.,,
-autem,echter,,bw.,,
-deinde,"daarna, vervolgens",,bw.,,
-etiam,zelfs,,bw.,,
-fere,ongeveer,,bw.,,
-hic,hier,,bw.,,
-iam,"reeds, al",,bw.,,
-ibi,daar,,bw.,,
-illic,daar,,bw.,,
-inde,"(van) daaruit, sindsdien",,bw.,,
-ita,zo,,bw.,,
-itaque,"en zo, derhalve",,bw.,,
-item,ook zo,,bw.,,
-iterum,opnieuw,,bw.,,
-magis,meer,,bw.,,
-modo,"net, onlangs; slechts",,bw.,,
-non,niet,,bw.,,
-nunc ,nu ,,bw.,,
-olim,vroeger,,bw.,,
-paene,bijna,,bw.,,
-paulo,een beetje,,bw.,,
-post(ea),"erna, later",,bw.,,
-primo,eerst,,bw.,,
-procul,"ver (weg), in de verte, van verre",,bw.,,
-prope,vlakbij,,bw.,,
-qua,waarlangs,,bw.,,
-quidem,"zeker, weliswaar, ongetwijfeld, wel",,bw.,,
-quoque,ook,,bw.,,
-quotiens,hoe vaak?,,bw.,,
-saepe,"vaak, dikwijls",,bw.,,
-sic,"zo, op die manier",,bw.,,
-statim,onmiddellijk,,bw.,,
-supra,"boven, erboven, daarboven",,bw.,,
-tam,"zo, zozeer, in die mate",,bw.,,
-tum,"toen, op dat moment",,bw.,,
-tunc,"toen, op dat moment, dan, vervolgens, daarna",,bw.,,
-ubi,waar,,bw.,,
-umquam,ooit,,bw.,,
-unde ,"vanwaar, waaruit, waarom, waardoor",,bw.,,
-undique,"van alle kanten, van overal",,bw.,,
-vero,"werkelijk, zeker, zelfs, toch, echter",,bw.,,
-vix,nauwelijks,,bw.,,
-ave,gegroet,,part.,,
-ecce,"ziehier, ziedaar",,part.,,
-ala,de vleugel,,subst.,1e klasse,
-amicus,de vriend,,subst.,1e klasse,
-animus,"de geest, de ziel",,subst.,1e klasse,
-annus,het jaar,,subst.,1e klasse,
-antrum,de grot,,subst.,1e klasse,
-aqua,het water,,subst.,1e klasse,
-arma,"de wapens, de wapenuitrusting",armorum (altijd mv.),subst.,1e klasse,
-astrum,de ster,,subst.,1e klasse,
-aurum,het goud,,subst.,1e klasse,
-bellum,de oorlog,,subst.,1e klasse,
-bene-ficium,de weldaad,,subst.,1e klasse,
-bracchium,de arm,,subst.,1e klasse,
-caelum,"de hemel, de lucht",,subst.,1e klasse,
-campus,"het veld, de akker, de vlakte",,subst.,1e klasse,
-castra,het kamp,,subst.,1e klasse,
-causa,"de reden, de oorzaak, de aanleiding",,subst.,1e klasse,
-cervus,het hert,,subst.,1e klasse,
-cibus,het voedsel,,subst.,1e klasse,
-cocus,de kok,,subst.,1e klasse,
-collum,"de hals, de nek",,subst.,1e klasse,
-concilium,de vergadering,,subst.,1e klasse,
-confidentia,het (zelf)vertrouwen,,subst.,1e klasse,
-coniugium,huwelijk,,subst.,1e klasse,
-consilium,de raad,,subst.,1e klasse,
-constantia,"de vastberadenheid, de volharding, de duurzaamheid ",,subst.,1e klasse,
-copia,de voorraad,,subst.,1e klasse,
-corona,de krans,,subst.,1e klasse,
-cubiculum,de slaapkamer,,subst.,1e klasse,
-"deus
-dea","de god, God
-de godin",,subst.,1e klasse,
-discordia,"de onenigheid, de strijd, de ruzie",,subst.,1e klasse,
-dominus,de heer,,subst.,1e klasse,
-donum,"de gave, het geschenk",,subst.,1e klasse,
-dubium,"de twijfel, het gevaar",,subst.,1e klasse,
-equus,het paard,,subst.,1e klasse,
-factum,de daad,,subst.,1e klasse,
-familia,de familie,,subst.,1e klasse,
-fera,het wilde dier,,subst.,1e klasse,
-ferrum,het ijzer,,subst.,1e klasse,
-"filius
-filia","de zoon
-de dochter",,subst.,1e klasse,
-forma,"de vorm, de gestalte, de schoonheid",,subst.,1e klasse,
-fortuna,het lot,,subst.,1e klasse,
-forum,"het marktplein, het forum",,subst.,1e klasse,
-garum,"de vissaus, het garum",,subst.,1e klasse,
-Graecus,de Griek,,subst.,1e klasse,
-hospitium,"de gastvrijheid, het onderkomen",,subst.,1e klasse,
-humus,de grond,,subst.,1e klasse,
-ianua,"de deur, de ingang",,subst.,1e klasse,
-imperium,"het gezag, het rijk",,subst.,1e klasse,
-initium,het begin,,subst.,1e klasse,
-insula,het eiland,,subst.,1e klasse,
-iudicium,"het oordeel, het vonnis, het proces",,subst.,1e klasse,
-lectus,het bed,,subst.,1e klasse,
-legatus,de gezant,,subst.,1e klasse,
-liber,"de bast, de brief, het boek",libri,subst.,1e klasse,
-lingua,"de tong, de taal",,subst.,1e klasse,
-littera,de letter; mv. de brief,,subst.,1e klasse,
-locus,de plaats,,subst.,1e klasse,
-luna,de maan,,subst.,1e klasse,
-magister,"de meester, de leraar",magistri,subst.,1e klasse,
-malum,de appel,,subst.,1e klasse,
-medium,het midden,,subst.,1e klasse,
-memoria,"de herinnering, de gedachte, het geheugen",,subst.,1e klasse,
-mensa,de tafel,,subst.,1e klasse,
-mundus,"de wereld, het heelal, de hemel",,subst.,1e klasse,
-murus,de muur,,subst.,1e klasse,
-natura,"de natuur, de wereld; de aard",,subst.,1e klasse,
-oceanus,de oceaan,,subst.,1e klasse,
-oculus,het oog,,subst.,1e klasse,
-odium,"de haat, de afkeer",,subst.,1e klasse,
-oppidum,het stadje,,subst.,1e klasse,
-oraculum,"het orakel, de profetie, de voorspelling",,subst.,1e klasse,
-paedagogus,de opvoeder,,subst.,1e klasse,
-palaestra,de sportzaal,,subst.,1e klasse,
-patria,het vaderland,,subst.,1e klasse,
-paulum,"een beetje, een weinig",,subst.,1e klasse,
-penna,veer,,subst.,1e klasse,
-periculum ,het gevaar,,subst.,1e klasse,
-porcus,het varken,,subst.,1e klasse,
-porta,de poort,,subst.,1e klasse,
-prandium,het middagmaal,,subst.,1e klasse,
-pretium,de prijs,,subst.,1e klasse,
-principium,het begin,,subst.,1e klasse,
-proelium,de strijd,,subst.,1e klasse,
-"puer
-puella","de jongen
-het meisje","pueri
-puellae",subst.,1e klasse,
-regnum,"het rijk, de heerschappij",,subst.,1e klasse,
-ripa,de oever,,subst.,1e klasse,
-rusticus,"de boer, de boerenkinkel (beledigend)",,subst.,1e klasse,
-sagitta,de pijl,,subst.,1e klasse,
-saxum,de steen,,subst.,1e klasse,
-sententia,"de mening, de spreuk",,subst.,1e klasse,
-servus,de slaaf,,subst.,1e klasse,
-silva,het bos,,subst.,1e klasse,
-socius,de bondgenoot,,subst.,1e klasse,
-somnus,de slaap,,subst.,1e klasse,
-sonum,het geluid,,subst.,1e klasse,
-studium,"de inzet, de ijver",,subst.,1e klasse,
-tabula,de schrijftafel,,subst.,1e klasse,
-taurus,de stier,,subst.,1e klasse,
-tectum ,het dak,,subst.,1e klasse,
-telum,"het projectiel, de speer",,subst.,1e klasse,
-terra,"de aarde, de grond, het land",,subst.,1e klasse,
-tunica,de tuniek,,subst.,1e klasse,
-unda,de golf,,subst.,1e klasse,
-venenum,"het gif, het medicijn, het magisch drankje",,subst.,1e klasse,
-ventus,de wind,,subst.,1e klasse,
-verbum,het woord,,subst.,1e klasse,
-via,de weg,,subst.,1e klasse,
-vir,de man,viri,subst.,1e klasse,
-aer,de lucht,aeris,subst.,2e klasse,
-aes,het koper,aeris o.,subst.,2e klasse,
-aestas,de zomer,aestatis,subst.,2e klasse,
-aetas,"de levensduur, het tijdperk, de leeftijd",aetatis,subst.,2e klasse,
-animal,het dier,animalis,subst.,2e klasse,
-arx,"de burcht, de citadel",arcis,subst.,2e klasse,
-auris,het oor,auris,subst.,2e klasse,
-bos,het rund,bovis m. of v.,subst.,2e klasse,
-canis,de hond,canis m. of v.,subst.,2e klasse,
-caput,"het hoofd, het hoofdstuk",capitis o.,subst.,2e klasse,
-caro,het vlees,carnis,subst.,2e klasse,
-clamor,"het geroep, het geschreeuw",clamoris,subst.,2e klasse,
-collis,de heuvel,collis m.,subst.,2e klasse,
-color,de kleur,coloris,subst.,2e klasse,
-consul,de consul,consulis m.,subst.,2e klasse,
-corpus,het lichaam,corporis,subst.,2e klasse,
-custos,de bewaker,custodis,subst.,2e klasse,
-dens,de tand,dentis m.,subst.,2e klasse,
-dux,de leider,ducis m.,subst.,2e klasse,
-fames,de honger,famis,subst.,2e klasse,
-finis,"het einde, de grens; mv. het grondgebied",finis m.,subst.,2e klasse,
-flumen,de rivier,fluminis,subst.,2e klasse,
-fons,de bron,fontis m.,subst.,2e klasse,
-frater,de broer,fratris,subst.,2e klasse,
-genus,"de soort, het geslacht, de afkomst",generis,subst.,2e klasse,
-hiems,de winter,hiemis,subst.,2e klasse,
-homo,de mens,hominis m.,subst.,2e klasse,
-hostis,de vijand,hostis m.,subst.,2e klasse,
-ignis,het vuur,ignis m.,subst.,2e klasse,
-infans,"het klein kind, de baby",infantis m. en v.,subst.,2e klasse,
-ius,het recht,iuris,subst.,2e klasse,
-iuvenis,de jongeman,iuvenis m. of v.,subst.,2e klasse,
-labor,"het werk, de inspanning, de moeite",laboris,subst.,2e klasse,
-leo,de leeuw,leonis m.,subst.,2e klasse,
-lex,de wet,legis,subst.,2e klasse,
-libertas,de vrijheid,libertatis,subst.,2e klasse,
-liquor,de vloeistof,liquoris,subst.,2e klasse,
-litus,de kust,litoris,subst.,2e klasse,
-lumen,"het licht, de lamp",luminis,subst.,2e klasse,
-lux,het licht,lucis,subst.,2e klasse,
-mare,de zee,maris,subst.,2e klasse,
-mater,de moeder,matris v.,subst.,2e klasse,
-mens,de geest,mentis,subst.,2e klasse,
-mons,de berg,montis m.,subst.,2e klasse,
-mors,de dood,mortis,subst.,2e klasse,
-mos,de zeden,moris,subst.,2e klasse,
-mulier,"vrouw, echtgenote",mulieris v.,subst.,2e klasse,
-nomen,de naam,nominis,subst.,2e klasse,
-nox ,de nacht,noctis,subst.,2e klasse,
-obses,de gijzelaar,obsidis m. of v.,subst.,2e klasse,
-opes,de middelen,"opum v. (zelden enk. ops, opis)",subst.,2e klasse,
-orbis,"de kring, de bol, de wereld",orbis m.,subst.,2e klasse,
-origo,"de oorsprong, het ontstaan",originis,subst.,2e klasse,
-os,de mond,oris o.,subst.,2e klasse,
-panis,het brood,panis m.,subst.,2e klasse,
-pars,het deel,partis,subst.,2e klasse,
-pater,de vader,patris,subst.,2e klasse,
-pax,de vrede,pacis,subst.,2e klasse,
-pellis,"de huid, het vel",pellis,subst.,2e klasse,
-pes,de voet,pedis m.,subst.,2e klasse,
-piscis,de vis,piscis m.,subst.,2e klasse,
-potestas,"de macht, het gezag, de kracht, de mogelijkheid",potestatis,subst.,2e klasse,
-pulvis,"het stof, het zand",pulveris m.,subst.,2e klasse,
-regio,"de plaats, het gebied",regionis,subst.,2e klasse,
-rex,de koning,regis m.,subst.,2e klasse,
-sal,het zout,salis m.,subst.,2e klasse,
-senex,de oude man,senis m.,subst.,2e klasse,
-severitas,"de ernst, de strengheid",severitatis,subst.,2e klasse,
-sol,de zon,solis m.,subst.,2e klasse,
-soror,de zus,sororis v.,subst.,2e klasse,
-tempus,de tijd,temporis,subst.,2e klasse,
-urbs,de stad,urbis,subst.,2e klasse,
-vallis,"dal, vallei",vallis,subst.,2e klasse,
-venter,de buik,ventris,subst.,2e klasse,
-veritas,de waarheid,veritatis,subst.,2e klasse,
-"victor
-victrix","(over)winnaar
-(over)winnares","victoris
-victricis",subst.,2e klasse,
-virgo,de maagd,virginis,subst.,2e klasse,
-vis,"het geweld, de kracht",viris,subst.,2e klasse,
-vox,de stem,vocis,subst.,2e klasse,
-vulnus,de wonde,vulneris,subst.,2e klasse,
-anus,de oude vrouw,anus v.,subst.,3e klasse,
-cornu,"de hoorn, (mv.) de horens, de gewei",cornus o.,subst.,3e klasse,
-dies,de dag,diei m. of v.,subst.,3e klasse,
-domus,het huis,domus v.,subst.,3e klasse,
-exercitus,het leger,exercitus,subst.,3e klasse,
-facies,het gezicht,faciei,subst.,3e klasse,
-manus,de hand,manus v.,subst.,3e klasse,
-species,"het uiterlijk, het beeld, de soort",speciei,subst.,3e klasse,
-spiritus,"de adem, de geest",spiritus,subst.,3e klasse,
-unus,één,"una, unum",telw.,hoofdtelwoord,1
-duo,twee,"duae, duo",telw.,hoofdtelwoord,2
-tres,drie,"tres, tria",telw.,hoofdtelwoord,3
-quattuor,vier,,telw.,hoofdtelwoord,4
-quinque,vijf,,telw.,hoofdtelwoord,5
-sex,zes,,telw.,hoofdtelwoord,6
-septem,zeven,,telw.,hoofdtelwoord,7
-octo,acht,,telw.,hoofdtelwoord,8
-novem,negen,,telw.,hoofdtelwoord,9
-decem,tien,,telw.,hoofdtelwoord,10
-centum,honderd,,telw.,hoofdtelwoord,100
-mille,duizend,"enkel verbuigbaar in mv.
-milia, milium",telw.,hoofdtelwoord,1000
-primus,eerst,,telw.,rangtelwoord,1
-secundus,"tweede, volgende",,telw.,rangtelwoord,2
-tertius,derde,,telw.,rangtelwoord,3
-quartus,vierde,,telw.,rangtelwoord,4
-quintus,vijfde,,telw.,rangtelwoord,5
-sextus,zesde,,telw.,rangtelwoord,6
-septimus,zevende,,telw.,rangtelwoord,7
-octavus,achtste,,telw.,rangtelwoord,8
-nonus,negende,,telw.,rangtelwoord,9
-decimus,tiende,,telw.,rangtelwoord,10
-bis,tweemaal,,telw.,telbijwoord,2
-singuli,telkens één,"singulae, singula",telw.,verdelingsgetal,1
--que,en,,vgw.,nevensch.,
-atque/ac,"en, en ook, en zelfs",,vgw.,nevensch.,
-aut,of,,vgw.,nevensch.,
-aut … aut,"of … of …, hetzij … hetzij ...",,vgw.,nevensch.,
-enim,"immers, namelijk, toch",vgw.,vgw.,nevensch.,
-ergo,dus,,vgw.,nevensch.,
-et,en,,vgw.,nevensch.,
-nam,want,,vgw.,nevensch.,
-nec / neque,en niet,,vgw.,nevensch.,
-sed,maar,,vgw.,nevensch.,
-cum,"toen, nadat, omdat, hoewel, terwijl",+ conj.,vgw.,ondersch.,
-cum,"toen, (telkens) wanneer",+ ind.,vgw.,ondersch.,
-dum,"terwijl, zolang als, totdat",+ ind.,vgw.,ondersch.,
-dum,"totdat, als maar, omdat",+ conj.,vgw.,ondersch.,
-ne,"opdat niet, dat niet",+ conj.,vgw.,ondersch.,
-quam,dan,vgw.,vgw.,ondersch.,
-quia,omdat,,vgw.,ondersch.,
-quoniam,"aangezien, vermits",+ ind,vgw.,ondersch.,
-si,"als, indien",,vgw.,ondersch.,
-ut,"toen, wanneer, zoals",+ ind.,vgw.,ondersch.,
-ut,"dat, om te, opdat, zodat",+ conj.,vgw.,ondersch.,
-hic,"deze, dit","haec, hoc",vnw.,aanw.,
-idem,"dezeflde, hetzelfde","eadem, idem",vnw.,aanw.,
-ille,"die, dat","illa, illud",vnw.,aanw.,
-ipse,"zelf, eigen, precies","ipsa, ipsum",vnw.,aanw.,
-is,"die, dat","ea, id",vnw.,aanw.,
-iste,"die, dat (bij jou of negatief)","ista, istud",vnw.,aanw.,
-tantus,"zo groot, zo veel","tanta, tantum",vnw.,aanw.,
-qui,"die, dat","quae, quod",vnw.,betr.,
-quisquis,"wie ook, iedereen die, al wat","quisquis, quicquid/quidquid",vnw.,betr.,
-meus,mijn,,vnw.,bez.,1
-noster,"ons, onze",,vnw.,bez.,2
-tuus,jouw,,vnw.,bez.,3
-vester,jullie,,vnw.,bez.,4
-suus,zijn eigen,,vnw.,bez.,5
-(ali)quis,"zelfts. iemand, iets; mv. sommigen
-bijv. een, een of ander","(ali)quis, (ali)quid ",vnw.,onbep.,
-alius,"ander, verschillend","alia, aliud",vnw.,onbep.,
-nemo,niemand,nullius,vnw.,onbep.,
-nihil,niets,,vnw.,onbep.,
-nullus,geen; niemand,,vnw.,onbep.,
-uterque,elk van beiden,"utraque, utrumque",vnw.,onbep.,
-ego,ik,,vnw.,pers.,1
-nos,wij,,vnw.,pers.,2
-tu,jij,,vnw.,pers.,3
-vos,jullie,,vnw.,pers.,4
-se,zich(zelf),,vnw.,pers.,5
-qui,welke?,"quae, quod",vnw.,vr.,
-quis,"wie?, wat?","quis, quid ",vnw.,vr.,
-a(b),"weg van, vanaf, door",+ abl.,vz.,+ abl.,
-cum,(samen) met,+ abl.,vz.,+ abl.,
-de,"vanaf, weg van/uit, over",+ abl.,vz.,+ abl.,
-e(x),uit,+ abl.,vz.,+ abl.,
-in,"in, op",+ abl.,vz.,+ abl.,
-pro,"voor, ten bate van, in plaats van",+ abl.,vz.,+ abl.,
-procul,"ver van, lang voor, zonder",+ abl.,vz.,+ abl.,
-sine,zonder,+ abl.,vz.,+ abl.,
-sub,onder,+ abl.,vz.,+ abl.,
-super,"bovenop, tijdens, over",+ abl.,vz.,+ abl.,
-ad,"naar, bij, tot aan",+ acc.,vz.,+ acc.,
-ante,voor,+ acc.,vz.,+ acc.,
-apud,bij,+ acc.,vz.,+ acc.,
-circa,"in de omgeving van, omstreeks, ongeveer",+ acc.,vz.,+ acc.,
-circum,"rond(om), (dicht) bij",+ acc.,vz.,+ acc.,
-contra,"tegen(-over), aan de andere kant van",+ acc.,vz.,+ acc.,
-in,"naar, tot in, tot op",+ acc.,vz.,+ acc.,
-inter,"tussen, te midden van",+ acc.,vz.,+ acc.,
-ob,"naar ... toe, tegenover, wegens",+ acc.,vz.,+ acc.,
-per,"door, gedurende",+ acc.,vz.,+ acc.,
-post,na,+ acc.,vz.,+ acc.,
-praeter ,"voorbij, langs, behalve",+ acc.,vz.,+ acc.,
-sub,tot onder,+ acc.,vz.,+ acc.,
-supra,"boven, over … heen, boven … uit, behalve",+ acc.,vz.,+ acc.,
-trans,over,+ acc.,vz.,+ acc.,
-appellare,"toespreken, noemen",,ww.,a-vervoeging,
-"clamare
-ex-clamare","roepen
-uitroepen",,ww.,a-vervoeging,
-curare,verzorgen,,ww.,a-vervoeging,
-"dare
-circum-dare
-(se) de-dere
-pro-dere
-red-dere
-tra-dere","geven
-omgeven
-(zich) overgeven
-doorgeven, overleveren
-teruggeven
-overhandigen","do, dedi, datum
-circumdo, circumdedi, circumdatum
-dedo, dedidi, deditum
-prode ...
-reddo ...
-trado …",ww.,a-vervoeging,
-donare,"geven, schenken, verlenen",,ww.,a-vervoeging,
-"errare
-ab-errare","dwalen
-afdwalen, verdwalen",,ww.,a-vervoeging,
-expulsare,wegslaan,,ww.,a-vervoeging,
-honorare,eren,,ww.,a-vervoeging,
-iactare,"werpen, ",,ww.,a-vervoeging,
-imitari,"nabootsen, navolgen, imiteren",,ww.,a-vervoeging,
-imperare,"heersen, bevelen",,ww.,a-vervoeging,
-iudicare,oordelen,,ww.,a-vervoeging,
-iuvare,"verheugen, helpen",,ww.,a-vervoeging,
-laborare,werken,,ww.,a-vervoeging,
-lavare,wassen,"lavo, lavi, lautum",ww.,a-vervoeging,
-mirari,"zich verwonderen, bewonderen","miror, miratus sum",ww.,a-vervoeging,
-monstrare,"wijzen, tonen, aangeven",,ww.,a-vervoeging,
-"mutare
-per-mutare","veranderen
-volledig veranderen, omruilen",,ww.,a-vervoeging,
-necare,doden,,ww.,a-vervoeging,
-negare,"ontkennen, weigeren",,ww.,a-vervoeging,
-numerare,"tellen, betalen, opsommen",,ww.,a-vervoeging,
-"pugnare
-op-pugnare","vechten
-belegeren",,ww.,a-vervoeging,
-purgare,"reinigen, schoonmaken",,ww.,a-vervoeging,
-putare,"denken, menen, beschouwen als",,ww.,a-vervoeging,
-regnare,"heersen, koning zijn",,ww.,a-vervoeging,
-"rogare
-inter-rogare","vragen, smeken
-ondervragen, vragen",,ww.,a-vervoeging,
-salutare,groeten,,ww.,a-vervoeging,
-secare,snijden,"seco, secui, sectum",ww.,a-vervoeging,
-servare,"redden, bewaren, bewaken",,ww.,a-vervoeging,
-spectare,"zien, kijken, bekijken",,ww.,a-vervoeging,
-"stare
-con-stare
-ob-stare
-prae-stare","staan
-blijven staan, (onpers.) vast staan
-verhinderen (+ dat.)
-overtreffen, beter zijn, (zich) tonen","sto, steti, statum
-consto, constiti, constatum
-obsto …
-praesto, praestiti, praestitum",ww.,a-vervoeging,
-vigilare,wakker zijn,,ww.,a-vervoeging,
-vindicare,opeisen,,ww.,a-vervoeging,
-"vocare
-con-vocare","roepen, noemen
-bijeenroepen, verzamelen",,ww.,a-vervoeging,
-volare,vliegen,,ww.,a-vervoeging,
-"*-dere
-ad-dere
-con-dere","(plaatsen)
-toevoegen
-stichten, bouwen, oprichten","(gereconstrueerde vorm)
-addo, addidi, additum
-condo …",ww.,consonantvervoeging,
-"agere
-co-gere","doen, handelen, bewegen
-dwingen","ago, egi, actum
-cogo, coegi, coactum",ww.,consonantvervoeging,
-bibere,drinken,"bibo, bibi, -",ww.,consonantvervoeging,
-"cadere
-in-cidere","vallen
-vallen op, gebeuren, stoten op","cado, cecidi, casum
-incido, incidi, -",ww.,consonantvervoeging,
-"caedere
-oc-cidere","vellen, neerslaan, slachten, afranselen
-doodslaan, doden, vernietigen","caedo, cecidi, caesum
-occido, occidi, occisum",ww.,consonantvervoeging,
-canere,zingen,"cano, cecini, cantatum",ww.,consonantvervoeging,
-carpere,plukken,"carpo, carpsi, carptum",ww.,consonantvervoeging,
-"cedere
-ac-cedere
-con-cedere
-de-cedere
-dis-cedere
-ex-cedere
-pro-cedere
-suc-cedere","gaan, wijken, toegeven
-gaan naarn erbij gaan
-toestaan, toegeven
-weggaan
-uiteengaan
-uitgaan
-voortgaan
-opvolgen","cedo, cessi, cessum
-accedo ...
-procedo …
-decedo …
-discedo …
-excedo …
-procedo …
-succedo …",ww.,consonantvervoeging,
-colere,"bewerken, bewonen, vereren","colo, colui, cultum",ww.,consonantvervoeging,
-consulere,"raadplegen, overwegen, overleggen, een besluit nemen","consulo, consului, consultum",ww.,consonantvervoeging,
-credere,geloven,"credo, credidi, creditum",ww.,consonantvervoeging,
-dicere,"zeggen, spreken, noemen","Dico, dixi, dictum",ww.,consonantvervoeging,
-discere,leren,"disco, didici, -",ww.,consonantvervoeging,
-dividere,verdelen,"divido, divisi, divisum",ww.,consonantvervoeging,
-"ducere
-ad-ducere
-de-ducere
-e-ducere
-re-ducere
-tra-ducere","leiden
-leiden naar, brengen
-afleiden
-uitleiden
-terugleiden, terugbrengen
-overleiden, overbrengen","duco, duxi, ductum
-adduco …
-deduco …
-educo …
-reduco …
-traduco …",ww.,consonantvervoeging,
-emere,kopen,"emo, emi, emptum",ww.,consonantvervoeging,
-figere,"vasthechten, treffen","figo, fixi, fixum",ww.,consonantvervoeging,
-frangere ,breken,"frango, fregi, fractum",ww.,consonantvervoeging,
-"fundere
-dif-fundere","gieten
-uitgieten","fundo, fudi, fusum
-diffundo ...",ww.,consonantvervoeging,
-gerere,"dragen, voeren","gero, gessi, gestum",ww.,consonantvervoeging,
-labi,glijden,"labor, lapsus sum",ww.,consonantvervoeging,
-"legere
-e-ligere
-col-ligere
-de-ligere
-intel-legere","verzamelen, lezen
-uitkiezen, uitzoeken, uittrekken
-verzamelen
-uitkiezen
-begrijpen","lego, legi, lectum
-eligo, elegi, electum
-colligo …
-deligo …
-intellego …",ww.,consonantvervoeging,
-"mittere
-ad-mittere
-a(m)-mittere
-di-mittere
-e-mittere
-pro-mittere
-re-mittere","zenden, sturen
-toelaten, binnenlaten, laten gaan
-wegzenden, wegsturen
-uit elkaar zenden, wegsturen
-uitzenden, wegsturen
-beloven, verzekeren
-terugzenden","mitto, misi, missum
-admitto ...
-a(m)mitto ...
-dimitto ...
-emitto ...
-promitto ...
-remitto …",ww.,consonantvervoeging,
-nasci,"ontstaan, geboren worden","nascor, natus sum",ww.,consonantvervoeging,
-noscere,leren kennen,"nosco, novi, notum",ww.,consonantvervoeging,
-Oblivisci,vergeten,"Obliviscor, oblitus sum",ww.,consonantvervoeging,
-petere,"zoeken, vragen","peto, petivi, petitum",ww.,consonantvervoeging,
-"ponere
-ante-ponere
-ap-ponere
-pro-ponere
-re-ponere","plaatsen, leggen
-vooropstellen, prefereren (boven: dat.)
-plaatsen, voorzetten, meegeven, toevoegen, beschouwen als
-bekendmaken, voorleggen
-neerzetten, wegleggen","pono, posui, positum
-antepono
-appono ...
-propono …
-repono …",ww.,consonantvervoeging,
-poscere,"eisen, verlangen","posco, poposci, -",ww.,consonantvervoeging,
-quaerere,"zoeken, vragen","quaero, quaesi(v)i, quaesitum",ww.,consonantvervoeging,
-"scandere
-de-scendere","klimmen
-afdalen","scando, scandi, scansum
-descendo …",ww.,consonantvervoeging,
-scribere,schrijven,"scribo, scripsi, scriptum",ww.,consonantvervoeging,
-"sidere
-sub-sidere","gaan zitten
-zich neerzetten","sido, sedi, sessum
-subsido ...",ww.,consonantvervoeging,
-"sistere
-con-sistere","doen staan, plaatsen, zetten
-bijeenkomen, zich opstellen, blijven staan","sisto, stiti/steti, statum
-consisto, constiti, -",ww.,consonantvervoeging,
-surgere,"oprijzen, opstaan","surgo, surrexi, surrectum",ww.,consonantvervoeging,
-tangere,"aanraken, treffen","tango, tetigi, tactum",ww.,consonantvervoeging,
-tegere,bedekken,"tego, texi (3)",ww.,consonantvervoeging,
-"tendere
-ex-tendere","spannen, strak aantrekken
-uitspreiden, uitstrekken","tendo, tetendi, tentum/tensum
-extendo, extendi, extentum/extensum",ww.,consonantvervoeging,
-tingere,"natmaken, bevochtigen, bestrijken","tingo, tinxi, tinctum",ww.,consonantvervoeging,
-"tollere
-at-tollere","opheffen, wegnemen
-opheffen, oprapen","tollo, sustuli, sublatum
-attollo, -, -",ww.,consonantvervoeging,
-"trahere
-de-trahere","trekken
-naar beneden trekken, ontrukken, afnemen","traho, traxi, tractum
-detraho ...",ww.,consonantvervoeging,
-"vertere
-re-verti","(om)draaien
-teruggaan, terugkeren","verto, verti, versum
-revertor, reverti, reversum",ww.,consonantvervoeging,
-vincere,overwinnen,"vinco, vici, victum",ww.,consonantvervoeging,
-vivere,leven,"vivo, vixi, -",ww.,consonantvervoeging,
-volvere,draaien,"volvo, volvi, volutum",ww.,consonantvervoeging,
-"*-plere
-com-plere","(vullen)
-vullen","(gereconstrueerde vorm)
-compleo, complevi, completum",ww.,e-vervoeging,
-"candere
-in-cendere","schijnen, schitteren
-verbranden","candeo, candui, -
-incendo, incendi, incensum",ww.,e-vervoeging,
-debere,Moeten,,ww.,e-vervoeging,
-decere,"passen, betamen","deceo, decui, -",ww.,e-vervoeging,
-"habere
-prae-bere
-pro-hibere
-hab-it-are","hebben, houden
-veroorzaken, geven
-weghouden van, verbieden
-wonen",,ww.,e-vervoeging,
-iubere,bevelen,"iubeo, iussi, iussum",ww.,e-vervoeging,
-manere,blijven,"maneo, mansi, mansum",ww.,e-vervoeging,
-movere,bewegen,"moveo, movi, motum",ww.,e-vervoeging,
-parere,gehoorzamen,,ww.,e-vervoeging,
-placere,"bevallen, behagen",,ww.,e-vervoeging,
-polliceri,"beloven, aanbieden","polliceor, pollicitus sum",ww.,e-vervoeging,
-respondere ,antwoorden,"respondeo, respondi, responsum",ww.,e-vervoeging,
-"ridere
-de-ridere","lachen, lachen om
-uitlachen, bespotten","rideo, risi, risum
-derideo ...",ww.,e-vervoeging,
-sedere,zitten,"sedeo, sedi, sessum",ww.,e-vervoeging,
-solere,gewoon zijn,"soleo, solitus sum",ww.,e-vervoeging,
-tacere ,zwijgen,,ww.,e-vervoeging,
-"tenere
-con-tinere
-re-tinere","houden
-bijeen houden, bevatten
-tegenhouden, bewaren, behouden","teneo, tenui, tentum
-contineo …
-retineo …",ww.,e-vervoeging,
-videre,zien,"video, visi, visum",ww.,e-vervoeging,
-"capere
-ac-cipere
-ex-cipere
-in-cipere
-re-cipere","nemen, grijpen
-ontvangen, aannemen
-uitnemen
-beginnen, aanvangen
-ontvangen, terugnemen","capio, cepi, captum
-accipio, accepi, acceptum
-excipio …
-incipio …
-recipio …",ww.,korte i-vervoeging,
-coepisse (enkel pf.),beginnen,"coepi, coeptum",ww.,korte i-vervoeging,
-"cupere
-con-cupi-sc-ere","verlangen
-beginnen te verlangen","cupio, cupivi, cupitum
-concupisco, concupi(v)i, concupitum",ww.,korte i-vervoeging,
-"facere
-con-ficere
-de-ficere
-ef-ficere
-inter-ficere
-per-ficere
-pro-ficere","doen, maken
-bijeenbrengen, vervaardigen, voltooien, verteren
-ontbreken
-tot stand brengen
-afmaken, doden
-afmaken, voltooien
-vorderingen maken","facio, feci, factum
-conficio, confeci, confectum
-deficio …
-efficio …
-interficio …
-perficio …
-proficio …",ww.,korte i-vervoeging,
-"fugere
-ef-fugere","(ont)vluchten
-ontsnappen, ontkomen, ontvluchten","fugio, fugi, -
-effugio ...",ww.,korte i-vervoeging,
-"iacere
-ab-icere
-ad-icere","werpen, gooien
-weggooien
-werpen naar, toevoegen","iacio, ieci, iactum
-abicio, abieci, abiectum
-adicio …",ww.,korte i-vervoeging,
-mori,sterven,"morior, mortuus sum",ww.,korte i-vervoeging,
-"rapere
-ar-ripere
-cor-ripere
-e-ripere","grijpen, roven
-aanpakken, vastgrijpen
-vastgrijpen
-uittrekken","rapio, rapui, raptum
-arripio, arripui, arreptum
-corripio …
-eripio …",ww.,korte i-vervoeging,
-"specere/spicere
-a-spicere
-circum-spicere
-con-spicere
-re-spicere ","zien
-kijken naar
-rondom kijken
-bemerken
-terugkijken, omkijken ","specio/spicio, spexi, spectum
-aspicio, aspexi, aspectum
-circumspicio …
-conspicio …
-respicio …",ww.,korte i-vervoeging,
-audire,horen,,ww.,lange i-vervoeging,
-dormire,slapen,,ww.,lange i-vervoeging,
-nutrire,voeden,,ww.,lange i-vervoeging,
-oriri,ontstaan,"orior, ortus sum",ww.,lange i-vervoeging,
-"scire
-ne-scire","weten, kennen, begrijpen, kunnen
-niet weten",,ww.,lange i-vervoeging,
-"venire
-circum-venire
-con-venire
-in-venire
-per-venire
-super-venire","komen
-omsingelen
-samenkomen, overeenkomen, passen bij (+ dat.)
-vinden, aantreffen
-bereiken, komen tot
-neerkomen op, plots verschijnen","venio, veni, ventum
-circumvenio ...
-convenio …
-invenio …
-pervenio …
-supervernio …",ww.,lange i-vervoeging,
-"esse
-ab-esse
-ad-esse
-de-esse
-inter-esse","zijn
-weg zijn, afwezig zijn
-erbij zijn, aanwezig zijn
-ontbreken, weg zijn, prijsgeven
-ertussen zijn, van belang zijn, verschillen, deelnemen","sum, fui, futurum
-absum, afui, afuturum
-adsum/assum, adfui/affui, adfuturum/affuturm
-desum …
-intersum …",ww.,onregelmatig,
-"ferre
-af-ferre
-re-ferre
-transferre","dragen, brengen
-(mee)brengen, dragen naar
-terugbrengen
-overbrengen","fero, tuli, latum
-affero ...
-refero …
-transfero …",ww.,onregelmatig,
-fieri,worden,"fio, factus sum",ww.,onregelmatig,
-inquit,"hij zegt, hij zei",inquam,ww.,onregelmatig,
-"ire
-ab-ire
-ad-ire
-ex-ire
-in-ire
-per-ire
-red-ire
-sub-ire
-trans-ire","gaan
-weggaan
-ernaartoe gaan
-buitengaan
-binnengaan
-verloren gaan, omkomen
-teruggaan
-ondergaan, naderen, voor de geest komen
-overgaan","eo, ii, itum
-abeo …
-adeo …
-exeo …
-ineo …
-pereo …
-redeo …
-subeo …
-transeo …",ww.,onregelmatig,
-posse,"kunnen, mogen","possum , potui, -",ww.,onregelmatig,
-velle,"willen, verlangen, begeren","volo, volui, -",ww.,onregelmatig,
+    <h1>Woordenlijst</h1>
 
-    </script>
+    <div class="search-box screen-only">
+      <input
+        type="text"
+        id="tableSearch"
+        placeholder="Zoek in eerste 3 kolommen..."
+        style="width: 300px; padding: 4px" />
+    </div>
 
-    <!-- voeg ergens in <body> toe waar je de tabel wilt zien -->
-    <div id="csv-output" style="margin-top: 1rem"></div>
+    <div class="filter-row screen-only" id="filter1Row"><strong>Categorie: </strong></div>
+    <div class="filter-row screen-only" id="filter2Row"><strong>Subcategorie: </strong></div>
 
-    <!-- plak dit in plaats van je bestaande PapaParse + IIFE -->
+    <table id="csvTable" class="display" style="width: 100%"></table>
+
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        function status(msg, isErr = false) {
-          let s = document.getElementById("csv-status");
-          if (!s) {
-            s = document.createElement("div");
-            s.id = "csv-status";
-            s.style.margin = "8px 0";
-            (document.getElementById("csv-output") || document.body).prepend(s);
+      // Diacritics-insensitive sort for strings
+      jQuery.extend(jQuery.fn.dataTable.ext.type.order, {
+        "string-pre": function (data) {
+          if (typeof data !== "string") {
+            return data;
           }
-          s.textContent = msg;
-          s.style.color = isErr ? "#8b0000" : "#116611";
-          console.log("[CSV]", msg);
+          return data
+            .toLowerCase()
+            .normalize("NFD") // split letters and accents
+            .replace(/[\u0300-\u036f]/g, ""); // remove accents
         }
-
-        const block = document.getElementById("embedded-csv");
-        if (!block) {
-          status('Geen embedded CSV (id="embedded-csv") gevonden.', true);
-          return;
-        }
-
-        // 1) normaliseer: verwijder voorloopspaties op iedere regel en BOM
-        let raw = (block.textContent || block.innerText || "").replace(/^\uFEFF/, "");
-        // verwijder (konsequent) voorloopspaces die ontstaan door HTML-indenting:
-        raw = raw
-          .split("\n")
-          .map((line) => line.replace(/^\s+/, ""))
-          .join("\n");
-
-        if (!raw.trim()) {
-          status("Embedded CSV is leeg.", true);
-          return;
-        }
-
-        // 2) parse: probeer PapaParse, anders fallback
-        function parseWithPapa(text) {
-          try {
-            if (window.Papa && typeof Papa.parse === "function") {
-              const r = Papa.parse(text, { header: true, skipEmptyLines: true, transformHeader: (h) => h.trim() });
-              if (r && r.errors && r.errors.length) console.warn("PapaParse warnings:", r.errors);
-              return r.data;
-            }
-          } catch (e) {
-            console.warn("PapaParse failed, fallback.", e);
-          }
-          return null;
-        }
-
-        function simpleParse(text) {
-          // simpele maar redelijk robuuste parser: houdt rekening met quotes en doubled quotes
-          text = text.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
-          const lines = text.split("\n").filter(Boolean);
-          if (lines.length === 0) return [];
-          const header = parseLine(lines[0]).map((h) => h.trim());
-          const out = [];
-          for (let i = 1; i < lines.length; i++) {
-            if (!lines[i].trim()) continue;
-            const vals = parseLine(lines[i]);
-            const obj = {};
-            for (let j = 0; j < header.length; j++) obj[header[j]] = (vals[j] === undefined ? "" : vals[j]).trim();
-            out.push(obj);
-          }
-          return out;
-
-          function parseLine(line) {
-            const res = [];
-            let cur = "",
-              inQ = false;
-            for (let i = 0; i < line.length; i++) {
-              const ch = line[i];
-              if (inQ) {
-                if (ch === '"') {
-                  if (line[i + 1] === '"') {
-                    cur += '"';
-                    i++;
-                  } else {
-                    inQ = false;
-                  }
-                } else cur += ch;
-              } else {
-                if (ch === '"') {
-                  inQ = true;
-                } else if (ch === ",") {
-                  res.push(cur);
-                  cur = "";
-                } else cur += ch;
-              }
-            }
-            res.push(cur);
-            return res;
-          }
-        }
-
-        let rows = parseWithPapa(raw);
-        if (!rows) rows = simpleParse(raw);
-
-        if (!rows || rows.length === 0) {
-          status("Parsing gaf geen rijen terug.", true);
-          console.warn("Parsed rows:", rows);
-          return;
-        }
-
-        status("CSV succesvol geparsed — rijen: " + rows.length);
-
-        // 3) render tabel in #csv-output
-        const out = document.getElementById("csv-output");
-        out.innerHTML = ""; // schoon beginnen
-
-        const info = document.createElement("div");
-        info.className = "small muted";
-        info.textContent = `Aantal rijen: ${rows.length} — (laatste kolommen getrimd).`;
-        out.appendChild(info);
-
-        const tableWrap = document.createElement("div");
-        tableWrap.style.overflowX = "auto";
-        tableWrap.style.marginTop = "0.5rem";
-        out.appendChild(tableWrap);
-
-        const table = document.createElement("table");
-        table.style.width = "100%";
-        table.style.borderCollapse = "collapse";
-        tableWrap.appendChild(table);
-
-        // headers: neem keys van eerste object
-        const keys = Object.keys(rows[0]);
-        const thead = document.createElement("thead");
-        const thr = document.createElement("tr");
-        keys.forEach((k) => {
-          const th = document.createElement("th");
-          th.textContent = k;
-          thr.appendChild(th);
-        });
-        thead.appendChild(thr);
-        table.appendChild(thead);
-
-        const tbody = document.createElement("tbody");
-        // limiteren we niet — geef makkelijk scroll; toon alle rijen
-        rows.forEach((r) => {
-          const tr = document.createElement("tr");
-          keys.forEach((k) => {
-            const td = document.createElement("td");
-            td.textContent = r[k] ?? "";
-            td.setAttribute("data-label", k);
-            td.style.padding = "6px";
-            tr.appendChild(td);
-          });
-          tbody.appendChild(tr);
-        });
-        table.appendChild(tbody);
-
-        // optionele kleine styling (kan je weghalen)
-        table.querySelectorAll("th").forEach((th) => {
-          th.style.background = "#f7f7f7";
-          th.style.padding = "6px";
-          th.style.textAlign = "left";
-        });
       });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Wacht even tot de CSV-render klaar is (retry kort als nodig)
-        function whenTableReady(cb, tries = 10) {
-          const table = document.querySelector("#csv-output table");
-          if (table) return cb(table);
-          if (tries <= 0) return console.warn("Tabel niet gevonden voor enhancement.");
-          setTimeout(() => whenTableReady(cb, tries - 1), 150);
+
+      // ✅ Accent-insensitive SEARCH
+      jQuery.fn.DataTable.ext.type.search.push(function (data) {
+        if (!data) return "";
+        if (typeof data !== "string") return data;
+        return data
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+      });
+      Papa.parse("Woordenlijst.csv", {
+        download: true,
+        header: true,
+        skipEmptyLines: true,
+        complete: function (results) {
+          const allColumns = Object.keys(results.data[0]);
+
+          // Alleen eerste 3 kolommen zichtbaar
+          const columns = allColumns.map((colName, index) => ({
+            title: colName,
+            visible: index < 3
+          }));
+
+          const data = results.data.map((row) => Object.values(row));
+          const colCat = 3; // index van categorie
+          const colSub = 4; // index van subcategorie
+
+          let table = $("#csvTable").DataTable({
+            data: data,
+            columns: columns,
+            paging: false,
+            dom: "t"
+          });
+
+          // 🔍 Zoeken in eerste 3 kolommen
+          $("#tableSearch").on("keyup", function () {
+            let searchTerm = this.value;
+            table.columns().search("");
+            for (let i = 0; i < 3; i++) {
+              table.column(i).search(searchTerm, true, false);
+            }
+            table.draw();
+          });
+
+          // Bouw categorieknoppen
+          function buildCategoryButtons() {
+            $("#filter1Row").find(".filter-button").remove();
+
+            // Alles knop voor categorie
+            let allBtn = $('<button class="filter-button active">Alles</button>').on("click", function () {
+              // Visuele reset
+              $("#filter1Row .filter-button").removeClass("active");
+              $(this).addClass("active");
+
+              // Verwijder ALLE filters
+              table.search("").columns().search("").draw();
+
+              // Verwijder subcategorie-knoppen
+              $("#filter2Row").find(".filter-button").remove();
+            });
+            $("#filter1Row").append(allBtn);
+
+            // Categorieknoppen
+            let categories = table.column(colCat).data().unique().sort();
+            categories.each(function (d) {
+              if (d) {
+                let btn = $('<button class="filter-button">' + d + "</button>").on("click", function () {
+                  // Reset tabel (maar laat zoekterm staan als gebruiker iets intikt)
+                  table.columns().search("").draw();
+
+                  // Zet actieve status
+                  $("#filter1Row .filter-button").removeClass("active");
+                  $(this).addClass("active");
+
+                  // Filter op categorie
+                  table
+                    .column(colCat)
+                    .search("^" + $.fn.dataTable.util.escapeRegex(d) + "$", true, false)
+                    .draw();
+
+                  // Opnieuw subcategorieën bouwen
+                  buildSubcategoryButtons();
+                });
+                $("#filter1Row").append(btn);
+              }
+            });
+          }
+
+          // Bouw subcategorieknoppen
+          function buildSubcategoryButtons() {
+            $("#filter2Row").find(".filter-button").remove();
+
+            // Alles knop voor subcategorie
+            let allBtn = $('<button class="filter-button active">Alles</button>').on("click", function () {
+              $("#filter2Row .filter-button").removeClass("active");
+              $(this).addClass("active");
+              table.column(colSub).search("").draw();
+            });
+            $("#filter2Row").append(allBtn);
+
+            // Subcategorieën op basis van huidige categorie
+            let subcategories = table.column(colSub, { search: "applied" }).data().unique().sort();
+            subcategories.each(function (d) {
+              if (d) {
+                let btn = $('<button class="filter-button">' + d + "</button>").on("click", function () {
+                  $("#filter2Row .filter-button").removeClass("active");
+                  $(this).addClass("active");
+                  table
+                    .column(colSub)
+                    .search("^" + $.fn.dataTable.util.escapeRegex(d) + "$", true, false)
+                    .draw();
+                });
+                $("#filter2Row").append(btn);
+              }
+            });
+          }
+
+          // Start
+          buildCategoryButtons();
         }
-
-        whenTableReady((table) => {
-          const out = document.getElementById("csv-output");
-          // Controls container
-          const controls = document.createElement("div");
-          controls.style.display = "flex";
-          controls.style.gap = "8px";
-          controls.style.flexWrap = "wrap";
-          controls.style.alignItems = "center";
-          controls.style.marginTop = "8px";
-          controls.innerHTML = `
-      <input id="globalSearch" placeholder="Globale zoekterm..." style="padding:.4rem .6rem;min-width:18ch"/>
-      <button id="resetFilters" title="Reset filters">Reset</button>
-      <div id="colFilters" style="display:flex;gap:8px;flex-wrap:wrap"></div>
-    `;
-          out.insertBefore(controls, out.firstChild);
-
-          const tbody = table.querySelector("tbody");
-          const headers = Array.from(table.querySelectorAll("thead th")).map((th) => th.textContent.trim());
-          const rows = Array.from(tbody.querySelectorAll("tr"));
-
-          // ------- per-kolom filters (select) -------
-          const colFiltersContainer = document.getElementById("colFilters");
-          const uniqueValues = headers.map((h, idx) => {
-            const vals = new Set();
-            rows.forEach((r) => {
-              const c = (r.children[idx] && r.children[idx].textContent.trim()) || "";
-              if (c) vals.add(c);
-            });
-            return Array.from(vals).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
-          });
-
-          headers.forEach((h, idx) => {
-            // only create filter if there are not-too-many unique values
-            if (uniqueValues[idx].length === 0 || uniqueValues[idx].length > 200) return;
-            const sel = document.createElement("select");
-            sel.dataset.col = idx;
-            sel.style.minWidth = "10ch";
-            sel.style.padding = ".25rem";
-            const optAll = document.createElement("option");
-            optAll.value = "";
-            optAll.textContent = h;
-            sel.appendChild(optAll);
-            uniqueValues[idx].forEach((v) => {
-              const o = document.createElement("option");
-              o.value = v;
-              o.textContent = v.length > 40 ? v.slice(0, 37) + "…" : v;
-              sel.appendChild(o);
-            });
-            sel.addEventListener("change", applyFilters);
-            colFiltersContainer.appendChild(sel);
-          });
-
-          // ------- global search (debounced) -------
-          const gs = document.getElementById("globalSearch");
-          let gsTimer = null;
-          gs.addEventListener("input", () => {
-            clearTimeout(gsTimer);
-            gsTimer = setTimeout(applyFilters, 220);
-          });
-
-          // ------- reset -------
-          document.getElementById("resetFilters").addEventListener("click", () => {
-            document.querySelectorAll("#colFilters select").forEach((s) => (s.value = ""));
-            gs.value = "";
-            applyFilters();
-          });
-
-          // ------- sorting by header click -------
-          table.querySelectorAll("thead th").forEach((th, colIdx) => {
-            // skip if header empty
-            if (!th.textContent.trim()) return;
-            th.style.cursor = "pointer";
-            const sortIndicator = document.createElement("span");
-            sortIndicator.style.marginLeft = "6px";
-            sortIndicator.style.color = "#666";
-            th.appendChild(sortIndicator);
-
-            th.addEventListener("click", () => {
-              const current = th.dataset.sortOrder === "asc" ? "asc" : th.dataset.sortOrder === "desc" ? "desc" : null;
-              // clear others
-              table.querySelectorAll("thead th").forEach((h) => {
-                h.dataset.sortOrder = "";
-                h.querySelector("span") && (h.querySelector("span").textContent = "");
-              });
-              const next = current === "asc" ? "desc" : "asc";
-              th.dataset.sortOrder = next;
-              sortTableByColumn(table, colIdx, next === "asc");
-              sortIndicator.textContent = next === "asc" ? "▲" : "▼";
-            });
-          });
-
-          // ------- core functions -------
-          function applyFilters() {
-            const terms = gs.value.trim().toLowerCase();
-            const selFilters = Array.from(document.querySelectorAll("#colFilters select")).map((s) => ({
-              idx: Number(s.dataset.col),
-              value: s.value
-            }));
-            rows.forEach((r) => {
-              let visible = true;
-              // column filters
-              for (const f of selFilters) {
-                if (!f.value) continue;
-                const cell = (r.children[f.idx] && r.children[f.idx].textContent.trim()) || "";
-                if (cell !== f.value) {
-                  visible = false;
-                  break;
-                }
-              }
-              // global search
-              if (visible && terms) {
-                const hay = Array.from(r.children)
-                  .map((td) => td.textContent.toLowerCase())
-                  .join(" ");
-                if (hay.indexOf(terms) === -1) visible = false;
-              }
-              r.style.display = visible ? "" : "none";
-            });
-          }
-
-          function sortTableByColumn(tbl, colIndex, asc = true) {
-            const body = tbl.querySelector("tbody");
-            const trs = Array.from(body.querySelectorAll("tr"));
-            const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
-            trs.sort((a, b) => {
-              const A = (a.children[colIndex] && a.children[colIndex].textContent.trim()) || "";
-              const B = (b.children[colIndex] && b.children[colIndex].textContent.trim()) || "";
-              // Try numeric
-              const nA = parseFloat(A.replace(/[, ]+/g, "."));
-              const nB = parseFloat(B.replace(/[, ]+/g, "."));
-              if (!isNaN(nA) && !isNaN(nB)) return asc ? nA - nB : nB - nA;
-              return asc ? collator.compare(A, B) : collator.compare(B, A);
-            });
-            trs.forEach((tr) => body.appendChild(tr));
-          }
-
-          // initial no-filter state
-          applyFilters();
-        });
       });
     </script>
   </body>

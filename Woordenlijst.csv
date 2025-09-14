@@ -1,840 +1,382 @@
-Grondwoord,Betekenis,Extra info,Woordsoort,Extra,Sorteerregel
-altus,"hoog, diep",,adj.,1e klasse,
-antiquus,"oud, vroeger",,adj.,1e klasse,
-argenteus,zilveren,,adj.,1e klasse,
-attentus,"gespannen, aandachtig",,adj.,1e klasse,
-aureus,gouden,,adj.,1e klasse,
-beatus,gelukkig,,adj.,1e klasse,
-caecus,blind,,adj.,1e klasse,
-ceterus,overig,,adj.,1e klasse,
-dignus,waardig (+ abl.),,adj.,1e klasse,
-divinus,goddelijk,,adj.,1e klasse,
-durus,hard,,adj.,1e klasse,
-exquisitus,voortreffelijk,,adj.,1e klasse,
-formosus,"mooi, welgevormd",,adj.,1e klasse,
-frigidus,koud,,adj.,1e klasse,
-geminus,tweeling-,,adj.,1e klasse,
-hospitus,"gastvrij, vreemd, buitenlands",,adj.,1e klasse,
-humanus,menselijk,,adj.,1e klasse,
-immensus,"onmetelijk groot, oneindig",,adj.,1e klasse,
-incognitus,onbekend,,adj.,1e klasse,
-infestus,"onveilig, verontrust, gevaarlijk, vijandig",,adj.,1e klasse,
-laudatus,prijzenswaardig,,adj.,1e klasse,
-magnus,groot,,adj.,1e klasse,
-multi,veel,enkel mv.,adj.,1e klasse,
-novus,nieuw,,adj.,1e klasse,
-pauci,"weinig, enkel",enkel mv.,adj.,1e klasse,
-placidus,"kalm, rustig",,adj.,1e klasse,
-planus,"vlak, duidelijk, eenvoudig",,adj.,1e klasse,
-posterus,"volgend, komend, laat",,adj.,1e klasse,
-pulcher,"mooi, prachtig","pulchra, pulchrum",adj.,1e klasse,
-rapidus,"snel, wild",,adj.,1e klasse,
-reliquus,"overgebleven, overig, ander",,adj.,1e klasse,
-sacer,heilig,,adj.,1e klasse,
-sanus,gezond,,adj.,1e klasse,
-securus,veilig,,adj.,1e klasse,
-serius,"ernstig, serieus, belangrijk",,adj.,1e klasse,
-sinister,"linker-, verkeerd, ongunstig","sinistra, sinistrum",adj.,1e klasse,
-solus,"enkel, alleen",,adj.,1e klasse,
-stultus,"dom, dwaas, gek",,adj.,1e klasse,
-tener,"fijn, zacht, jong","tenera, tenerum",adj.,1e klasse,
-timidus,angstig,,adj.,1e klasse,
-totus,"heel, totaal, helemaal, (mv.) alle",,adj.,1e klasse,
-ultimus,laatst,,adj.,1e klasse,
-vanus,"leeg, ijdel, hoogmoedig",,adj.,1e klasse,
-varius,"verschillend, afwisselend",,adj.,1e klasse,
-verus,"echt, waar",,adj.,1e klasse,
-vivus,levend,,adj.,1e klasse,
-acer,"scherp, hevig",,adj.,2e klasse,
-crudelis,gruwelijk,,adj.,2e klasse,
-dives,"rijk, welvoorzien, vruchtbaar",divitis,adj.,2e klasse,
-felix,gelukkig,felicis,adj.,2e klasse,
-ferox,"wild, ontstuimig, strijdlustig",ferocis,adj.,2e klasse,
-fortis,"dapper, sterk",,adj.,2e klasse,
-grandis,"groot, gewichtig, omvangrijk",,adj.,2e klasse,
-gravis,zwaar,,adj.,2e klasse,
-immortalis,onsterfelijk,,adj.,2e klasse,
-immanis,"reusachtig, onmetelijk",,adj.,2e klasse,
-ingens,reusachtig,ingentis,adj.,2e klasse,
-instabilis,"onvast, onbegaanbaar, wankel",,adj.,2e klasse,
-liberalis,"beschaafd, vriendelijk, vrijgevig",,adj.,2e klasse,
-mortalis,sterfelijk,,adj.,2e klasse,
-necesse,"noodzakelijk, onvermijdbaar",onverbuigbaar,adj.,2e klasse,
-nobilis,"duidelijk, bekend, beroemd, voortreffelijk, nobel",,adj.,2e klasse,
-omnis,"ieder, elk",,adj.,2e klasse,
-par,"gelijk aan, gelijkend op",paris,adj.,2e klasse,
-prior,"voorst, eerder, voortreffelijker","prior, prius",adj.,2e klasse,
-rudis,"ruw, onbewerkt; onervaren",,adj.,2e klasse,
-tristis,treurig,,adj.,2e klasse,
-velox,"snel, vlug, behendig",velocis,adj.,2e klasse,
-vetus,oud,veteris,adj.,2e klasse,
-adhuc,nog,,bw.,,
-ante,voorheen,,bw.,,
-autem,echter,,bw.,,
-deinde,"daarna, vervolgens",,bw.,,
-etiam,zelfs,,bw.,,
-fere,ongeveer,,bw.,,
-hic,hier,,bw.,,
-iam,"reeds, al",,bw.,,
-ibi,daar,,bw.,,
-illic,daar,,bw.,,
-inde,"(van) daaruit, sindsdien",,bw.,,
-ita,zo,,bw.,,
-itaque,"en zo, derhalve",,bw.,,
-item,ook zo,,bw.,,
-iterum,opnieuw,,bw.,,
-magis,meer,,bw.,,
-modo,"net, onlangs; slechts",,bw.,,
-non,niet,,bw.,,
-nunc ,nu ,,bw.,,
-olim,vroeger,,bw.,,
-paene,bijna,,bw.,,
-paulo,een beetje,,bw.,,
-post(ea),"erna, later",,bw.,,
-primo,eerst,,bw.,,
-procul,"ver (weg), in de verte, van verre",,bw.,,
-prope,vlakbij,,bw.,,
-qua,waarlangs,,bw.,,
-quidem,"zeker, weliswaar, ongetwijfeld, wel",,bw.,,
-quoque,ook,,bw.,,
-quotiens,hoe vaak?,,bw.,,
-saepe,"vaak, dikwijls",,bw.,,
-sic,"zo, op die manier",,bw.,,
-statim,onmiddellijk,,bw.,,
-supra,"boven, erboven, daarboven",,bw.,,
-tam,"zo, zozeer, in die mate",,bw.,,
-tum,"toen, op dat moment",,bw.,,
-tunc,"toen, op dat moment, dan, vervolgens, daarna",,bw.,,
-ubi,waar,,bw.,,
-umquam,ooit,,bw.,,
-unde ,"vanwaar, waaruit, waarom, waardoor",,bw.,,
-undique,"van alle kanten, van overal",,bw.,,
-vero,"werkelijk, zeker, zelfs, toch, echter",,bw.,,
-vix,nauwelijks,,bw.,,
-ave,gegroet,,part.,,
-ecce,"ziehier, ziedaar",,part.,,
-ala,de vleugel,,subst.,1e klasse,
-amicus,de vriend,,subst.,1e klasse,
-animus,"de geest, de ziel",,subst.,1e klasse,
-annus,het jaar,,subst.,1e klasse,
-antrum,de grot,,subst.,1e klasse,
-aqua,het water,,subst.,1e klasse,
-arma,"de wapens, de wapenuitrusting",armorum (altijd mv.),subst.,1e klasse,
-astrum,de ster,,subst.,1e klasse,
-aurum,het goud,,subst.,1e klasse,
-bellum,de oorlog,,subst.,1e klasse,
-bene-ficium,de weldaad,,subst.,1e klasse,
-bracchium,de arm,,subst.,1e klasse,
-caelum,"de hemel, de lucht",,subst.,1e klasse,
-campus,"het veld, de akker, de vlakte",,subst.,1e klasse,
-castra,het kamp,,subst.,1e klasse,
-causa,"de reden, de oorzaak, de aanleiding",,subst.,1e klasse,
-cervus,het hert,,subst.,1e klasse,
-cibus,het voedsel,,subst.,1e klasse,
-cocus,de kok,,subst.,1e klasse,
-collum,"de hals, de nek",,subst.,1e klasse,
-concilium,de vergadering,,subst.,1e klasse,
-confidentia,het (zelf)vertrouwen,,subst.,1e klasse,
-coniugium,huwelijk,,subst.,1e klasse,
-consilium,de raad,,subst.,1e klasse,
-constantia,"de vastberadenheid, de volharding, de duurzaamheid ",,subst.,1e klasse,
-copia,de voorraad,,subst.,1e klasse,
-corona,de krans,,subst.,1e klasse,
-cubiculum,de slaapkamer,,subst.,1e klasse,
-"deus
-dea","de god, God
-de godin",,subst.,1e klasse,
-discordia,"de onenigheid, de strijd, de ruzie",,subst.,1e klasse,
-dominus,de heer,,subst.,1e klasse,
-donum,"de gave, het geschenk",,subst.,1e klasse,
-dubium,"de twijfel, het gevaar",,subst.,1e klasse,
-equus,het paard,,subst.,1e klasse,
-factum,de daad,,subst.,1e klasse,
-familia,de familie,,subst.,1e klasse,
-fera,het wilde dier,,subst.,1e klasse,
-ferrum,het ijzer,,subst.,1e klasse,
-"filius
-filia","de zoon
-de dochter",,subst.,1e klasse,
-forma,"de vorm, de gestalte, de schoonheid",,subst.,1e klasse,
-fortuna,het lot,,subst.,1e klasse,
-forum,"het marktplein, het forum",,subst.,1e klasse,
-garum,"de vissaus, het garum",,subst.,1e klasse,
-Graecus,de Griek,,subst.,1e klasse,
-hospitium,"de gastvrijheid, het onderkomen",,subst.,1e klasse,
-humus,de grond,,subst.,1e klasse,
-ianua,"de deur, de ingang",,subst.,1e klasse,
-imperium,"het gezag, het rijk",,subst.,1e klasse,
-initium,het begin,,subst.,1e klasse,
-insula,het eiland,,subst.,1e klasse,
-iudicium,"het oordeel, het vonnis, het proces",,subst.,1e klasse,
-lectus,het bed,,subst.,1e klasse,
-legatus,de gezant,,subst.,1e klasse,
-liber,"de bast, de brief, het boek",libri,subst.,1e klasse,
-lingua,"de tong, de taal",,subst.,1e klasse,
-littera,de letter; mv. de brief,,subst.,1e klasse,
-locus,de plaats,,subst.,1e klasse,
-luna,de maan,,subst.,1e klasse,
-magister,"de meester, de leraar",magistri,subst.,1e klasse,
-malum,de appel,,subst.,1e klasse,
-medium,het midden,,subst.,1e klasse,
-memoria,"de herinnering, de gedachte, het geheugen",,subst.,1e klasse,
-mensa,de tafel,,subst.,1e klasse,
-mundus,"de wereld, het heelal, de hemel",,subst.,1e klasse,
-murus,de muur,,subst.,1e klasse,
-natura,"de natuur, de wereld; de aard",,subst.,1e klasse,
-oceanus,de oceaan,,subst.,1e klasse,
-oculus,het oog,,subst.,1e klasse,
-odium,"de haat, de afkeer",,subst.,1e klasse,
-oppidum,het stadje,,subst.,1e klasse,
-oraculum,"het orakel, de profetie, de voorspelling",,subst.,1e klasse,
-paedagogus,de opvoeder,,subst.,1e klasse,
-palaestra,de sportzaal,,subst.,1e klasse,
-patria,het vaderland,,subst.,1e klasse,
-paulum,"een beetje, een weinig",,subst.,1e klasse,
-penna,veer,,subst.,1e klasse,
-periculum ,het gevaar,,subst.,1e klasse,
-porcus,het varken,,subst.,1e klasse,
-porta,de poort,,subst.,1e klasse,
-prandium,het middagmaal,,subst.,1e klasse,
-pretium,de prijs,,subst.,1e klasse,
-principium,het begin,,subst.,1e klasse,
-proelium,de strijd,,subst.,1e klasse,
-"puer
-puella","de jongen
-het meisje","pueri
-puellae",subst.,1e klasse,
-regnum,"het rijk, de heerschappij",,subst.,1e klasse,
-ripa,de oever,,subst.,1e klasse,
-rusticus,"de boer, de boerenkinkel (beledigend)",,subst.,1e klasse,
-sagitta,de pijl,,subst.,1e klasse,
-saxum,de steen,,subst.,1e klasse,
-sententia,"de mening, de spreuk",,subst.,1e klasse,
-servus,de slaaf,,subst.,1e klasse,
-silva,het bos,,subst.,1e klasse,
-socius,de bondgenoot,,subst.,1e klasse,
-somnus,de slaap,,subst.,1e klasse,
-sonum,het geluid,,subst.,1e klasse,
-studium,"de inzet, de ijver",,subst.,1e klasse,
-tabula,de schrijftafel,,subst.,1e klasse,
-taurus,de stier,,subst.,1e klasse,
-tectum ,het dak,,subst.,1e klasse,
-telum,"het projectiel, de speer",,subst.,1e klasse,
-terra,"de aarde, de grond, het land",,subst.,1e klasse,
-tunica,de tuniek,,subst.,1e klasse,
-unda,de golf,,subst.,1e klasse,
-venenum,"het gif, het medicijn, het magisch drankje",,subst.,1e klasse,
-ventus,de wind,,subst.,1e klasse,
-verbum,het woord,,subst.,1e klasse,
-via,de weg,,subst.,1e klasse,
-vir,de man,viri,subst.,1e klasse,
-aer,de lucht,aeris,subst.,2e klasse,
-aes,het koper,aeris o.,subst.,2e klasse,
-aestas,de zomer,aestatis,subst.,2e klasse,
-aetas,"de levensduur, het tijdperk, de leeftijd",aetatis,subst.,2e klasse,
-animal,het dier,animalis,subst.,2e klasse,
-arx,"de burcht, de citadel",arcis,subst.,2e klasse,
-auris,het oor,auris,subst.,2e klasse,
-bos,het rund,bovis m. of v.,subst.,2e klasse,
-canis,de hond,canis m. of v.,subst.,2e klasse,
-caput,"het hoofd, het hoofdstuk",capitis o.,subst.,2e klasse,
-caro,het vlees,carnis,subst.,2e klasse,
-clamor,"het geroep, het geschreeuw",clamoris,subst.,2e klasse,
-collis,de heuvel,collis m.,subst.,2e klasse,
-color,de kleur,coloris,subst.,2e klasse,
-consul,de consul,consulis m.,subst.,2e klasse,
-corpus,het lichaam,corporis,subst.,2e klasse,
-custos,de bewaker,custodis,subst.,2e klasse,
-dens,de tand,dentis m.,subst.,2e klasse,
-dux,de leider,ducis m.,subst.,2e klasse,
-fames,de honger,famis,subst.,2e klasse,
-finis,"het einde, de grens; mv. het grondgebied",finis m.,subst.,2e klasse,
-flumen,de rivier,fluminis,subst.,2e klasse,
-fons,de bron,fontis m.,subst.,2e klasse,
-frater,de broer,fratris,subst.,2e klasse,
-genus,"de soort, het geslacht, de afkomst",generis,subst.,2e klasse,
-hiems,de winter,hiemis,subst.,2e klasse,
-homo,de mens,hominis m.,subst.,2e klasse,
-hostis,de vijand,hostis m.,subst.,2e klasse,
-ignis,het vuur,ignis m.,subst.,2e klasse,
-infans,"het klein kind, de baby",infantis m. en v.,subst.,2e klasse,
-ius,het recht,iuris,subst.,2e klasse,
-iuvenis,de jongeman,iuvenis m. of v.,subst.,2e klasse,
-labor,"het werk, de inspanning, de moeite",laboris,subst.,2e klasse,
-leo,de leeuw,leonis m.,subst.,2e klasse,
-lex,de wet,legis,subst.,2e klasse,
-libertas,de vrijheid,libertatis,subst.,2e klasse,
-liquor,de vloeistof,liquoris,subst.,2e klasse,
-litus,de kust,litoris,subst.,2e klasse,
-lumen,"het licht, de lamp",luminis,subst.,2e klasse,
-lux,het licht,lucis,subst.,2e klasse,
-mare,de zee,maris,subst.,2e klasse,
-mater,de moeder,matris v.,subst.,2e klasse,
-mens,de geest,mentis,subst.,2e klasse,
-mons,de berg,montis m.,subst.,2e klasse,
-mors,de dood,mortis,subst.,2e klasse,
-mos,de zeden,moris,subst.,2e klasse,
-mulier,"vrouw, echtgenote",mulieris v.,subst.,2e klasse,
-nomen,de naam,nominis,subst.,2e klasse,
-nox ,de nacht,noctis,subst.,2e klasse,
-obses,de gijzelaar,obsidis m. of v.,subst.,2e klasse,
-opes,de middelen,"opum v. (zelden enk. ops, opis)",subst.,2e klasse,
-orbis,"de kring, de bol, de wereld",orbis m.,subst.,2e klasse,
-origo,"de oorsprong, het ontstaan",originis,subst.,2e klasse,
-os,de mond,oris o.,subst.,2e klasse,
-panis,het brood,panis m.,subst.,2e klasse,
-pars,het deel,partis,subst.,2e klasse,
-pater,de vader,patris,subst.,2e klasse,
-pax,de vrede,pacis,subst.,2e klasse,
-pellis,"de huid, het vel",pellis,subst.,2e klasse,
-pes,de voet,pedis m.,subst.,2e klasse,
-piscis,de vis,piscis m.,subst.,2e klasse,
-potestas,"de macht, het gezag, de kracht, de mogelijkheid",potestatis,subst.,2e klasse,
-pulvis,"het stof, het zand",pulveris m.,subst.,2e klasse,
-regio,"de plaats, het gebied",regionis,subst.,2e klasse,
-rex,de koning,regis m.,subst.,2e klasse,
-sal,het zout,salis m.,subst.,2e klasse,
-senex,de oude man,senis m.,subst.,2e klasse,
-severitas,"de ernst, de strengheid",severitatis,subst.,2e klasse,
-sol,de zon,solis m.,subst.,2e klasse,
-soror,de zus,sororis v.,subst.,2e klasse,
-tempus,de tijd,temporis,subst.,2e klasse,
-urbs,de stad,urbis,subst.,2e klasse,
-vallis,"dal, vallei",vallis,subst.,2e klasse,
-venter,de buik,ventris,subst.,2e klasse,
-veritas,de waarheid,veritatis,subst.,2e klasse,
-"victor
-victrix","(over)winnaar
-(over)winnares","victoris
-victricis",subst.,2e klasse,
-virgo,de maagd,virginis,subst.,2e klasse,
-vis,"het geweld, de kracht",viris,subst.,2e klasse,
-vox,de stem,vocis,subst.,2e klasse,
-vulnus,de wonde,vulneris,subst.,2e klasse,
-anus,de oude vrouw,anus v.,subst.,3e klasse,
-cornu,"de hoorn, (mv.) de horens, de gewei",cornus o.,subst.,3e klasse,
-dies,de dag,diei m. of v.,subst.,3e klasse,
-domus,het huis,domus v.,subst.,3e klasse,
-exercitus,het leger,exercitus,subst.,3e klasse,
-facies,het gezicht,faciei,subst.,3e klasse,
-manus,de hand,manus v.,subst.,3e klasse,
-species,"het uiterlijk, het beeld, de soort",speciei,subst.,3e klasse,
-spiritus,"de adem, de geest",spiritus,subst.,3e klasse,
-unus,één,"una, unum",telw.,hoofdtelwoord,1
-duo,twee,"duae, duo",telw.,hoofdtelwoord,2
-tres,drie,"tres, tria",telw.,hoofdtelwoord,3
-quattuor,vier,,telw.,hoofdtelwoord,4
-quinque,vijf,,telw.,hoofdtelwoord,5
-sex,zes,,telw.,hoofdtelwoord,6
-septem,zeven,,telw.,hoofdtelwoord,7
-octo,acht,,telw.,hoofdtelwoord,8
-novem,negen,,telw.,hoofdtelwoord,9
-decem,tien,,telw.,hoofdtelwoord,10
-centum,honderd,,telw.,hoofdtelwoord,100
-mille,duizend,"enkel verbuigbaar in mv.
-milia, milium",telw.,hoofdtelwoord,1000
-primus,eerst,,telw.,rangtelwoord,1
-secundus,"tweede, volgende",,telw.,rangtelwoord,2
-tertius,derde,,telw.,rangtelwoord,3
-quartus,vierde,,telw.,rangtelwoord,4
-quintus,vijfde,,telw.,rangtelwoord,5
-sextus,zesde,,telw.,rangtelwoord,6
-septimus,zevende,,telw.,rangtelwoord,7
-octavus,achtste,,telw.,rangtelwoord,8
-nonus,negende,,telw.,rangtelwoord,9
-decimus,tiende,,telw.,rangtelwoord,10
-bis,tweemaal,,telw.,telbijwoord,2
-singuli,telkens één,"singulae, singula",telw.,verdelingsgetal,1
--que,en,,vgw.,nevensch.,
-atque/ac,"en, en ook, en zelfs",,vgw.,nevensch.,
-aut,of,,vgw.,nevensch.,
-aut … aut,"of … of …, hetzij … hetzij ...",,vgw.,nevensch.,
-enim,"immers, namelijk, toch",vgw.,vgw.,nevensch.,
-ergo,dus,,vgw.,nevensch.,
-et,en,,vgw.,nevensch.,
-nam,want,,vgw.,nevensch.,
-nec / neque,en niet,,vgw.,nevensch.,
-sed,maar,,vgw.,nevensch.,
-cum,"toen, nadat, omdat, hoewel, terwijl",+ conj.,vgw.,ondersch.,
-cum,"toen, (telkens) wanneer",+ ind.,vgw.,ondersch.,
-dum,"terwijl, zolang als, totdat",+ ind.,vgw.,ondersch.,
-dum,"totdat, als maar, omdat",+ conj.,vgw.,ondersch.,
-ne,"opdat niet, dat niet",+ conj.,vgw.,ondersch.,
-quam,dan,vgw.,vgw.,ondersch.,
-quia,omdat,,vgw.,ondersch.,
-quoniam,"aangezien, vermits",+ ind,vgw.,ondersch.,
-si,"als, indien",,vgw.,ondersch.,
-ut,"toen, wanneer, zoals",+ ind.,vgw.,ondersch.,
-ut,"dat, om te, opdat, zodat",+ conj.,vgw.,ondersch.,
-hic,"deze, dit","haec, hoc",vnw.,aanw.,
-idem,"dezeflde, hetzelfde","eadem, idem",vnw.,aanw.,
-ille,"die, dat","illa, illud",vnw.,aanw.,
-ipse,"zelf, eigen, precies","ipsa, ipsum",vnw.,aanw.,
-is,"die, dat","ea, id",vnw.,aanw.,
-iste,"die, dat (bij jou of negatief)","ista, istud",vnw.,aanw.,
-tantus,"zo groot, zo veel","tanta, tantum",vnw.,aanw.,
-qui,"die, dat","quae, quod",vnw.,betr.,
-quisquis,"wie ook, iedereen die, al wat","quisquis, quicquid/quidquid",vnw.,betr.,
-meus,mijn,,vnw.,bez.,1
-noster,"ons, onze",,vnw.,bez.,2
-tuus,jouw,,vnw.,bez.,3
-vester,jullie,,vnw.,bez.,4
-suus,zijn eigen,,vnw.,bez.,5
-(ali)quis,"zelfts. iemand, iets; mv. sommigen
-bijv. een, een of ander","(ali)quis, (ali)quid ",vnw.,onbep.,
-alius,"ander, verschillend","alia, aliud",vnw.,onbep.,
-nemo,niemand,nullius,vnw.,onbep.,
-nihil,niets,,vnw.,onbep.,
-nullus,geen; niemand,,vnw.,onbep.,
-uterque,elk van beiden,"utraque, utrumque",vnw.,onbep.,
-ego,ik,,vnw.,pers.,1
-nos,wij,,vnw.,pers.,2
-tu,jij,,vnw.,pers.,3
-vos,jullie,,vnw.,pers.,4
-se,zich(zelf),,vnw.,pers.,5
-qui,welke?,"quae, quod",vnw.,vr.,
-quis,"wie?, wat?","quis, quid ",vnw.,vr.,
-a(b),"weg van, vanaf, door",+ abl.,vz.,+ abl.,
-cum,(samen) met,+ abl.,vz.,+ abl.,
-de,"vanaf, weg van/uit, over",+ abl.,vz.,+ abl.,
-e(x),uit,+ abl.,vz.,+ abl.,
-in,"in, op",+ abl.,vz.,+ abl.,
-pro,"voor, ten bate van, in plaats van",+ abl.,vz.,+ abl.,
-procul,"ver van, lang voor, zonder",+ abl.,vz.,+ abl.,
-sine,zonder,+ abl.,vz.,+ abl.,
-sub,onder,+ abl.,vz.,+ abl.,
-super,"bovenop, tijdens, over",+ abl.,vz.,+ abl.,
-ad,"naar, bij, tot aan",+ acc.,vz.,+ acc.,
-ante,voor,+ acc.,vz.,+ acc.,
-apud,bij,+ acc.,vz.,+ acc.,
-circa,"in de omgeving van, omstreeks, ongeveer",+ acc.,vz.,+ acc.,
-circum,"rond(om), (dicht) bij",+ acc.,vz.,+ acc.,
-contra,"tegen(-over), aan de andere kant van",+ acc.,vz.,+ acc.,
-in,"naar, tot in, tot op",+ acc.,vz.,+ acc.,
-inter,"tussen, te midden van",+ acc.,vz.,+ acc.,
-ob,"naar ... toe, tegenover, wegens",+ acc.,vz.,+ acc.,
-per,"door, gedurende",+ acc.,vz.,+ acc.,
-post,na,+ acc.,vz.,+ acc.,
-praeter ,"voorbij, langs, behalve",+ acc.,vz.,+ acc.,
-sub,tot onder,+ acc.,vz.,+ acc.,
-supra,"boven, over … heen, boven … uit, behalve",+ acc.,vz.,+ acc.,
-trans,over,+ acc.,vz.,+ acc.,
-appellare,"toespreken, noemen",,ww.,a-vervoeging,
-"clamare
-ex-clamare","roepen
-uitroepen",,ww.,a-vervoeging,
-curare,verzorgen,,ww.,a-vervoeging,
-"dare
-circum-dare
-(se) de-dere
-pro-dere
-red-dere
-tra-dere","geven
-omgeven
-(zich) overgeven
-doorgeven, overleveren
-teruggeven
-overhandigen","do, dedi, datum
-circumdo, circumdedi, circumdatum
-dedo, dedidi, deditum
-prode ...
-reddo ...
-trado …",ww.,a-vervoeging,
-donare,"geven, schenken, verlenen",,ww.,a-vervoeging,
-"errare
-ab-errare","dwalen
-afdwalen, verdwalen",,ww.,a-vervoeging,
-expulsare,wegslaan,,ww.,a-vervoeging,
-honorare,eren,,ww.,a-vervoeging,
-iactare,"werpen, ",,ww.,a-vervoeging,
-imitari,"nabootsen, navolgen, imiteren",,ww.,a-vervoeging,
-imperare,"heersen, bevelen",,ww.,a-vervoeging,
-iudicare,oordelen,,ww.,a-vervoeging,
-iuvare,"verheugen, helpen",,ww.,a-vervoeging,
-laborare,werken,,ww.,a-vervoeging,
-lavare,wassen,"lavo, lavi, lautum",ww.,a-vervoeging,
-mirari,"zich verwonderen, bewonderen","miror, miratus sum",ww.,a-vervoeging,
-monstrare,"wijzen, tonen, aangeven",,ww.,a-vervoeging,
-"mutare
-per-mutare","veranderen
-volledig veranderen, omruilen",,ww.,a-vervoeging,
-necare,doden,,ww.,a-vervoeging,
-negare,"ontkennen, weigeren",,ww.,a-vervoeging,
-numerare,"tellen, betalen, opsommen",,ww.,a-vervoeging,
-"pugnare
-op-pugnare","vechten
-belegeren",,ww.,a-vervoeging,
-purgare,"reinigen, schoonmaken",,ww.,a-vervoeging,
-putare,"denken, menen, beschouwen als",,ww.,a-vervoeging,
-regnare,"heersen, koning zijn",,ww.,a-vervoeging,
-"rogare
-inter-rogare","vragen, smeken
-ondervragen, vragen",,ww.,a-vervoeging,
-salutare,groeten,,ww.,a-vervoeging,
-secare,snijden,"seco, secui, sectum",ww.,a-vervoeging,
-servare,"redden, bewaren, bewaken",,ww.,a-vervoeging,
-spectare,"zien, kijken, bekijken",,ww.,a-vervoeging,
-"stare
-con-stare
-ob-stare
-prae-stare","staan
-blijven staan, (onpers.) vast staan
-verhinderen (+ dat.)
-overtreffen, beter zijn, (zich) tonen","sto, steti, statum
-consto, constiti, constatum
-obsto …
-praesto, praestiti, praestitum",ww.,a-vervoeging,
-vigilare,wakker zijn,,ww.,a-vervoeging,
-vindicare,opeisen,,ww.,a-vervoeging,
-"vocare
-con-vocare","roepen, noemen
-bijeenroepen, verzamelen",,ww.,a-vervoeging,
-volare,vliegen,,ww.,a-vervoeging,
-"*-dere
-ad-dere
-con-dere","(plaatsen)
-toevoegen
-stichten, bouwen, oprichten","(gereconstrueerde vorm)
-addo, addidi, additum
-condo …",ww.,consonantvervoeging,
-"agere
-co-gere","doen, handelen, bewegen
-dwingen","ago, egi, actum
-cogo, coegi, coactum",ww.,consonantvervoeging,
-bibere,drinken,"bibo, bibi, -",ww.,consonantvervoeging,
-"cadere
-in-cidere","vallen
-vallen op, gebeuren, stoten op","cado, cecidi, casum
-incido, incidi, -",ww.,consonantvervoeging,
-"caedere
-oc-cidere","vellen, neerslaan, slachten, afranselen
-doodslaan, doden, vernietigen","caedo, cecidi, caesum
-occido, occidi, occisum",ww.,consonantvervoeging,
-canere,zingen,"cano, cecini, cantatum",ww.,consonantvervoeging,
-carpere,plukken,"carpo, carpsi, carptum",ww.,consonantvervoeging,
-"cedere
-ac-cedere
-con-cedere
-de-cedere
-dis-cedere
-ex-cedere
-pro-cedere
-suc-cedere","gaan, wijken, toegeven
-gaan naarn erbij gaan
-toestaan, toegeven
-weggaan
-uiteengaan
-uitgaan
-voortgaan
-opvolgen","cedo, cessi, cessum
-accedo ...
-procedo …
-decedo …
-discedo …
-excedo …
-procedo …
-succedo …",ww.,consonantvervoeging,
-colere,"bewerken, bewonen, vereren","colo, colui, cultum",ww.,consonantvervoeging,
-consulere,"raadplegen, overwegen, overleggen, een besluit nemen","consulo, consului, consultum",ww.,consonantvervoeging,
-credere,geloven,"credo, credidi, creditum",ww.,consonantvervoeging,
-dicere,"zeggen, spreken, noemen","Dico, dixi, dictum",ww.,consonantvervoeging,
-discere,leren,"disco, didici, -",ww.,consonantvervoeging,
-dividere,verdelen,"divido, divisi, divisum",ww.,consonantvervoeging,
-"ducere
-ad-ducere
-de-ducere
-e-ducere
-re-ducere
-tra-ducere","leiden
-leiden naar, brengen
-afleiden
-uitleiden
-terugleiden, terugbrengen
-overleiden, overbrengen","duco, duxi, ductum
-adduco …
-deduco …
-educo …
-reduco …
-traduco …",ww.,consonantvervoeging,
-emere,kopen,"emo, emi, emptum",ww.,consonantvervoeging,
-figere,"vasthechten, treffen","figo, fixi, fixum",ww.,consonantvervoeging,
-frangere ,breken,"frango, fregi, fractum",ww.,consonantvervoeging,
-"fundere
-dif-fundere","gieten
-uitgieten","fundo, fudi, fusum
-diffundo ...",ww.,consonantvervoeging,
-gerere,"dragen, voeren","gero, gessi, gestum",ww.,consonantvervoeging,
-labi,glijden,"labor, lapsus sum",ww.,consonantvervoeging,
-"legere
-e-ligere
-col-ligere
-de-ligere
-intel-legere","verzamelen, lezen
-uitkiezen, uitzoeken, uittrekken
-verzamelen
-uitkiezen
-begrijpen","lego, legi, lectum
-eligo, elegi, electum
-colligo …
-deligo …
-intellego …",ww.,consonantvervoeging,
-"mittere
-ad-mittere
-a(m)-mittere
-di-mittere
-e-mittere
-pro-mittere
-re-mittere","zenden, sturen
-toelaten, binnenlaten, laten gaan
-wegzenden, wegsturen
-uit elkaar zenden, wegsturen
-uitzenden, wegsturen
-beloven, verzekeren
-terugzenden","mitto, misi, missum
-admitto ...
-a(m)mitto ...
-dimitto ...
-emitto ...
-promitto ...
-remitto …",ww.,consonantvervoeging,
-nasci,"ontstaan, geboren worden","nascor, natus sum",ww.,consonantvervoeging,
-noscere,leren kennen,"nosco, novi, notum",ww.,consonantvervoeging,
-Oblivisci,vergeten,"Obliviscor, oblitus sum",ww.,consonantvervoeging,
-petere,"zoeken, vragen","peto, petivi, petitum",ww.,consonantvervoeging,
-"ponere
-ante-ponere
-ap-ponere
-pro-ponere
-re-ponere","plaatsen, leggen
-vooropstellen, prefereren (boven: dat.)
-plaatsen, voorzetten, meegeven, toevoegen, beschouwen als
-bekendmaken, voorleggen
-neerzetten, wegleggen","pono, posui, positum
-antepono
-appono ...
-propono …
-repono …",ww.,consonantvervoeging,
-poscere,"eisen, verlangen","posco, poposci, -",ww.,consonantvervoeging,
-quaerere,"zoeken, vragen","quaero, quaesi(v)i, quaesitum",ww.,consonantvervoeging,
-"scandere
-de-scendere","klimmen
-afdalen","scando, scandi, scansum
-descendo …",ww.,consonantvervoeging,
-scribere,schrijven,"scribo, scripsi, scriptum",ww.,consonantvervoeging,
-"sidere
-sub-sidere","gaan zitten
-zich neerzetten","sido, sedi, sessum
-subsido ...",ww.,consonantvervoeging,
-"sistere
-con-sistere","doen staan, plaatsen, zetten
-bijeenkomen, zich opstellen, blijven staan","sisto, stiti/steti, statum
-consisto, constiti, -",ww.,consonantvervoeging,
-surgere,"oprijzen, opstaan","surgo, surrexi, surrectum",ww.,consonantvervoeging,
-tangere,"aanraken, treffen","tango, tetigi, tactum",ww.,consonantvervoeging,
-tegere,bedekken,"tego, texi (3)",ww.,consonantvervoeging,
-"tendere
-ex-tendere","spannen, strak aantrekken
-uitspreiden, uitstrekken","tendo, tetendi, tentum/tensum
-extendo, extendi, extentum/extensum",ww.,consonantvervoeging,
-tingere,"natmaken, bevochtigen, bestrijken","tingo, tinxi, tinctum",ww.,consonantvervoeging,
-"tollere
-at-tollere","opheffen, wegnemen
-opheffen, oprapen","tollo, sustuli, sublatum
-attollo, -, -",ww.,consonantvervoeging,
-"trahere
-de-trahere","trekken
-naar beneden trekken, ontrukken, afnemen","traho, traxi, tractum
-detraho ...",ww.,consonantvervoeging,
-"vertere
-re-verti","(om)draaien
-teruggaan, terugkeren","verto, verti, versum
-revertor, reverti, reversum",ww.,consonantvervoeging,
-vincere,overwinnen,"vinco, vici, victum",ww.,consonantvervoeging,
-vivere,leven,"vivo, vixi, -",ww.,consonantvervoeging,
-volvere,draaien,"volvo, volvi, volutum",ww.,consonantvervoeging,
-"*-plere
-com-plere","(vullen)
-vullen","(gereconstrueerde vorm)
-compleo, complevi, completum",ww.,e-vervoeging,
-"candere
-in-cendere","schijnen, schitteren
-verbranden","candeo, candui, -
-incendo, incendi, incensum",ww.,e-vervoeging,
-debere,Moeten,,ww.,e-vervoeging,
-decere,"passen, betamen","deceo, decui, -",ww.,e-vervoeging,
-"habere
-prae-bere
-pro-hibere
-hab-it-are","hebben, houden
-veroorzaken, geven
-weghouden van, verbieden
-wonen",,ww.,e-vervoeging,
-iubere,bevelen,"iubeo, iussi, iussum",ww.,e-vervoeging,
-manere,blijven,"maneo, mansi, mansum",ww.,e-vervoeging,
-movere,bewegen,"moveo, movi, motum",ww.,e-vervoeging,
-parere,gehoorzamen,,ww.,e-vervoeging,
-placere,"bevallen, behagen",,ww.,e-vervoeging,
-polliceri,"beloven, aanbieden","polliceor, pollicitus sum",ww.,e-vervoeging,
-respondere ,antwoorden,"respondeo, respondi, responsum",ww.,e-vervoeging,
-"ridere
-de-ridere","lachen, lachen om
-uitlachen, bespotten","rideo, risi, risum
-derideo ...",ww.,e-vervoeging,
-sedere,zitten,"sedeo, sedi, sessum",ww.,e-vervoeging,
-solere,gewoon zijn,"soleo, solitus sum",ww.,e-vervoeging,
-tacere ,zwijgen,,ww.,e-vervoeging,
-"tenere
-con-tinere
-re-tinere","houden
-bijeen houden, bevatten
-tegenhouden, bewaren, behouden","teneo, tenui, tentum
-contineo …
-retineo …",ww.,e-vervoeging,
-videre,zien,"video, visi, visum",ww.,e-vervoeging,
-"capere
-ac-cipere
-ex-cipere
-in-cipere
-re-cipere","nemen, grijpen
-ontvangen, aannemen
-uitnemen
-beginnen, aanvangen
-ontvangen, terugnemen","capio, cepi, captum
-accipio, accepi, acceptum
-excipio …
-incipio …
-recipio …",ww.,korte i-vervoeging,
-coepisse (enkel pf.),beginnen,"coepi, coeptum",ww.,korte i-vervoeging,
-"cupere
-con-cupi-sc-ere","verlangen
-beginnen te verlangen","cupio, cupivi, cupitum
-concupisco, concupi(v)i, concupitum",ww.,korte i-vervoeging,
-"facere
-con-ficere
-de-ficere
-ef-ficere
-inter-ficere
-per-ficere
-pro-ficere","doen, maken
-bijeenbrengen, vervaardigen, voltooien, verteren
-ontbreken
-tot stand brengen
-afmaken, doden
-afmaken, voltooien
-vorderingen maken","facio, feci, factum
-conficio, confeci, confectum
-deficio …
-efficio …
-interficio …
-perficio …
-proficio …",ww.,korte i-vervoeging,
-"fugere
-ef-fugere","(ont)vluchten
-ontsnappen, ontkomen, ontvluchten","fugio, fugi, -
-effugio ...",ww.,korte i-vervoeging,
-"iacere
-ab-icere
-ad-icere","werpen, gooien
-weggooien
-werpen naar, toevoegen","iacio, ieci, iactum
-abicio, abieci, abiectum
-adicio …",ww.,korte i-vervoeging,
-mori,sterven,"morior, mortuus sum",ww.,korte i-vervoeging,
-"rapere
-ar-ripere
-cor-ripere
-e-ripere","grijpen, roven
-aanpakken, vastgrijpen
-vastgrijpen
-uittrekken","rapio, rapui, raptum
-arripio, arripui, arreptum
-corripio …
-eripio …",ww.,korte i-vervoeging,
-"specere/spicere
-a-spicere
-circum-spicere
-con-spicere
-re-spicere ","zien
-kijken naar
-rondom kijken
-bemerken
-terugkijken, omkijken ","specio/spicio, spexi, spectum
-aspicio, aspexi, aspectum
-circumspicio …
-conspicio …
-respicio …",ww.,korte i-vervoeging,
-audire,horen,,ww.,lange i-vervoeging,
-dormire,slapen,,ww.,lange i-vervoeging,
-nutrire,voeden,,ww.,lange i-vervoeging,
-oriri,ontstaan,"orior, ortus sum",ww.,lange i-vervoeging,
-"scire
-ne-scire","weten, kennen, begrijpen, kunnen
-niet weten",,ww.,lange i-vervoeging,
-"venire
-circum-venire
-con-venire
-in-venire
-per-venire
-super-venire","komen
-omsingelen
-samenkomen, overeenkomen, passen bij (+ dat.)
-vinden, aantreffen
-bereiken, komen tot
-neerkomen op, plots verschijnen","venio, veni, ventum
-circumvenio ...
-convenio …
-invenio …
-pervenio …
-supervernio …",ww.,lange i-vervoeging,
-"esse
-ab-esse
-ad-esse
-de-esse
-inter-esse","zijn
-weg zijn, afwezig zijn
-erbij zijn, aanwezig zijn
-ontbreken, weg zijn, prijsgeven
-ertussen zijn, van belang zijn, verschillen, deelnemen","sum, fui, futurum
-absum, afui, afuturum
-adsum/assum, adfui/affui, adfuturum/affuturm
-desum …
-intersum …",ww.,onregelmatig,
-"ferre
-af-ferre
-re-ferre
-transferre","dragen, brengen
-(mee)brengen, dragen naar
-terugbrengen
-overbrengen","fero, tuli, latum
-affero ...
-refero …
-transfero …",ww.,onregelmatig,
-fieri,worden,"fio, factus sum",ww.,onregelmatig,
-inquit,"hij zegt, hij zei",inquam,ww.,onregelmatig,
-"ire
-ab-ire
-ad-ire
-ex-ire
-in-ire
-per-ire
-red-ire
-sub-ire
-trans-ire","gaan
-weggaan
-ernaartoe gaan
-buitengaan
-binnengaan
-verloren gaan, omkomen
-teruggaan
-ondergaan, naderen, voor de geest komen
-overgaan","eo, ii, itum
-abeo …
-adeo …
-exeo …
-ineo …
-pereo …
-redeo …
-subeo …
-transeo …",ww.,onregelmatig,
-posse,"kunnen, mogen","possum , potui, -",ww.,onregelmatig,
-velle,"willen, verlangen, begeren","volo, volui, -",ww.,onregelmatig,
+Grondwoord,Middenkolom,Betekenis,Woordsoort,Extra,Bron
+ūnus,"ūna, ūnum",1,telwoord,hoofdtelwoord,1e jaar
+duo,"duae, duo",2,telwoord,hoofdtelwoord,2e jaar
+trēs,"trēs, tria",3,telwoord,hoofdtelwoord,1e jaar
+quattuor,-,4,telwoord,hoofdtelwoord,2e jaar
+quinque,-,5,telwoord,hoofdtelwoord,2e jaar
+sex,-,6,telwoord,hoofdtelwoord,1e jaar
+septem,-,7,telwoord,hoofdtelwoord,2e jaar
+octō,-,8,telwoord,hoofdtelwoord,2e jaar
+novem,-,9,telwoord,hoofdtelwoord,2e jaar
+decem,-,10,telwoord,hoofdtelwoord,2e jaar
+vīgintī,-,20,telwoord,hoofdtelwoord,1e jaar
+centum,-,100,telwoord,hoofdtelwoord,2e jaar
+mille,"(mv.) millia, millium",1000,telwoord,hoofdtelwoord,2e jaar
+alius,"alia, aliud",(een) ander,voornaamwoord,onbepaald,1e jaar
+cum,+abl.,(samen) met,voorzetsel,+abl.,1e jaar
+decimus,"decima, decimum",10de,telwoord,rangtelwoord,2e jaar
+prīmus,"prīma, prīmum",1ste,telwoord,rangtelwoord,1e jaar
+secundus,"secunda, secundum",2de,telwoord,rangtelwoord,2e jaar
+bis,-,"2x, tweemaal",telwoord,telbijwoord,1e jaar
+tertius,"tertia, tertium",3de,telwoord,rangtelwoord,2e jaar
+quartus,"quarta, quartum",4de,telwoord,rangtelwoord,2e jaar
+quintus,"quinta, quintum",5de,telwoord,rangtelwoord,2e jaar
+sextus,"sexta, sextum",6de,telwoord,rangtelwoord,2e jaar
+septimus,"septima, septimum",7de,telwoord,rangtelwoord,2e jaar
+octāvus,"octāva, octāvum",8ste,telwoord,rangtelwoord,2e jaar
+nōnus,"nōna, nōnum",9de,telwoord,rangtelwoord,2e jaar
+pervenīre,"perveniō, pervēnī, perventum","aankomen, bereiken",werkwoord,ī-vervoeging,1e jaar
+oppugnāre,oppugnō,"aanvallen, bestormen",werkwoord,a-vervoeging,1e jaar
+C,-,afkorting van voornaam Gāius,substantief,1e klasse,C1T1
+conficere,"cōnficiō, confēcī, confectum",afmaken,werkwoord,ĭ-vervoeging,2e jaar
+iam,-,"al, reeds",bijwoord,-,2e jaar
+sic,-,"aldus, zo",bijwoord,-,1e jaar
+sōlus,"sōla, sōlum",alleen,adjectief,1e klasse,1e jaar
+sī,-,"als, indien",voegwoord,onderschikkend,2e jaar
+respondēre,"respondeō, respondī, respōnsum",antwoorden,werkwoord,e-vervoeging,2e jaar
+timidus,"timida, timidum","bang, angstig",adjectief,1e klasse,2e jaar
+tegere,"tegō, tēxī, tēctum","bedekken, beschermen",werkwoord,consonantvervoeging,1e jaar
+agitāre,agitō,"bedrijven, zich bezighouden met",werkwoord,a-vervoeging,C1T1
+incipere,"incipiō, incēpī, inceptum",beginnen,werkwoord,ĭ-vervoeging,1e jaar
+hūmānus,"hūmāna, hūmānum","beschaafd, menselijk",adjectief,1e klasse,1e jaar
+imperāre,imperō,bevelen,werkwoord,a-vervoeging,1e jaar
+iubēre,"iubeō, iussī, iussum","bevelen, opdragen",werkwoord,e-vervoeging,1e jaar
+admirārī,"admiror, admirātus sum","bewonderen, zich verwonderen",werkwoord,a-vervoeging,1e jaar
+succumbere,"succumbō, succubuī, succubitum",bezwijken,werkwoord,consonantvervoeging,C1T1
+apud,+acc.,bij,voorzetsel,+acc.,C1T1
+ad,+acc.,"bij, tot, naar",voorzetsel,+acc.,1e jaar
+compōnere,"compōnō, composuī, compositum","bijeenzetten, ordenen",werkwoord,consonantvervoeging,C1T1
+paene,-,bijna,bijwoord,-,2e jaar
+ferē,-,"bijna, bijna altijd",bijwoord,-,2e jaar
+manēre,"maneō, mansī, mansum","blijven, wachten op",werkwoord,e-vervoeging,1e jaar
+īrātus,"īrāta, īrātum",boos,adjectief,1e klasse,1e jaar
+frangere,"frangō, frēgī, fractum",breken,werkwoord,consonantvervoeging,2e jaar
+ferre,"ferō, tulī, lātum","brengen, dragen",werkwoord,onregelmatig,C1T1
+ibi,-,daar,bijwoord,-,1e jaar
+eā … quā,-,daarlangs … waarlangs,bijwoord,-,1e jaar
+deinde,-,"daarna, vervolgens",bijwoord,-,1e jaar
+illinc,-,daarvandaan,bijwoord,-,2e jaar
+cēterī,"cēterae, cētera","de anderen, de rest",voornaamwoord,onbepaald,1e jaar
+bracchium,bracchiī,de arm,substantief,1e klasse,1e jaar
+mōns,montis m.,de berg,substantief,2e klasse,1e jaar
+custōs,custōdis,"de bewaker, de wacht",substantief,2e klasse,1e jaar
+flōs,flōris m.,de bloem,substantief,2e klasse,1e jaar
+socius,sociī,"de bondgenoot, de kameraad",substantief,1e klasse,2e jaar
+incendium,incendii,de brand,substantief,1e klasse,2e jaar
+venter,ventris,de buik,substantief,2e klasse,2e jaar
+arx,arcis,de burcht,substantief,2e klasse,1e jaar
+diēs,diēī m./v.,de dag,substantief,3e klasse,1e jaar
+fīlia,fīliae,de dochter,substantief,1e klasse,1e jaar
+familia,familiae,de familie,substantief,1e klasse,2e jaar
+mēns,mentis,"de geest, het verstand, de gezindheid",substantief,2e klasse,1e jaar
+mōs,mōris,"de gewoonte, de zede, de levenswijze, het karakter",substantief,2e klasse,1e jaar
+lēgātus,lēgātī,de gezant; de onderbevelhebber; de gouverneur,substantief,1e klasse,1e jaar
+deus,deī,de god; God,substantief,1e klasse,1e jaar
+fīnis,fīnis m,"de grens, het einde",substantief,2e klasse,C1T1
+humus,humī v.,"de grond, de bodem",substantief,1e klasse,1e jaar
+avus,avī,"de grootvader, de opa",substantief,1e klasse,1e jaar
+manus,manūs v.,de hand,substantief,3e klasse,2e jaar
+collis,collis m.,de heuvel,substantief,2e klasse,1e jaar
+canis,canis,de hond,substantief,2e klasse,1e jaar
+famēs,famis,de honger,substantief,2e klasse,1e jaar
+studium,studiī,"de ijver, het enthousiasme, de sympathie",substantief,1e klasse,1e jaar
+puer,puerī,"de jongen, het kind; de slaaf",substantief,1e klasse,1e jaar
+rēx,rēgis m.,de koning,substantief,2e klasse,1e jaar
+pertinācia,pertināciae,"de koppigheid, de volharding",substantief,1e klasse,C1T1
+sumptus,sumptūs,de kost,substantief,3e klasse,C1T1
+vīs,- v.,"de kracht, het geweld",substantief,2e klasse,1e jaar
+corōna,corōnae,de krans,substantief,1e klasse,2e jaar
+lītus,lītoris,de kust,substantief,2e klasse,1e jaar
+dux,ducis m.,de leider,substantief,2e klasse,1e jaar
+amor,amōris,de liefde,substantief,2e klasse,1e jaar
+homō,hominis m.,"de mens, de man",substantief,2e klasse,1e jaar
+virtūs,virtūtis v.,"de moed, de dapperheid",substantief,2e klasse,C1T1
+māter,mātris,de moeder,substantief,2e klasse,1e jaar
+mūrus,mūrī,de muur,substantief,1e klasse,1e jaar
+nox,noctis,de nacht,substantief,2e klasse,1e jaar
+collum,collī,de nek,substantief,1e klasse,1e jaar
+bellum,bellī,de oorlog,substantief,1e klasse,1e jaar
+trānsitus,trānsitūs,"de overgang, de doortocht",substantief,3e klasse,1e jaar
+locus,locī,"de plaats, het gebied, het terrein",substantief,1e klasse,1e jaar
+pretium,pretiī,"de prijs, de waarde",substantief,1e klasse,2e jaar
+calamitas,calamitātis,de ramp,substantief,2e klasse,C1T1
+rosa,rosae,de roos,substantief,1e klasse,1e jaar
+flāgitium,flāgitii,"de schanddaad, de misdaad",substantief,1e klasse,C1T1
+servus,servī,"de slaaf, de dienaar",substantief,1e klasse,1e jaar
+proelium,proeliī,"de slag, de strijd, het gevecht",substantief,1e klasse,1e jaar
+mīles,mīlitis m.,de soldaat,substantief,2e klasse,1e jaar
+genus,generis,"de soort, de afkomst, het geslacht",substantief,2e klasse,2e jaar
+urbs,urbis,de stad,substantief,2e klasse,1e jaar
+oppidum,oppidī,"de stad, de vesting",substantief,1e klasse,1e jaar
+saxum,saxī,"de steen, de rots",substantief,1e klasse,1e jaar
+sevēritās,severitātis,de strengheid,substantief,2e klasse,2e jaar
+ferōcia,ferōciae,"de strijdlust, de felheid",substantief,1e klasse,C1T1
+mensa,mensae,de tafel,substantief,1e klasse,2e jaar
+dens,dentis m.,de tand,substantief,2e klasse,2e jaar
+adversārius,adversāriī,de tegenstander,substantief,1e klasse,C1T1
+tempus,temporis,de tijd,substantief,2e klasse,1e jaar
+aetās,aetātis,"de tijd, de leeftijd",substantief,2e klasse,1e jaar
+toga,togae,de toga,substantief,1e klasse,1e jaar
+tunica,tunicae,de tuniek,substantief,1e klasse,2e jaar
+geminī,geminōrum,de tweelingen,substantief,1e klasse,1e jaar
+pater,patris,de vader,substantief,2e klasse,1e jaar
+hostis,hostis m.,de vijand,substantief,2e klasse,1e jaar
+piscis,piscis m.,de vis,substantief,2e klasse,2e jaar
+āla,ālae,de vleugel,substantief,1e klasse,1e jaar
+classis,classis,de vloot,substantief,2e klasse,C1T1
+cōpia,cōpiae,"de voorraad, de gelegenheid; (mv.) de troepen",substantief,1e klasse,1e jaar
+pāx,pācis,de vrede,substantief,2e klasse,C1T1
+amīcus,amīcī,de vriend,substantief,1e klasse,1e jaar
+vēritās,vēritātis,"de waarheid, de waarachtigheid, de oprechtheid, de werkelijkheid",substantief,2e klasse,1e jaar
+arma,armōrum,de wapens,substantief,1e klasse,1e jaar
+via,viae,"de weg, de straat",substantief,1e klasse,1e jaar
+lēx,lēgis,de wet,substantief,2e klasse,1e jaar
+vīnum,vīnī,de wijn,substantief,1e klasse,1e jaar
+hiems,hiemis,de winter,substantief,2e klasse,2e jaar
+lupa,lupae,de wolvin,substantief,1e klasse,1e jaar
+vulnus,vulneris,de wond,substantief,2e klasse,1e jaar
+fīlius,fīliī,de zoon,substantief,1e klasse,1e jaar
+putāre,putō,"denken, menen, beschouwen als",werkwoord,a-vervoeging,2e jaar
+hic,"haec, hoc","deze, dit",voornaamwoord,aanwijzend,1e jaar
+idem,"eadem, idem",dezelfde,voornaamwoord,aanwijzend,1e jaar
+prope,+acc.,"dichtbij, bijna",voorzetsel,+acc.,1e jaar
+iste,"ista, istud","die, dat",voornaamwoord,aanwijzend,1e jaar
+ille,"illa, illud","die, dat, hij, zij, het",voornaamwoord,aanwijzend,2e jaar
+servīre,serviō,dienen,werkwoord,ī-vervoeging,C1T1
+saepe,-,"dikwijls, vaak",bijwoord,-,2e jaar
+statim,-,"direct, onmiddellijk",bijwoord,-,1e jaar
+interficere,"interficiō, interfēcī, interfectum",doden,werkwoord,ĭ-vervoeging,1e jaar
+necāre,necō,doden,werkwoord,a-vervoeging,1e jaar
+per,+acc.,"doorheen, gedurende",voorzetsel,+acc.,2e jaar
+gerere,"gerō, gessī, gestum","dragen, doen",werkwoord,consonantvervoeging,1e jaar
+tenuis,"tenuis, tenue","dun, fijn, teer",adjectief,2e klasse,2e jaar
+ergō,-,dus,voegwoord,nevenschikkend,1e jaar
+itaque,-,dus,voegwoord,nevenschikkend,1e jaar
+vēro,-,"echter, inderdaad, werkelijk",bijwoord,-,1e jaar
+paulum/paulo,-,"een weinig, een beetje",bijwoord,-,1e jaar
+ōlim,-,"eens, vroeger",bijwoord,-,2e jaar
+potius,-,eerder,bijwoord,-,C1T1
+poscere,"poscō, poposcī","eisen, verlangen",werkwoord,consonantvervoeging,2e jaar
+uterque,"utraque, utrumque",elk van beide(n),voornaamwoord,onbepaald,1e jaar
+-que,-,en,voegwoord,nevenschikkend,1e jaar
+nēc/neque,-,"en niet, ook niet, zelfs niet",voegwoord,nevenschikkend,2e jaar
+et,-,"en, ook, zelfs",voegwoord,nevenschikkend,1e jaar
+singulus,"singula, singulum","enig, telkens één",adjectief,1e klasse,2e jaar
+circumstāre,"circumstō, circumstetī","eromheen staan, dreigen",werkwoord,a-vervoeging,1e jaar
+īre,"eō, iī, itum",gaan,werkwoord,onregelmatig,1e jaar
+cēdere,"cēdō, cessī, cessum","gaan, weggaan, wijken",werkwoord,consonantvervoeging,C1T1
+nullus,"nulla, nullum",geen (enkele),voornaamwoord,onbepaald,2e jaar
+omnis,"omnis, omne","geheel, elk, ieder, alle",adjectief,2e klasse,1e jaar
+pārēre,"pareō, paruī, pāritum",gehoorzamen,werkwoord,e-vervoeging,2e jaar
+adversus,+acc.,"gekeerd naar, ongunstig",voorzetsel,+acc.,C1T1
+pār,paris,"gelijk aan, opgewassen tegen",adjectief,2e klasse,2e jaar
+fēlix,fēlicis,"gelukkig, welvarend",adjectief,2e klasse,2e jaar
+dare,"dō, dedī, datum",geven,werkwoord,a-vervoeging,2e jaar
+sānus,"sāna, sānum",gezond,adjectief,1e klasse,1e jaar
+labī,"labor, lapsus sum",glijden,werkwoord,consonantvervoeging,2e jaar
+iacere,"iaciō, iēcī, iactum",gooien,werkwoord,ĭ-vervoeging,1e jaar
+arripere,"arripiō, arripuī, arreptum","grijpen, arresteren, aanvallen, oppakken, absorberen",werkwoord,ĭ-vervoeging,1e jaar
+magnus,"magna, magnum",groot,adjectief,1e klasse,2e jaar
+conciliāre,conciliō,"gunstig stemmen, verschaffen, tot stand brengen",werkwoord,a-vervoeging,C1T1
+dūrus,"dūra, dūrum",hard,adjectief,1e klasse,1e jaar
+habēre,"habeō, habuī, habitum","hebben, houden",werkwoord,e-vervoeging,1e jaar
+sacēr,"sacra, sacrum",heilig,adjectief,1e klasse,1e jaar
+renovāre,renovō,hernieuwen,werkwoord,a-vervoeging,C1T1
+reficere,"reficiō, refēcī, refectum","herstellen, terugmaken",werkwoord,ĭ-vervoeging,C1T1
+imperium,imperiī n.,"het bevel, het gezag, de heerschappij, het rijk",substantief,1e klasse,1e jaar
+pānis,pānis m.,het brood,substantief,2e klasse,1e jaar
+tectum,tectī,"het dak, het huis",substantief,1e klasse,2e jaar
+pars,partis,"het deel, het gedeelte, de kant",substantief,2e klasse,1e jaar
+insula,insulae,het eiland,substantief,1e klasse,C1T1
+pecūnia,pecūniae,het geld,substantief,1e klasse,1e jaar
+dōnum,dōnī,het geschenk,substantief,1e klasse,1e jaar
+perīculum,perīculī,het gevaar,substantief,1e klasse,2e jaar
+caput,capitis o.,het hoofd; de hoofdstad; het hoofdstuk,substantief,2e klasse,1e jaar
+domus,domūs v.,het huis,substantief,3e klasse,1e jaar
+annus,annī,het jaar,substantief,1e klasse,1e jaar
+castra,castrōrum,"het kamp, de legerplaats",substantief,1e klasse,1e jaar
+rēgnum,rēgnī,"het koningschap, de heerschappij, het rijk, het koninkrijk",substantief,1e klasse,1e jaar
+exercitus,exercitūs,het leger,substantief,3e klasse,1e jaar
+corpus,corporis,"het lichaam, het lijk",substantief,2e klasse,1e jaar
+fortūna,fortūnae,"het lot, het geluk, de hoge positie; het ongeluk; (mv.) het vermogen, het bezit",substantief,1e klasse,1e jaar
+puella,puellae,het meisje,substantief,1e klasse,1e jaar
+virgō,virginis,"het meisje, de jonge vrouw, de maagd",substantief,2e klasse,1e jaar
+medium,mediī,het midden,substantief,1e klasse,2e jaar
+auris,auris,het oor,substantief,2e klasse,2e jaar
+arbitrium,arbitrii,"het oordeel, de beslissing",substantief,1e klasse,C1T1
+equus,equī,het paard,substantief,1e klasse,1e jaar
+cōnsilium,cōnsiliī,"het plan, het beleid, het besluit, de raad",substantief,1e klasse,1e jaar
+patria,patriae,"het vaderland, de vaderstad",substantief,1e klasse,1e jaar
+cupiditas,cupiditātis,het verlangen,substantief,2e klasse,C1T1
+cibus,cibī,het voedsel,substantief,1e klasse,2e jaar
+aqua,aquae,het water,substantief,1e klasse,2e jaar
+tēlum,tēlī,"het werptuig, de wapens",substantief,1e klasse,1e jaar
+verbum,verbī,"het woord, het werkwoord",substantief,1e klasse,1e jaar
+argentum,argentī,het zilver,substantief,1e klasse,2e jaar
+gladius,gladiī,het zwaard,substantief,1e klasse,1e jaar
+flagrāre,flagrō,hevig branden,werkwoord,a-vervoeging,C1T1
+hinc,-,hiervandaan,bijwoord,-,2e jaar
+is,"ea, id","hij, zij, het, degene, datgene, deze, dit",voornaamwoord,aanwijzend,1e jaar
+inquit,inquit,"hij/zij zegt, hij/zij zei",werkwoord,onregelmatig,2e jaar
+quotiens,-,hoe vaak,bijwoord,-,2e jaar
+quam,-,"hoe, wat; (na comp.) dan",bijwoord,-,C1T1
+etsī,-,"hoewel, ofschoon",voegwoord,onderschikkend,C1T1
+altus,"ālta, āltum","hoog, diep",adjectief,1e klasse,2e jaar
+summus,"summa, summum","hoogst, hoogste",adjectief,1e klasse,1e jaar
+tenēre,"teneō, tenuī, tentum","houden, vasthouden",werkwoord,e-vervoeging,2e jaar
+(ali)quis,"(ali)qua, (ali)quid",iemand,voornaamwoord,onbepaald,2e jaar
+egō,meī,ik,voornaamwoord,persoonlijk,2e jaar
+inquam,inquam,"ik zeg, ik zei",werkwoord,onregelmatig,2e jaar
+in,+abl.,"in, op",voorzetsel,+abl.,1e jaar
+interim,-,"intussen, voorlopig",bijwoord,-,1e jaar
+intelligere,"intellegō, intellexī, intellectum","inzien, begrijpen",werkwoord,consonantvervoeging,C1T1
+Ītalia,Ītaliae,Italië,substantief,1e klasse,1e jaar
+tū,tuī,jij,voornaamwoord,persoonlijk,1e jaar
+tuus,"tua, tuum",jouw,voornaamwoord,bezittelijk,2e jaar
+vōs,vestrum,jullie,voornaamwoord,persoonlijk,2e jaar
+vester,"vestra, vestrum",jullie,voornaamwoord,bezittelijk,2e jaar
+venīre,"veniō, vēnī, ventum",komen,werkwoord,ī-vervoeging,1e jaar
+posse,"possum, potuī",kunnen,werkwoord,onregelmatig,1e jaar
+infrā,+acc.,lager,voorzetsel,+acc.,1e jaar
+diū,-,"lang, lange tijd",bijwoord,-,C1T1
+praeter,+acc.,langs; behalve,voorzetsel,+acc.,1e jaar
+mittere,"mittō, mīsī, missum","laten gaan, sturen, zenden",werkwoord,consonantvervoeging,1e jaar
+post(eā),-,later,bijwoord,-,1e jaar
+nōscere,"nōscō, nōvī, nōtum","leren kennen, te weten komen",werkwoord,consonantvervoeging,1e jaar
+remittere,"remittō, remīsī, remissum","loslaten, terugsturen",werkwoord,consonantvervoeging,1e jaar
+sed,-,maar,voegwoord,nevenschikkend,1e jaar
+autem,-,"maar, echter",voegwoord,nevenschikkend,2e jaar
+facere,"faciō, fēcī, factum","maken, doen",werkwoord,ĭ-vervoeging,1e jaar
+rapere,"rapiō, rapuī, raptum","meeslepen, snel grijpen, roven",werkwoord,ĭ-vervoeging,1e jaar
+meus,"mea, meum",mijn,voornaamwoord,bezittelijk,1e jaar
+difficilis,"difficilis, difficile",moeilijk,adjectief,2e klasse,1e jaar
+dēbēre,"dēbeō, dēbuī, dēbitum","moeten, verschuldigd zijn",werkwoord,e-vervoeging,1e jaar
+post,+acc.,na,voorzetsel,+acc.,1e jaar
+in,+acc.,"naar, tegen, tot",voorzetsel,+acc.,1e jaar
+accēdere,"accēdō, accessī, accessum","naderen, erbij komen",werkwoord,consonantvervoeging,1e jaar
+vix,-,nauwelijks,bijwoord,-,1e jaar
+capere,"capiō, cēpī, captum","nemen, bereiken",werkwoord,ĭ-vervoeging,1e jaar
+nēmō,nullius,niemand,voornaamwoord,onbepaald,1e jaar
+nōn,-,niet,bijwoord,-,1e jaar
+nescīre,nesciō,niet weten,werkwoord,ī-vervoeging,2e jaar
+nihil,-,niets,voornaamwoord,onbepaald,2e jaar
+novus,"nova, novum","nieuw, ongewoon",adjectief,1e klasse,1e jaar
+appellare,appellō,"noemen, toespreken",werkwoord,a-vervoeging,1e jaar
+necesse,necesse,noodzakelijk,adjectief,onverbuigbaar,2e jaar
+nunc,-,nu,bijwoord,-,1e jaar
+aut,-,of,voegwoord,nevenschikkend,2e jaar
+quod,-,omdat,voegwoord,onderschikkend,C1T1
+quoniam,-,"omdat, aangezien",voegwoord,onderschikkend,1e jaar
+sub,+abl.,onder,voorzetsel,+abl.,2e jaar
+noster,"nostra, nostrum","ons, onze",voornaamwoord,bezittelijk,2e jaar
+negāre,negō,"ontkennen, weigeren",werkwoord,a-vervoeging,2e jaar
+recipere,"recipiō, recēpī, receptum","ontvangen, terugkrijgen",werkwoord,ĭ-vervoeging,2e jaar
+accipere,"accipiō, accēpī, acceptum","ontvangen, vernemen",werkwoord,ĭ-vervoeging,1e jaar
+umquam,-,ooit,bijwoord,-,1e jaar
+quoque,-,ook,bijwoord,-,1e jaar
+etiam,-,"ook, zelfs",bijwoord,-,1e jaar
+bellāre,bellō,oorlog voeren,werkwoord,a-vervoeging,C1T1
+fugāre,fugō,op de vlucht jagen,werkwoord,a-vervoeging,1e jaar
+cavēre,"caveō, cāvī, cautum","op zijn hoede zijn, oppassen voor",werkwoord,e-vervoeging,1e jaar
+excitāre,excitō,"opwekken, opruien, aanzetten tot",werkwoord,a-vervoeging,1e jaar
+vetus,veteris,oud,adjectief,2e klasse,2e jaar
+transferre,"transferō, transtulī, translātum",overbrengen,werkwoord,onregelmatig,2e jaar
+dēdere,"dēdō, dēdidī, dēditum",overgeven,werkwoord,consonantvervoeging,C1T1
+trādere,"trādō, trādidī, trāditum","overgeven, overleveren",werkwoord,consonantvervoeging,C1T1
+trānsīre,"trānseō, trānsiī, trānsitum",overtrekken,werkwoord,onregelmatig,1e jaar
+vincere,"vincō, vīcī, victum",overwinnen,werkwoord,consonantvervoeging,1e jaar
+superāre,superō,"overwinnen, overtreffen",werkwoord,a-vervoeging,C1T1
+trādūcere,"trādūcō, trādūxī, trādūctum",overzetten,werkwoord,consonantvervoeging,1e jaar
+pōnere,"pōnō, posuī, positum","plaatsen, zetten, (neer)leggen",werkwoord,consonantvervoeging,1e jaar
+laudāre,laudō,"prijzen, eren, loven",werkwoord,a-vervoeging,2e jaar
+vocāre,vocō,"roepen, noemen",werkwoord,a-vervoeging,1e jaar
+clāmāre,clāmō,"roepen, schreeuwen",werkwoord,a-vervoeging,1e jaar
+errāre,errō,"rondzwerven, dwalen, zich vergissen",werkwoord,a-vervoeging,1e jaar
+ācer,"ācris, ācre","scherp, fel, hevig",adjectief,2e klasse,2e jaar
+scrībere,"scrībō, scrīpsī, scrīptum",schrijven,werkwoord,consonantvervoeging,1e jaar
+dormīre,dormiō,slapen,werkwoord,ī-vervoeging,2e jaar
+modo,-,"slechts, zojuist, (+gen.) op de manier van",bijwoord,-,C1T1
+tristis,"tristis, triste","somber, bedroefd",adjectief,2e klasse,2e jaar
+stāre,"stō, stetī, statum",staan,werkwoord,a-vervoeging,2e jaar
+statuere,"statuō, statuī, statūtum","stellen, vaststellen, besluiten",werkwoord,consonantvervoeging,C1T1
+fortis,"fortis, forte","sterk, dapper",adjectief,2e klasse,1e jaar
+morī,"morior, mortuus sum",sterven,werkwoord,consonantvervoeging,1e jaar
+condere,"condō, condidī, conditum","stichten, opbergen, verbergen",werkwoord,consonantvervoeging,1e jaar
+perīre,"pereō, periī, peritum",te gronde gaan,werkwoord,onregelmatig,C1T1
+contrā,+acc.,"tegen, aan de andere kant van",voorzetsel,+acc.,2e jaar
+dēnique,-,"tenslotte, eindelijk, kortom",bijwoord,-,1e jaar
+nisi,-,"tenzij, als niet",voegwoord,onderschikkend,C1T1
+referre,"referō, rettulī, relātum","terugbrengen, rapporteren, ter sprake brengen",werkwoord,onregelmatig,1e jaar
+repellere,"repellō, reppulī, repulsum",terugdrijven,werkwoord,consonantvervoeging,1e jaar
+revertī,"revertor, reversus sum","teruggaan, terugkeren",werkwoord,consonantvervoeging,2e jaar
+recēdere,"recēdō, recessī, recessum","teruggaan, zich terugtrekken",werkwoord,consonantvervoeging,2e jaar
+reddere,"reddō, reddidī, redditum","teruggeven, maken tot",werkwoord,consonantvervoeging,1e jaar
+redīre,"redeō, rediī, reditum",terugkeren,werkwoord,onregelmatig,C1T1
+respicere,"respiciō, respēxī, respectum","terugkijken, omkijken",werkwoord,ĭ-vervoeging,2e jaar
+repōnere,"repōnō, reposuī, repositum","terugplaatsen, wegleggen",werkwoord,consonantvervoeging,2e jaar
+donicum,-,"terwijl, zolang als, totdat",voegwoord,onderschikkend,C1T1
+dum,-,"terwijl, zolang als, totdat, mits",voegwoord,onderschikkend,1e jaar
+tamen,-,"toch, evenwel",bijwoord,-,C1T1
+tum,-,"toen, dan",bijwoord,-,1e jaar
+cum,-,"toen, nadat, omdat, hoewel",voegwoord,onderschikkend,C1T1
+permittere,"permittō, permīsī, permīssum","toestaan, loslaten",werkwoord,consonantvervoeging,C1T1
+sub,+acc.,tot onder,voorzetsel,+acc.,2e jaar
+trahere,"trahō, trāxī, tractum","trekken, slepen",werkwoord,consonantvervoeging,2e jaar
+inter,+acc.,"tussen, temidden van",voorzetsel,+acc.,1e jaar
+ē/ex,+abl.,"uit, sinds, vanwege",voorzetsel,+abl.,1e jaar
+ultimus,"ultima, ultimum","uiterst, laatste",adjectief,1e klasse,2e jaar
+effundere,"effundō, effūdī, effūsum","uitgieten, vergieten",werkwoord,consonantvervoeging,2e jaar
+ēligere,"ēligō, ēlēgī, ēlectum","uitkiezen, selecteren",werkwoord,consonantvervoeging,1e jaar
+exhaurīre,"exhauriō, exhausī, exhaustum","uitputten, leegdrinken",werkwoord,ī-vervoeging,C1T1
+exclāmāre,exclāmō,uitroepen,werkwoord,a-vervoeging,2e jaar
+cadere,"cadō, cecidī, cāsum","vallen, sneuvelen",werkwoord,consonantvervoeging,1e jaar
+undique,-,van alle kanten,bijwoord,-,1e jaar
+ā/ab,+abl.,"vanaf, vandaan, van; door",voorzetsel,+abl.,1e jaar
+dē,+abl.,"vanaf, weg van/uit, over",voorzetsel,+abl.,2e jaar
+unde,-,"vanwaar, waarvandaan",bijwoord,-,2e jaar
+adprehendere,"adprehendō, adprendī, adprēnsum",vastpakken,werkwoord,consonantvervoeging,1e jaar
+constāre,"cōnstō, constiti, constātum","vaststaan, kosten",werkwoord,a-vervoeging,2e jaar
+multus,"multa, multum",veel,adjectief,1e klasse,1e jaar
+dīvidere,"dīvidō, dīvīsī, dīvīsum","verdelen, scheiden",werkwoord,consonantvervoeging,1e jaar
+oblīviscī,"oblīvīscor, oblītus sum",vergeten,werkwoord,consonantvervoeging,2e jaar
+prohibēre,"prohibeō, prohibuī, prohibitum","verhinderen, afhouden van",werkwoord,e-vervoeging,1e jaar
+obstāre,"obstō, obstitī, obstātum","verhinderen, in de weg staan",werkwoord,a-vervoeging,2e jaar
+cupere,"cupiō, cupīvī, cupītum","verlangen, begeren",werkwoord,ĭ-vervoeging,1e jaar
+petere,"petō, petīvī, petītum","verlangen, vragen, halen, gaan naar, trachten te bereiken",werkwoord,consonantvervoeging,1e jaar
+persequi,"persequor, persecūtus sum",vervolgen,werkwoord,consonantvervoeging,C1T1
+vulnerāre,vulnerō,verwonden,werkwoord,a-vervoeging,1e jaar
+cōgere,"cōgō, coēgī, coactum","verzamelen, dwingen",werkwoord,consonantvervoeging,2e jaar
+invenīre,"inveniō, invēnī, inventum","vinden, uitvinden",werkwoord,ī-vervoeging,1e jaar
+volāre,volō,vliegen,werkwoord,a-vervoeging,1e jaar
+fugere,"fugiō, fūgī",vluchten,werkwoord,ĭ-vervoeging,1e jaar
+anteā,-,"vroeger, tevoren",bijwoord,-,1e jaar
+ubi,-,waar,bijwoord,-,1e jaar
+nam,-,want,voegwoord,nevenschikkend,1e jaar
+dēcēdere,"dēcēdō, dēcessī, dēcessum","weggaan, sterven",werkwoord,consonantvervoeging,C1T1
+ābicere,"ābiciō, ābiēcī, ābiectum",weggooien,werkwoord,ĭ-vervoeging,2e jaar
+paucī,"paucae, pauca",weinigen,adjectief,1e klasse,1e jaar
+quidem,-,"weliswaar, wel",bijwoord,-,1e jaar
+labōrāre,labōrō,werken,werkwoord,a-vervoeging,2e jaar
+trāicere,"trāiciō, trāiēcī, trāiectum","werpen over, laten oversteken",werkwoord,ĭ-vervoeging,1e jaar
+quis,"quis, quid","wie, wat",voornaamwoord,vragend,2e jaar
+quī,"quae, quod","wie, welke, wat",voornaamwoord,betrekkelijk,1e jaar
+nōs,nostrum,wij,voornaamwoord,persoonlijk,2e jaar
+velle,"volō, voluī",willen,werkwoord,onregelmatig,1e jaar
+habitāre,habitō,wonen,werkwoord,a-vervoeging,1e jaar
+incolere,"incolō, incoluī, incultum","wonen in, bewonen",werkwoord,consonantvervoeging,2e jaar
+fierī,"fiō, factus sum","worden, gemaakt worden, gebeuren",werkwoord,onregelmatig,1e jaar
+crūdēlis,"crūdēlis, crūdēle",wreed,adjectief,2e klasse,2e jaar
+mollis,"mollis, molle","zacht, tam",adjectief,2e klasse,2e jaar
+dīcere,"dīcō, dīxī, dictum",zeggen,werkwoord,consonantvervoeging,1e jaar
+ipse,"ipsa, ipsum",zelf,voornaamwoord,aanwijzend,1e jaar
+insidēre,"insidēo, insēdī, insessum","zich houden aan, grijpen, in bezit nemen, vasthouden, bezetten",werkwoord,e-vervoeging,1e jaar
+sē,suī,zichzelf,voornaamwoord,persoonlijk,2e jaar
+vidēre,"videō, vīdī, vīsum",zien,werkwoord,e-vervoeging,1e jaar
+esse,"sum, fuī",zijn,werkwoord,onregelmatig,1e jaar
+suus,"sua, suum","zijn, haar, hun (eigen)",voornaamwoord,bezittelijk,2e jaar
+ita,-,zo,bijwoord,-,C1T1
+ut,-,"zoals, zodra als, dat, opdat",voegwoord,onderschikkend,1e jaar
+quaerere,"quaerō, quaesīvī, quaesītum","zoeken, vragen",werkwoord,consonantvervoeging,2e jaar
+sēcūrus,"sēcūra, sēcūrum","zonder zorg, onbezorgd",adjectief,1e klasse,2e jaar
+cūrāre,cūrō,zorgen voor,werkwoord,a-vervoeging,2e jaar
+tacēre,"taceō, tacuī, tacitum","zwijgen, verzwijgen",werkwoord,e-vervoeging,2e jaar
