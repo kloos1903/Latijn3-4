@@ -197,7 +197,7 @@
         }
     }
 
-    // Expose to global scope
-window.initWoordenfilter = initWoordenfilter;
+    // ✅ FIXED: Expose to global scope (proper indentation)
+    window.initWoordenfilter = initWoordenfilter;
 
 })(jQuery);
