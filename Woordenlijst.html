@@ -1,198 +1,52 @@
 <!doctype html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Woordenlijst – Knoppenfilters + Zoeken</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>CSV Tabel met Woordfilter</title>
+  <link rel="stylesheet" href="style.css?v=1" />
+  <link rel="stylesheet" href="woordfilter.css" />
 
-    <!-- Je eigen CSS -->
-    <link rel="stylesheet" href="style.css?v=1" />
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
 
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
 
-    <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+  <!-- PapaParse -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
-    <!-- PapaParse -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <!-- Your JS -->
+  <script src="Woordenlijst.js"></script>
+  <script src="woordfilter.js"></script>
+</head>
+<body>
+  <h1>Woordenlijst</h1>
 
-    <style>
-      .filter-row {
-        margin-bottom: 1em;
-      }
-      .filter-button {
-        display: inline-block;
-        margin: 2px;
-        padding: 6px 12px;
-        border: 1px solid #ccc;
-        background-color: #f0f0f0;
-        cursor: pointer;
-        border-radius: 4px;
-        font-size: 0.9em;
-      }
-      .filter-button.active {
-        background-color: #007bff;
-        color: white;
-        border-color: #007bff;
-      }
-      .search-box {
-        margin-bottom: 1em;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Woordenlijst</h1>
+  <!-- Woordfilter Container -->
+  <div id="woordfilterContainer"></div>
 
-    <div class="search-box screen-only">
-      <input
-        type="text"
-        id="tableSearch"
-        placeholder="Zoek in eerste 3 kolommen..."
-        style="width: 300px; padding: 4px" />
-    </div>
+  <!-- Table -->
+  <table id="csvTable" class="display" style="width: 100%"></table>
 
-    <div class="filter-row screen-only" id="filter1Row"><strong>Categorie: </strong></div>
-    <div class="filter-row screen-only" id="filter2Row"><strong>Subcategorie: </strong></div>
-
-    <table id="csvTable" class="display" style="width: 100%"></table>
-
-    <script>
-      // Diacritics-insensitive sort for strings
-      jQuery.extend(jQuery.fn.dataTable.ext.type.order, {
-        "string-pre": function (data) {
-          if (typeof data !== "string") {
-            return data;
-          }
-          return data
-            .toLowerCase()
-            .normalize("NFD") // split letters and accents
-            .replace(/[\u0300-\u036f]/g, ""); // remove accents
+  <!-- Initialize -->
+  <script>
+    $(document).ready(function() {
+      // Initialize table
+      initWoordenlijst("Woordenlijst.csv", {
+        onComplete: function() {
+          // Initialize woordfilter AFTER table is ready
+          initWoordenfilter("csvTable", "woordfilterContainer", {
+            col4Index: 3,
+            col5Index: 4,
+            col4Label: "Woordsoort",
+            col5Label: "Extra"
+          });
         }
       });
-
-      // ✅ Accent-insensitive SEARCH
-      jQuery.fn.DataTable.ext.type.search.push(function (data) {
-        if (!data) return "";
-        if (typeof data !== "string") return data;
-        return data
-          .toLowerCase()
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "");
-      });
-      Papa.parse("Woordenlijst.csv", {
-        download: true,
-        header: true,
-        skipEmptyLines: true,
-        complete: function (results) {
-          const allColumns = Object.keys(results.data[0]);
-
-          // Alleen eerste 3 kolommen zichtbaar
-          const columns = allColumns.map((colName, index) => ({
-            title: colName,
-            visible: index < 3
-          }));
-
-          const data = results.data.map((row) => Object.values(row));
-          const colCat = 3; // index van categorie
-          const colSub = 4; // index van subcategorie
-
-          let table = $("#csvTable").DataTable({
-            data: data,
-            columns: columns,
-            paging: false,
-            dom: "t"
-          });
-
-          // 🔍 Zoeken in eerste 3 kolommen
-          $("#tableSearch").on("keyup", function () {
-            let searchTerm = this.value;
-            table.columns().search("");
-            for (let i = 0; i < 3; i++) {
-              table.column(i).search(searchTerm, true, false);
-            }
-            table.draw();
-          });
-
-          // Bouw categorieknoppen
-          function buildCategoryButtons() {
-            $("#filter1Row").find(".filter-button").remove();
-
-            // Alles knop voor categorie
-            let allBtn = $('<button class="filter-button active">Alles</button>').on("click", function () {
-              // Visuele reset
-              $("#filter1Row .filter-button").removeClass("active");
-              $(this).addClass("active");
-
-              // Verwijder ALLE filters
-              table.search("").columns().search("").draw();
-
-              // Verwijder subcategorie-knoppen
-              $("#filter2Row").find(".filter-button").remove();
-            });
-            $("#filter1Row").append(allBtn);
-
-            // Categorieknoppen
-            let categories = table.column(colCat).data().unique().sort();
-            categories.each(function (d) {
-              if (d) {
-                let btn = $('<button class="filter-button">' + d + "</button>").on("click", function () {
-                  // Reset tabel (maar laat zoekterm staan als gebruiker iets intikt)
-                  table.columns().search("").draw();
-
-                  // Zet actieve status
-                  $("#filter1Row .filter-button").removeClass("active");
-                  $(this).addClass("active");
-
-                  // Filter op categorie
-                  table
-                    .column(colCat)
-                    .search("^" + $.fn.dataTable.util.escapeRegex(d) + "$", true, false)
-                    .draw();
-
-                  // Opnieuw subcategorieën bouwen
-                  buildSubcategoryButtons();
-                });
-                $("#filter1Row").append(btn);
-              }
-            });
-          }
-
-          // Bouw subcategorieknoppen
-          function buildSubcategoryButtons() {
-            $("#filter2Row").find(".filter-button").remove();
-
-            // Alles knop voor subcategorie
-            let allBtn = $('<button class="filter-button active">Alles</button>').on("click", function () {
-              $("#filter2Row .filter-button").removeClass("active");
-              $(this).addClass("active");
-              table.column(colSub).search("").draw();
-            });
-            $("#filter2Row").append(allBtn);
-
-            // Subcategorieën op basis van huidige categorie
-            let subcategories = table.column(colSub, { search: "applied" }).data().unique().sort();
-            subcategories.each(function (d) {
-              if (d) {
-                let btn = $('<button class="filter-button">' + d + "</button>").on("click", function () {
-                  $("#filter2Row .filter-button").removeClass("active");
-                  $(this).addClass("active");
-                  table
-                    .column(colSub)
-                    .search("^" + $.fn.dataTable.util.escapeRegex(d) + "$", true, false)
-                    .draw();
-                });
-                $("#filter2Row").append(btn);
-              }
-            });
-          }
-
-          // Start
-          buildCategoryButtons();
-        }
-      });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>

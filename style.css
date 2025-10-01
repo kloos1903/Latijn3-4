@@ -232,6 +232,27 @@ button:hover {
   outline: 2px solid #8ab4ff;
   outline-offset: 2px;
 }
+.filter-row {
+  margin-bottom: 1em;
+}
+.filter-button {
+  display: inline-block;
+  margin: 2px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+.filter-button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+.search-box {
+  margin-bottom: 1em;
+}
 
 /* ========== Screen / Print toggles ========== */
 .print-only {

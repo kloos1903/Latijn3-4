@@ -3,245 +3,87 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Punische oorlogen — overzicht & bronnen</title>
+        <title>Vocabularium — Punische oorlogen</title>
 
+        <!-- DataTables CSS & jQuery -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+        <script src="js/tooltip.js" defer></script>
         <link rel="stylesheet" href="style.css?v=1" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:wght@400;500;600&display=swap"
-            rel="stylesheet" />
+
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 2em;
+            }
+            table.dataTable {
+                width: 100% !important;
+            }
+        </style>
     </head>
-    <body>
+    <body data-col6="C1T1">
         <h1>Cornelius Nepos, De viris Illustribus XIII, 1, 3-5</h1>
 
         <section class="card">
             <h2>Hamilkar</h2>
-
             <p>
-                [3]
-                <span class="word" data-info="interim (bw.): intussen, voorlopig">Interim</span>
-                <span class="word" data-info="Karthāginiensis, -is: de Carthager">Karthāginienses</span>
-                <span class="word" data-info="classis, -is: de vloot">classe</span>
-                <span class="word" data-info="ăpŭd (+ acc.): bij, dichtbij, onder invloed van">apud</span>
-                <span class="word" data-info="insula, -ae: het eiland">insulas</span>
-                <span class="word" data-info="Aegātes, -ium: de Aegatische eilanden">Aegātes</span>
-                <span class="word" data-info="ā/ăb (+ abl.): van(uit), weg van, door">ā</span>
-                <span
-                    class="word"
-                    data-info="Gāius Lutātius Catulus was de consul die in 241 v.C. de Carthaagse vloot bij de Aegatische eilanden versloeg en zo de Eerste Punische Oorlog won."
-                    >C. Lutātio,</span
-                >
-                <span class="word" data-info="consul, consulis: de consul">consule</span>
-                <span class="word" data-info="Rōmānus, -i: de Romein">Rōmānorum,</span>
-                <span class="word" data-info="superāre, -ō: overwinnen">superāti</span>
-                <span class="word" data-info="statuere, -ō, statui, statutum: besluiten, vaststellen">statuērunt</span>
-                <span class="word" data-info="bellum, -i: de oorlog">belli</span>
-                <span class="word" data-info="facere, -iō, fēcī, factum: doen, maken">facere</span>
-                <span class="word" data-info="fīnis, -is: het einde, de grens">fīnem</span>
-                <span class="word" data-info="is, ea, id: die, dat, hij, zij, het + -que: en">eamque</span>
-                <span class="word" data-info="rēs, rēi: de zaak">rēm</span>
-                <span class="word" data-info="arbitrium, -i: het oordeel, het besluit">arbitrio</span>
-                <span class="word" data-info="permittere, -ō, -mīsi, -missum: toestaan, toelaten">permīsērunt</span>
-                <span class="word" data-info="Hamilcar, aris: Hamilcar Barcas, vader van Hannibal">Hamilcaris.</span>
-                <span class="word" data-info="ille, illa, illud: die, dat">Ille</span>
-                <span class="word" data-info="etsi (vgw.): ook al, hoewel">etsi</span>
-                <span class="word" data-info="flăgrāre, -ō: branden, gloeien (figuurlijk: hevig verlangen)"
-                    >flăgrābat</span
-                >
-                <span class="word" data-info="bellāre, -ō: oorlog voeren">bellāndi</span>
-                <span class="word" data-info="cupiditas, -ātis: de begeerte, de hartstocht">cupiditāte,</span>
-                <span class="word" data-info="tamen (bw.): toch, desalniettemin">tamen</span>
-                <span class="word" data-info="pax, pācis: de vrede">pāci</span>
-                <span class="word" data-info="serviundum [esse] &gt; servire, -io: dienen, zich onderwerpen"
-                    >serviundum</span
-                >
-                <span class="word" data-info="putāre, -ō: menen, denken">putāvit,</span>
-                <span class="word" data-info="quod (+ind.): omdat">quod</span>
-                <span class="word" data-info="patria, -ae: het vaderland">patriam</span>
-                <span class="word" data-info="exhaurire, -iō, -hausī, -haustum: uitputten">exhaustam</span>
-                <span class="word" data-info="sumptus, -ūs: de uitgaven, de kost">sumptibūs</span>
-                <span class="word" data-info="diūtius (bw.): langer / langere tijd">diūtius</span>
-                <span class="word" data-info="calamitas, -ātis: de ramp, de ellende">calamitātes</span>
-                <span class="word" data-info="ferre, ferō, tulī, lātum: dragen, verdragen">ferre</span>
-                <span class="word" data-info="nōn (bw.): niet">nōn</span>
-                <span class="word" data-info="posse, possum, potuī: kunnen">posse</span>
-                <span class="word" data-info="intellegere, -ō, -lēxī, -lēctum: begrijpen, inzien">intellegebat,</span>
+                [3] Interim Karthāginiēnsēs classe apud īnsulās Aegātēs ā C. Lutātiō, cōnsule Rōmānōrum, superātī
+                statuērunt bellī facere fīnem eamque rem arbitriō permīserunt Hamilcaris. Ille etsī flăgrabat bellandī
+                cupiditāte, tamen pācī serviundum putāvit, quod patriam exhaustam sūmptibus diūtius calamitātēs ferre
+                nōn posse intellegēbat,
             </p>
-
             <p>
-                [4]
-                <span class="word" data-info="sed (vgw.): maar">sed</span>
-                <span class="word" data-info="ita (bw.): zo, op die manier">ita</span>
-                <span class="word" data-info="ut (+conj.): dat, opdat, zodat">ut</span>
-                <span class="word" data-info="statim (bw.): onmiddellijk">statim</span>
-                <span class="word" data-info="mēns, mentis: de geest, de gedachte">mente</span>
-                <span class="word" data-info="agitāre, -ō: overwegen, handelen">agitāret,</span>
-                <span class="word" data-info="sī (vgw.): als / indien">sī</span>
-                <span class="word" data-info="paulum (bw.): weinig">paulum</span>
-                <span class="word" data-info="modo (bw.): slechts, alleen maar">modo</span>
-                <span class="word" data-info="rēs, rēi: de zaak">rēs</span>
-                <span class="word" data-info="esse, sum, fuī, futurum: zijn">essent</span>
-                <span class="word" data-info="reficere, -iō, -fēcī, -fectum: herstellen, terugmaken">refectae,</span>
-                <span class="word" data-info="bellum, -i: de oorlog">bellum</span>
-                <span class="word" data-info="renovāre, -ō: vernieuwen">renovāre</span>
-                <span class="word" data-info="Rōmānus, -i: de Romein + -que: en">Rōmānosque</span>
-                <span class="word" data-info="arma, -ōrum: de wapens">armis</span>
-                <span class="word" data-info="persequī, -or, -secūtus sum: achtervolgen, vervolgen">persequī,</span>
-                <span class="word" data-info="donicum = donec (vgw.): terwijl, zolang als, totdat">dōnicum</span>
-                <span class="word" data-info="aut ... aut (vgw.): of ... of, hetzij ... hetzij">aut</span>
-                <span class="word" data-info="virtūs, virtūtis (v.): de moed, de deugd, de mannelijkheid">virtūte</span>
-                <span class="word" data-info="vincere, -ō, vīcī, victum: overwinnen">vicissent</span>
-                <span class="word" data-info="aut ... aut (vgw.): of ... of, hetzij ... hetzij">aut</span>
-                <span class="word" data-info="vincere, -ō, vīcī, victum: overwinnen">victi</span>
-                <span class="word" data-info="manus, -ūs (v.): de hand">manūs</span>
-                <span class="word" data-info="dăre, dō, dedī, datum: geven">dedissent.</span>
-                <span class="word" data-info="hic, haec, hoc: deze, dit">Hoc</span>
-                <span class="word" data-info="cōnsilium, -i: het plan, de raad">consilio</span>
-                <span class="word" data-info="pax, pācis: de vrede">pācem</span>
-                <span class="word" data-info="conciliāre, -ō: bijeenbrengen, verkrijgen">conciliāvit;</span>
+                [4] sed ita ut statim mente agitāret, sī paulum modo rēs essēnt refectae, bellum renovāre Rōmānōsque
+                armīs persequī, donicum aut virtūte vīcissent aut vīctī manūs dedissent. Hōc cōnsiliō pācem conciliāvit;
             </p>
-
             <p>
-                [5]
-                <span class="word" data-info="in (+ abl.): in, op">in</span>
-                <span class="word" data-info="qui, quae, quod: die, welke">quo</span>
-                <span class="word" data-info="tantus, -a, -um: zo groot, zoveel">tanta</span>
-                <span class="word" data-info="esse, sum, fuī, futurum: zijn">fuīt</span>
-                <span class="word" data-info="ferocia, -ae: de woestheid, de hevigheid">ferōcia,</span>
-                <span class="word" data-info="cum (+ conj.): toen, omdat, hoewel">cum</span>
-                <span
-                    class="word"
-                    data-info="Gāius Lutātius Catulus was de consul die in 241 v.C. de Carthaagse vloot bij de Aegatische eilanden versloeg en zo de Eerste Punische Oorlog won."
-                    >Catulus</span
-                >
-                <span class="word" data-info="negāre, -ō: ontkennen, weigeren, ontzeggen">negāret</span>
-                <span class="word" data-info="bellum, -i: de oorlog">bellum</span>
-                <span class="word" data-info="compōnere, -ō, -posuī, -positum: samenstellen, regelen"
-                    >compositurum,</span
-                >
-                <span class="word" data-info="nisī (vgw.): tenzij, behalve als">nisī</span>
-                <span class="word" data-info="cum (+ abl.): met, samen met">cum</span>
-                <span class="word" data-info="suus, -a, -um: zijn (eigen), haar (eigen), hun (eigen)">suīs,</span>
-                <span class="word" data-info="quī, quae, quod: die, welke">quī</span>
-                <span
-                    class="word"
-                    data-info="Eryx, Erycis: berg in het westen van Sicilië. Op deze berg was een versterkt fort aanwezig."
-                    >Erycem</span
-                >
-                <span class="word" data-info="tenēre, -eō, tenuī, tentum: houden, bezetten">tenērent,</span>
-                <span class="word" data-info="arma, -ōrum: de wapens">armis</span>
-                <span class="word" data-info="relinquere, -ō, -līquī, -lictum: achterlaten">relictis</span>
-                <span class="word" data-info="Sicilia, -ae: Sicilië">Sicilia</span>
-                <span class="word" data-info="dēcēdere, -ō, -cessī, -cessum: weggaan, vertrekken">dēcēderent,</span>
-                <span class="word" data-info="ut (+conj.): dat, opdat, zodat">ut</span>
-                <span class="word" data-info="succumbere, -ō, -cubuī, -cubitus: bezwijken">succumbente</span>
-                <span class="word" data-info="patria, -ae: het vaderland">patria</span>
-                <span class="word" data-info="ipse, ipsa, ipsum: zelf, juist hij/zij/het">ipse</span>
-                <span class="word" data-info="perīre, -eō, -iī, -itum: omkomen, sterven">periturum</span>
-                <span class="word" data-info="sē: zich">sē</span>
-                <span class="word" data-info="potius (bw.): eerder, liever">potius</span>
-                <span class="word" data-info="dīcere, -ō, dīxī, dictum: zeggen">dīxerit,</span>
-                <span class="word" data-info="quam (vgw.): dan">quam</span>
-                <span class="word" data-info="cum (+ abl.): met, samen met">cum</span>
-                <span class="word" data-info="tantus, -a, -um: zoveel, zo groot">tanto</span>
-                <span class="word" data-info="flāgitium, -i: de schande, het misdrijf">flāgitio</span>
-                <span class="word" data-info="domus, -ūs (v.): het huis">domum</span>
-                <span class="word" data-info="redīre, -eō, -iī, -itum: terugkeren, teruggaan">rediret:</span>
-                <span class="word" data-info="nōn (bw.): niet">nōn</span>
-                <span class="word" data-info="enim (part.): namelijk, immers">enim</span>
-                <span class="word" data-info="suus, -a, -um: zijn (eigen), haar (eigen), hun (eigen)">suae</span>
-                <span class="word" data-info="esse, sum, fuī, futurum: zijn">esse</span>
-                <span class="word" data-info="virtūs, virtūtis (v.): de moed, de deugd, de mannelijkheid"
-                    >virtūtis</span
-                >
-                <span class="word" data-info="arma, -ōrum: de wapens">arma</span>
-                <span class="word" data-info="ā/ăb (+ abl.): van(uit), weg van, door">ā</span>
-                <span class="word" data-info="patria, -ae: het vaderland">patria</span>
-                <span class="word" data-info="accipere, -iō, -cēpī, -ceptum: ontvangen">accepta</span>
-                <span class="word" data-info="adversus (+ acc.): tegen, tegenover">adversus</span>
-                <span class="word" data-info="hostis, hostis: de vijand">hostes</span>
-                <span class="word" data-info="adversārius, -i: de tegenstander, de rivaal">adversāriis</span>
-                <span class="word" data-info="trādere, -ō, -didī, -ditum: overhandigen, overleveren">trādere.</span>
-                <span class="word" data-info="hic, haec, hoc: deze, dit">Hūiūs</span>
-                <span class="word" data-info="pertinācia, -ae: de koppigheid, de volharding">pertināciae</span>
-                <span class="word" data-info="cēdere, -ō, cessī, cessum: gaan, wijken, toegeven">cessīt</span>
-                <span
-                    class="word"
-                    data-info="Gaius Lutatius Catulus was de consul die in 241 v.C. de Carthaagse vloot bij de Aegatische eilanden versloeg en zo de Eerste Punische Oorlog won."
-                    >Catulus.</span
-                >
+                [5] in quō tanta fuit ferōcia, cum Catulus negāret bellum compositūrum, nisi cum suīs, quī Erycem
+                tenērent, armīs relictīs Siciliā dēcēderent, ut succumbente patriā ipse peritūrum sē pōtius dīxerit,
+                quam cum tantō flāgitiō domum redīret: nōn enim suae esse virtūtis arma ā patriā acceptā adversus hostēs
+                adversāriīs trādere. Huius pertināciae cessit Catulus.
             </p>
         </section>
         <section class="card">
-            <h2>Vocabularium</h2>
-            <ul>
-                <li>adversarius, -i: de tegenstander, de rivaal</li>
-                <li><strong>adversus (+ acc.): tegen, tegenover</strong></li>
-                <li>Aegates, -ium: de Aegatische eilanden</li>
-                <li><strong>agitare, -o: overwegen, handelen</strong></li>
-                <li>arbitrium, -i: het oordeel, het besluit</li>
-                <li>aut ... aut (vgw.): of ... of, hetzij ... hetzij</li>
-                <li>bellare, -o: oorlog voeren</li>
-                <li><strong>calamitas, -atis: de ramp, de ellende</strong></li>
-                <li><strong>cedere, -o, cessi, cessum: gaan, wijken, toegeven</strong></li>
-                <li><strong>classis, -is: de vloot</strong></li>
-                <li><strong>componere, -o, -posui, -positum: samenstellen, regelen</strong></li>
-                <li>conciliare, -o: bijeenbrengen, verkrijgen</li>
-                <li><strong>cum (+ conj.): toen, omdat, hoewel</strong></li>
-                <li><strong>cupiditas, -atis: de begeerte, de hartstocht</strong></li>
-                <li><strong>decedere, -o, -cessi, -cessum: weggaan, vertrekken</strong></li>
-                <li><strong>diutius (bw.): langer / langere tijd</strong></li>
-                <li>donicum = donec (vgw.): terwijl, zolang als, totdat</li>
-                <li><strong>enim (part.): namelijk, immers</strong></li>
-                <li>Eryx, Erycis: berg in het westen van Sicilië. Op deze berg was een versterkt fort aanwezig.</li>
-                <li><strong>etsi (vgw.): ook al, hoewel</strong></li>
-                <li>exhaurire, -io, -hausi, -haustum: uitputten</li>
-                <li><strong>ferocia, -ae: de woestheid, de hevigheid</strong></li>
-                <li><strong>ferre, fero, tuli, latum: dragen, verdragen</strong></li>
-                <li>flagitium, -i: de schande, het misdrijf</li>
-                <li>flagrare, -o: branden, gloeien (figuurlijk: hevig verlangen)</li>
-                <li>
-                    Gaius Lutatius Catulus: de consul die in 241 v.C. de Carthaagse vloot bij de Aegatische eilanden
-                    versloeg en zo de Eerste Punische Oorlog won.
-                </li>
-                <li>Hamilcar, aris: Hamilcar Barcas, vader van Hannibal</li>
-                <li><strong>hostis, hostis: de vijand</strong></li>
-                <li><strong>insula, -ae: het eiland</strong></li>
-                <li><strong>ita (bw.): zo, op die manier</strong></li>
-                <li><strong>manus, -us (v.): de hand</strong></li>
-                <li><strong>mens, mentis: de geest, de gedachte</strong></li>
-                <li><strong>modo (bw.): slechts, alleen maar</strong></li>
-                <li><strong>nisi (vgw.): tenzij, behalve als</strong></li>
-                <li><strong>paulum (bw.): weinig</strong></li>
-                <li><strong>pax, pacis: de vrede</strong></li>
-                <li><strong>perire, -eo, -ii, -itum: omkomen, sterven</strong></li>
-                <li><strong>permittere, -o, -misi, -missum: toestaan, toelaten</strong></li>
-                <li><strong>persequi, -or, -secutus sum: achtervolgen, vervolgen</strong></li>
-                <li>pertinacia, -ae: de koppigheid, de volharding</li>
-                <li><strong>potius (bw.): eerder, liever</strong></li>
-                <li><strong>putare, -o: menen, denken</strong></li>
-                <li><strong>quam (vgw.): dan</strong></li>
-                <li><strong>quod (+ind.): omdat</strong></li>
-                <li><strong>redire, -eo, -ii, -itum: terugkeren, teruggaan</strong></li>
-                <li><strong>relinquere, -o, -liqui, -lictum: achterlaten</strong></li>
-                <li><strong>statim (bw.): onmiddellijk</strong></li>
-                <li><strong>statuere, -o, statui, statutum: besluiten, vaststellen</strong></li>
-                <li>succumbere, -o, -cubui, -cubitus: bezwijken</li>
-                <li>sumptus, -us: de uitgaven, de kost</li>
-                <li><strong>superare, -o: overwinnen</strong></li>
-                <li><strong>tamen (bw.): toch, desalniettemin</strong></li>
-                <li><strong>tantus, -a, -um: zoveel, zo groot</strong></li>
-                <li><strong>tenere, -eo, tenui, tentum: houden, bezetten</strong></li>
-                <li><strong>tradere, -o, -didi, -ditum: overhandigen, overleveren</strong></li>
-                <li><strong>ut (+conj.): dat, opdat, zodat</strong></li>
-                <li><strong>vincere, -o, vici, victum: overwinnen</strong></li>
-                <li><strong>virtus, virtutis (v.): de moed, de deugd, de mannelijkheid</strong></li>
-            </ul>
+            <h1>Vocabularium Punische oorlogen</h1>
+
+            <input type="text" id="tableSearch" placeholder="Zoek woorden…" style="margin-bottom: 1em" />
+
+            <table id="csvTable" class="display"></table>
+
+            <script>
+                $(document).ready(function () {
+                    const prefilterCol6 = document.body.getAttribute("data-col6");
+
+                    // Laad CSV via AJAX en zet in DataTable
+                    $.ajax({
+                        url: "Woordenlijst.csv",
+                        dataType: "text"
+                    }).done(function (data) {
+                        const rows = data.split("\n").map((r) => r.split(","));
+                        const columns = rows.shift().map((h) => ({ title: h }));
+
+                        const table = $("#csvTable").DataTable({
+                            data: rows,
+                            columns: columns,
+                            pageLength: 25
+                        });
+
+                        // Prefilter op kolom 6 (Categorie) indien opgegeven
+                        if (prefilterCol6) {
+                            table
+                                .column(5)
+                                .search("^" + prefilterCol6 + "$", true, false)
+                                .draw();
+                            $("#tableSearch").hide();
+                        } else {
+                            $("#tableSearch").on("keyup", function () {
+                                table.search(this.value).draw();
+                            });
+                        }
+                    });
+                });
+            </script>
         </section>
-
-        <!-- shared tooltip node -->
-        <div id="tooltip" role="tooltip" aria-hidden="true"></div>
-
-        <!-- external JS -->
-        <script src="tooltip.js" defer></script>
     </body>
 </html>

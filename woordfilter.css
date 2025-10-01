@@ -1,0 +1,205 @@
+/* ===== Button Filter - Roman Dark Theme ===== */
+
+/* Button Filter Container */
+.button-filter {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Filter Header */
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.filter-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-gold), transparent 70%);
+}
+
+.filter-header h3 {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-head, serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Clear Button */
+.btn-clear {
+  background: linear-gradient(180deg, var(--accent-red), #6e2525);
+  border: 1px solid #5a1d1d;
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--font-head, serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  transition: transform 0.1s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-clear:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(143, 42, 42, 0.4);
+}
+
+.btn-clear:active {
+  transform: translateY(0);
+}
+
+/* Second Row Wrapper */
+.filter-row-wrapper {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.filter-row-wrapper h4 {
+  margin: 0 0 1rem 0;
+  color: var(--muted);
+  font-family: var(--font-head, serif);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+/* Filter Button Rows */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* Filter Buttons */
+.filter-btn {
+  background: linear-gradient(180deg, rgba(212, 177, 106, 0.2), rgba(212, 177, 106, 0.1));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--font-text, Georgia, serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  position: relative;
+}
+
+.filter-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--accent-gold), #b48d52);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: -1;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 177, 106, 0.25);
+}
+
+.filter-btn:hover::before {
+  opacity: 0.15;
+}
+
+/* Active State - Column 4 (Gold) */
+.col4-btn.active {
+  background: linear-gradient(180deg, var(--accent-gold), #b48d52);
+  border-color: #8f6d36;
+  color: #1a1208;
+  font-weight: 700;
+  box-shadow: 0 0 0 3px rgba(212, 177, 106, 0.3);
+  transform: translateY(-1px);
+}
+
+.col4-btn.active::before {
+  opacity: 0;
+}
+
+/* Column 5 Buttons (Purple tint) */
+.col5-btn {
+  background: linear-gradient(180deg, rgba(155, 89, 182, 0.2), rgba(155, 89, 182, 0.1));
+  border-color: rgba(155, 89, 182, 0.3);
+}
+
+.col5-btn:hover {
+  border-color: #9b59b6;
+  box-shadow: 0 4px 12px rgba(155, 89, 182, 0.25);
+}
+
+.col5-btn:hover::before {
+  background: linear-gradient(180deg, #9b59b6, #8e44ad);
+  opacity: 0.15;
+}
+
+/* Active State - Column 5 (Accent Red) */
+.col5-btn.active {
+  background: linear-gradient(180deg, var(--accent-red), #6e2525);
+  border-color: #5a1d1d;
+  color: var(--text);
+  font-weight: 700;
+  box-shadow: 0 0 0 3px rgba(143, 42, 42, 0.3);
+  transform: translateY(-1px);
+}
+
+.col5-btn.active::before {
+  opacity: 0;
+}
+
+/* Empty State Message */
+.filter-row p {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .filter-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .btn-clear {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .button-filter {
+    display: none !important;
+  }
+}
