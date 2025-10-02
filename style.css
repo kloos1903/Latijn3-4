@@ -1,7 +1,10 @@
-/* ===== Roman Dark Theme + Video Grid + Print Utils (cleaned) ===== */
+/* ===== Roman Dark Theme + Word Filter + Latin Declensions ===== */
+
+/* CSS Variables */
 :root {
   --accent-gold: #d4b16a;
   --accent-red: #8f2a2a;
+  --accent-purple: #9b59b6;
   --bg: #121111;
   --border: #3a3129;
   --card: #1a1715;
@@ -12,7 +15,7 @@
   --text: #eadfca;
 }
 
-/* ========== Base ========== */
+/* ========== Base Styles ========== */
 html,
 body {
   background: var(--bg);
@@ -20,22 +23,25 @@ body {
   font-family: var(--font-text, Georgia, serif);
   font-size: 22px;
   line-height: 1.6;
-  margin: 0;
+  margin: 2em;
 }
 
 strong {
   color: var(--accent-gold);
-  font-weight: "bold";
+  font-weight: bold;
 }
 
-/* ========== Layout helpers ========== */
+.muted {
+  color: var(--muted);
+}
+
+/* ========== Layout ========== */
 .grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-/* ========== Cards ========== */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -45,21 +51,32 @@ strong {
   padding: 1rem;
 }
 
+.card:last-child {
+  margin-top: 2rem;
+}
+
+.card p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
 /* ========== Typography ========== */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   color: var(--text);
   font-family: var(--font-head, serif);
   text-transform: uppercase;
   margin: 0 0 0.3rem 0;
 }
+
 h1 {
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 0.04em;
   margin-bottom: 0.25rem;
+  text-align: center;
+  padding-bottom: 1rem;
 }
+
 h2 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -67,6 +84,7 @@ h2 {
   margin-top: 0.6rem;
   margin-bottom: 0.3rem;
 }
+
 h3 {
   font-size: 1.25rem;
   font-weight: 700;
@@ -75,24 +93,253 @@ h3 {
   margin-bottom: 0.3rem;
 }
 
-h1::after,
-h2::after {
+h1::after, h2::after {
   content: "";
   display: block;
   width: 100%;
   margin: 0.35rem 0 0 0;
 }
+
 h1::after {
   background: linear-gradient(90deg, var(--accent-red), transparent 70%);
   height: 4px;
 }
+
 h2::after {
   background: linear-gradient(90deg, var(--accent-gold), transparent 70%);
   height: 2px;
 }
 
-.muted {
-  color: var(--muted);
+/* ========== Latin Declension Specific Styles ========== */
+
+/* Main title enhancement */
+h1 {
+  border-bottom: 3px solid var(--accent-gold);
+  position: relative;
+}
+
+h1::before {
+  content: "📚";
+  position: absolute;
+  left: -3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+}
+
+/* Declination sections */
+.declination-section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 3rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.declination-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Declination type specific colors */
+.declination-section:nth-child(1)::before,
+.declination-section[data-type="first"]::before {
+  background: linear-gradient(90deg, var(--accent-gold), transparent);
+}
+
+.declination-section:nth-child(2)::before,
+.declination-section[data-type="second"]::before {
+  background: linear-gradient(90deg, var(--accent-red), transparent);
+}
+
+.declination-section:nth-child(3)::before,
+.declination-section[data-type="third"]::before {
+  background: linear-gradient(90deg, var(--accent-purple), transparent);
+}
+
+/* Declination titles */
+.declination-title {
+  color: var(--accent-gold);
+  font-family: var(--font-head, serif);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.declination-title::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-gold), transparent);
+  margin: 0.5rem auto 0;
+}
+
+/* Info boxes */
+.declination-info {
+  background: rgba(212, 177, 106, 0.1);
+  border: 1px solid rgba(212, 177, 106, 0.3);
+  border-left: 4px solid var(--accent-gold);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.declination-info h3 {
+  color: var(--accent-gold);
+  font-family: var(--font-head, serif);
+  font-size: 1.1rem;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.declination-info ul {
+  margin: 1rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+.declination-info li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.declination-info em {
+  color: var(--accent-red);
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Tables container */
+.tables-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+/* Latin declension tables */
+.latin-declension {
+  background: rgba(26, 23, 21, 0.8);
+  border: 1px solid var(--border);
+  border-collapse: collapse;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin: 0;
+  max-width: 450px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.latin-declension caption {
+  background: linear-gradient(135deg, var(--card), rgba(58, 49, 41, 0.8));
+  border-bottom: 2px solid var(--accent-gold);
+  color: var(--text);
+  font-family: var(--font-head, serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+.latin-declension th {
+  background: linear-gradient(180deg, rgba(212, 177, 106, 0.15), rgba(212, 177, 106, 0.05));
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-head, serif);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.latin-declension td {
+  border: 1px solid var(--border);
+  padding: 0.8rem 1rem;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.latin-declension td:first-child {
+  background: rgba(58, 49, 41, 0.3);
+  color: var(--text);
+  font-family: var(--font-head, serif);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.latin-declension tbody tr:nth-child(even) {
+  background: rgba(26, 23, 21, 0.6);
+}
+
+.latin-declension tbody tr:hover {
+  background: rgba(212, 177, 106, 0.1);
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+/* Latin text emphasis */
+.latin-declension strong {
+  color: var(--accent-red);
+  font-weight: 800;
+}
+
+/* Footer styling */
+footer {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  color: var(--text);
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer h3 {
+  color: var(--accent-gold);
+  font-family: var(--font-head, serif);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+footer > div {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+footer > div > div {
+  background: rgba(212, 177, 106, 0.08);
+  border: 1px solid rgba(212, 177, 106, 0.2);
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem;
+}
+
+footer strong {
+  color: var(--accent-gold);
+  font-family: var(--font-head, serif);
+  text-transform: uppercase;
 }
 
 /* ========== Links ========== */
@@ -100,25 +347,10 @@ a {
   color: var(--accent-gold);
   text-decoration: none;
 }
+
 a:hover {
   color: var(--accent-red);
   text-decoration: underline;
-}
-
-/* ========== Tables ========== */
-table {
-  border-collapse: collapse;
-  margin: 0.5rem 0 0 0;
-  width: 100%;
-}
-td,
-th {
-  border: 1px solid var(--border);
-  padding: 0.5rem;
-  vertical-align: top;
-}
-th {
-  background: linear-gradient(0deg, rgba(212, 177, 106, 0.08), rgba(255, 255, 255, 0));
 }
 
 /* ========== Buttons ========== */
@@ -133,227 +365,261 @@ button {
   letter-spacing: 0.03em;
   padding: 0.6rem 1rem;
   text-transform: uppercase;
-  transition:
-    transform 0.1s ease,
-    filter 0.2s ease;
+  transition: transform 0.1s ease, filter 0.2s ease;
 }
+
 .button:hover,
 button:hover {
   filter: brightness(1.05);
   transform: translateY(-1px);
 }
 
-/* ========== Video grid (onscreen) ========== */
-.video-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin: 2rem auto;
-  max-width: 1200px;
-  padding: 0 1rem;
-}
-.video {
-  aspect-ratio: 16/9;
-  background: #000;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  width: 100%;
-}
-.video iframe {
-  border: 0;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-/* ========== Tooltip styles (shared) ==========
-   .tooltip is for any inline/absolute tooltip (e.g. inside triggers);
-   #tooltip is the single fixed tooltip node used by your JS.
-*/
-.tooltip,
-#tooltip {
-  padding: 0.4rem 0.6rem;
-  border: 1px solid #bbb;
-  border-radius: 6px;
-  background: var(--accent-gold);
-  box-shadow: 0 23px 18px rgba(0, 0, 0, 0.08);
-  color: var(--bg);
-  max-width: 46ch;
-  font-size: 0.9rem;
-  line-height: 1.25;
-}
-
-/* absolute variant (used for trigger-scoped tooltips) */
-.trigger .tooltip {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: calc(100% + 8px);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.12s;
-  z-index: 100;
-}
-.trigger .tooltip[data-visible="true"] {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* fixed/shared JS tooltip node */
-#tooltip {
-  position: fixed;
-  z-index: 9999;
-  padding: 0.45rem 0.6rem;
-  pointer-events: none;
-  transform-origin: center bottom;
-  transition:
-    opacity 0.12s,
-    transform 0.12s;
-  opacity: 0;
-  transform: translateY(6px) scale(0.98);
-  left: 0;
-  top: 0;
-}
-#tooltip[data-visible="true"] {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-}
-
-/* helper for inline lemma-words */
-.word {
-  cursor: help;
-  padding: 0 0.08rem;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.14);
-}
-.word:focus {
-  outline: 2px solid #8ab4ff;
-  outline-offset: 2px;
-}
-.filter-row {
-  margin-bottom: 1em;
-}
-.filter-button {
-  display: inline-block;
-  margin: 2px;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 0.9em;
-}
-.filter-button.active {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
-}
-.search-box {
-  margin-bottom: 1em;
-}
-
-/* ========== Screen / Print toggles ========== */
-.print-only {
-  display: none;
-}
-@media print {
-  .print-only {
-    display: block !important;
-  }
-  .screen-only {
-    display: none !important;
-  }
-
-  :root {
-    --accent-gold: #7c6e21;
-    --accent-red: #6e2525;
-    --bg: #121212;
-    --border: #2c2c2c;
-    --card: #4c4c4c;
-    --muted: #aaaaaa;
-    --text: #e0e0e0;
-  }
-
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
   body {
-    background: var(--bg);
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11pt;
-    line-height: 1.4;
-    margin: 1cm;
+    font-size: 20px;
+    margin: 1rem;
   }
 
-  .grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important; /* forceert verticale stapeling */
-    gap: 0.75rem !important;
+  h1::before {
+    display: none;
   }
 
-  .card {
-    width: 100% !important;
-    box-shadow: none !important; /* schaduwen printen slecht */
+  .tables-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .latin-declension {
+    max-width: 100%;
+  }
+
+  .declination-section {
+    padding: 1rem;
+  }
+
+  footer > div {
+    flex-direction: column;
+  }
+
+  footer > div > div {
+    min-width: auto;
+  }
+}
+
+/* ========== Print Styles ========== */
+@media print {
+  .declination-section {
     background: transparent !important;
-    margin: 0 0 1rem 0 !important;
-    page-break-inside: avoid; /* voorkom dat een kaart in tweeën breekt */
-    break-inside: avoid;
-    background: var(--card);
-  }
-  img {
-    max-width: 100% !important;
-    height: auto !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
     page-break-inside: avoid;
   }
 
-  .muted {
-    color: var(--muted);
-    font-size: small;
+  .latin-declension {
+    background: transparent !important;
+    box-shadow: none !important;
   }
 
-  a {
-    color: var(--accent-gold);
-    text-decoration: underline;
+  .latin-declension caption {
+    background: #f0f0f0 !important;
+    color: #000 !important;
   }
 
-  h1,
-  h2,
-  h3 {
-    color: var(--text);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    letter-spacing: normal;
-    margin-top: 0.8em;
-    margin-bottom: 0.4em;
-    text-transform: none;
-  }
-  h1 {
-    font-size: 14pt;
-    color: var(--accent-gold);
-  }
-  h2 {
-    font-size: 12pt;
-    color: var(--accent-red);
-  }
-  h2::after {
-    content: none;
-  }
-  h3 {
-    font-size: 11pt;
+  .latin-declension th {
+    background: #f8f8f8 !important;
+    color: #000 !important;
   }
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
+  .latin-declension td {
+    color: #000 !important;
   }
-  td,
-  th {
-    border: 1px solid var(--border);
-    padding: 0.3rem 0.5rem;
+
+  .latin-declension strong {
+    color: #800000 !important;
   }
 }
 
-/* keep compatibility class when video-grid is screen-only */
-.video-grid.screen-only {
-  display: grid !important;
+/* ========== Word Filter (Keep existing styles) ========== */
+.button-filter {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#woordfilterContainer {
+  margin-bottom: 1.5rem;
+}
+
+/* Filter Header */
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.filter-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-gold), transparent 70%);
+}
+
+.filter-header h3 {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-head, serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Clear Button */
+.btn-clear {
+  background: linear-gradient(180deg, var(--accent-red), #6e2525);
+  border: 1px solid #5a1d1d;
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--font-head, serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  transition: transform 0.1s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-clear:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(143, 42, 42, 0.4);
+}
+
+.btn-clear:active {
+  transform: translateY(0);
+}
+
+/* Filter Rows */
+.filter-row-wrapper {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.filter-row-wrapper h4 {
+  margin: 0 0 1rem 0;
+  color: var(--muted);
+  font-family: var(--font-head, serif);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+/* Filter Buttons */
+.filter-btn {
+  background: linear-gradient(180deg, rgba(212, 177, 106, 0.2), rgba(212, 177, 106, 0.1));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--font-text, Georgia, serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  position: relative;
+}
+
+.filter-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--accent-gold), #b48d52);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: -1;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 177, 106, 0.25);
+}
+
+.filter-btn:hover::before {
+  opacity: 0.15;
+}
+
+/* Column 4 Active State (Gold) */
+.col4-btn.active {
+  background: linear-gradient(180deg, var(--accent-gold), #b48d52);
+  border-color: #8f6d36;
+  color: #1a1208;
+  font-weight: 700;
+  box-shadow: 0 0 0 3px rgba(212, 177, 106, 0.3);
+  transform: translateY(-1px);
+}
+
+.col4-btn.active::before {
+  opacity: 0;
+}
+
+/* Column 5 Buttons (Purple tint) */
+.col5-btn {
+  background: linear-gradient(180deg, rgba(155, 89, 182, 0.2), rgba(155, 89, 182, 0.1));
+  border-color: rgba(155, 89, 182, 0.3);
+}
+
+.col5-btn:hover {
+  border-color: #9b59b6;
+  box-shadow: 0 4px 12px rgba(155, 89, 182, 0.25);
+}
+
+.col5-btn:hover::before {
+  background: linear-gradient(180deg, #9b59b6, #8e44ad);
+  opacity: 0.15;
+}
+
+/* Column 5 Active State (Accent Red) */
+.col5-btn.active {
+  background: linear-gradient(180deg, var(--accent-red), #6e2525);
+  border-color: #5a1d1d;
+  color: var(--text);
+  font-weight: 700;
+  box-shadow: 0 0 0 3px rgba(143, 42, 42, 0.3);
+  transform: translateY(-1px);
+}
+
+.col5-btn.active::before {
+  opacity: 0;
+}
+
+/* Empty State */
+.filter-row p {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0;
 }

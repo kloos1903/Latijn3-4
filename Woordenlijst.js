@@ -49,61 +49,64 @@
                     $("#csvTable").DataTable().clear().destroy();
                 }
 
-                // Initialize DataTable
+                // Apply prefilter if specified - filter the DATA, not during search
+                let tableData = data;
+                if (options.prefilterCol6) {
+                    tableData = data.filter(row => row[5] === options.prefilterCol6);
+                }
+
+                // Initialize DataTable with filtered data as base
                 const table = $("#csvTable").DataTable({
-                    data: data,
+                    data: tableData,
                     columns: columns,
                     paging: false,
-                    searching: true,
+                    searching: true, // Critical: Enable searching for filters to work
                     info: false,
-                    dom: 't',  // Hide default search box
+                    dom: 't', // Hide default search box but keep search functionality
                     language: {
-                        search: "",
-                        searchPlaceholder: "Zoeken in kolommen 1-3...",
                         emptyTable: "Geen gegevens beschikbaar",
                         zeroRecords: "Geen overeenkomende records gevonden"
                     }
                 });
 
-                // Setup custom search functionality
-                if (!options.disableSearch) {
-                    $("#tableSearchContainer").show();
-                    $("#tableSearch").val("").off("keyup").on("keyup", function () {
-                        table.draw();
-                    });
+                // Add custom search box with styling
+                const searchHtml = `
+                    <div class="custom-search" style="margin-bottom: 1rem;">
+                        <input type="text" id="customSearchInput" placeholder="Zoeken ..."
+                               style="width: 100%; max-width: 400px; padding: 0.8rem; border: 1px solid var(--border);
+                                      border-radius: 8px; background: var(--bg); color: var(--text); font-size: 1rem;" />
+                    </div>
+                `;
 
-                    // Add custom search filter
-                    const filterFunction = function (settings, rowData, dataIndex) {
-                        if (settings.nTable.id !== "csvTable") return true;
+                $("#csvTable").before(searchHtml);
 
-                        // Column 6 prefilter (index 5)
-                        if (options.prefilterCol6 && rowData[5] !== options.prefilterCol6) {
-                            return false;
+                // Custom search filter function using DataTables search system
+                const searchFilterFunction = function (settings, rowData, dataIndex) {
+                    if (settings.nTable.id !== "csvTable") return true;
+
+                    // Custom search box filter (first 3 columns only)
+                    const query = normalizeStr($("#customSearchInput").val() || "");
+                    if (!query) return true;
+
+                    for (let i = 0; i < 3; i++) {
+                        if (normalizeStr(rowData[i]).includes(query)) {
+                            return true;
                         }
+                    }
 
-                        // Search box filter (first 3 columns only)
-                        const query = normalizeStr($("#tableSearch").val() || "");
-                        if (!query) return true;
+                    return false;
+                };
 
-                        for (let i = 0; i < 3; i++) {
-                            if (normalizeStr(rowData[i]).includes(query)) {
-                                return true;
-                            }
-                        }
+                // Add the search filter to DataTables search system
+                $.fn.dataTable.ext.search.push(searchFilterFunction);
+                currentSearchFilterIndex = $.fn.dataTable.ext.search.length - 1;
 
-                        return false;
-                    };
+                // Setup search input event
+                $("#customSearchInput").off("input keyup").on("input keyup", function() {
+                    table.draw(); // This now works with ALL filters including button filters
+                });
 
-                    $.fn.dataTable.ext.search.push(filterFunction);
-                    currentSearchFilterIndex = $.fn.dataTable.ext.search.length - 1;
-
-                    // Initial filter application
-                    table.draw();
-                } else {
-                    $("#tableSearchContainer").hide();
-                }
-
-                // ✅ CRITICAL: Trigger the callback
+                // Trigger callback after everything is set up
                 if (typeof options.onComplete === "function") {
                     console.log("Calling onComplete callback");
                     options.onComplete();

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Vocabularium — Punische oorlogen</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+            rel="stylesheet" />
+        <!-- CDN Libraries (no versioning needed) -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+        <!-- Auto-versioned Your Files -->
+        <script>
+            (function () {
+                const v = Date.now();
+                document.write(`<link rel="stylesheet" href="style.css?v=${v}">`);
+                document.write(`<script src="Woordenlijst.js?v=${v}"><\/script>`);
+                document.write(`<script src="tooltip.js?v=${v}"><\/script>`);
+            })();
+        </script>
+    </head>
+    <body data-col6="C1T1">
+        <header class="screen-only">
+            <a href="index.html"> HOME </a>
+        </header>
+        <h1>Cornelius Nepos, De viris Illustribus, Hannibal I, 1 & III, 4</h1>
+
+        <section class="card">
+            <h2>Hannibal</h2>
+            <h3>I, 1</h3>
+            <p>
+                Hannibal, Hamilcaris fīlius, Karthāginiēnsis. sī vērum est, quod nēmō dubitat, ut populus Rōmānus omnēs
+                gentēs virtūte superārit, nōn est īnfitiandum Hannibalem tantō praestitisse cēterōs imperātōrēs
+                prūdentiā, quantō populus Rōmānus antecēdat fortitūdine cūnctās nātiōnēs.
+            </p>
+            <h3>III, 4</h3>
+            <p>
+                Ad Alpēs posteāquam vēnit, quae Ītaliam ab Galliā sēiungunt, quās nēmō umquam cum exercitū ante eum
+                praeter Herculem
+                <span class="word" data-info="Grāius = Graecus"
+                    ><b><i>Grāium</i></b></span
+                >
+                trānsierat (quō factō is hodiē
+                <span class="word" data-info="hier: de (berg)pas"
+                    ><b><i>saltus</i></b></span
+                >
+                <span class="word" data-info="Grāius = Graecus"
+                    ><b><i>Grāius</i></b></span
+                >
+                appellātur), Alpicōs cōnantēs prohibēre trānsitū concīdit, loca patefēcit, itinera mūniit, effēcit ut ea
+                elephantus ōrnātus īre posset, quā anteā ūnus homō inermis vix poterat rēpere. hāc cōpiās trādūxit in
+                Ītaliamque pervēnit.
+            </p>
+        </section>
+        <section class="card">
+            <h2>Vocabularium</h2>
+            <table id="csvTable" class="display" style="width: 100%"></table>
+
+            <script>
+                $(document).ready(function () {
+                    // Apply C1T1 prefilter
+                    initWoordenlijst("./Woordenlijst.csv", {
+                        prefilterCol6: "C1T2", // ← This filters to only C1T1 rows
+                        onComplete: function () {
+                            initWoordenfilter("csvTable", "woordfilterContainer", {
+                                col4Index: 3,
+                                col5Index: 4,
+                                col4Label: "Woordsoort",
+                                col5Label: "Extra"
+                            });
+                        }
+                    });
+                });
+            </script>
+        </section>
+    </body>
+</html>

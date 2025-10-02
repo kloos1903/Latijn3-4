@@ -19,7 +19,9 @@ alius,"alia, aliud",(een) ander,voornaamwoord,onbepaald,1e jaar
 amīcus,amīcī,de vriend,substantief,1e klasse,1e jaar
 amor,amōris,de liefde,substantief,2e klasse,1e jaar
 annus,annī,het jaar,substantief,1e klasse,1e jaar
+ante,+acc.,voor,voorzetsel,+acc.,C1T2
 anteā,-,"vroeger, tevoren",bijwoord,-,1e jaar
+antecēdere,"antecēdō, antecessī, antecessum","voorafgaan, overtreffen",werkwoord,consonantvervoeging,C1T2
 appellāre,appellō,"noemen, toespreken",werkwoord,a-vervoeging,1e jaar
 apud,+acc.,bij,voorzetsel,+acc.,C1T1
 aqua,aquae,het water,substantief,1e klasse,2e jaar
@@ -55,6 +57,8 @@ cōgere,"cōgō, coēgī, coactum","verzamelen, dwingen",werkwoord,consonantverv
 collis,collis m.,de heuvel,substantief,2e klasse,1e jaar
 collum,collī,de nek,substantief,1e klasse,1e jaar
 compōnere,"compōnō, composuī, compositum","bijeenzetten, ordenen",werkwoord,consonantvervoeging,C1T1
+cōnārī,cōnor,"proberen, zich inspannen",werkwoord,a-vervoeging,C1T2
+concidere,"concidō, concīdī, -","instorten, verdwijnen, het onderspit delven",werkwoord,consonantvervoeging,C1T2
 conciliāre,conciliō,"gunstig stemmen, verschaffen, tot stand brengen",werkwoord,a-vervoeging,C1T1
 condere,"condō, condidī, conditum","stichten, opbergen, verbergen",werkwoord,consonantvervoeging,1e jaar
 conficere,"cōnficiō, confēcī, confectum",afmaken,werkwoord,ĭ-vervoeging,2e jaar
@@ -67,6 +71,7 @@ corpus,corporis,"het lichaam, het lijk",substantief,2e klasse,1e jaar
 crūdēlis,"crūdēlis, crūdēle",wreed,adjectief,2e klasse,2e jaar
 cum,-,"toen, nadat, omdat, hoewel",voegwoord,onderschikkend,C1T1
 cum,+abl.,(samen) met,voorzetsel,+abl.,1e jaar
+cūnctus,"cūncta, cūnctum","(enk.) geheel, (mv.) alle",adjectief,1e klasse,C1T2
 cupere,"cupiō, cupīvī, cupītum","verlangen, begeren",werkwoord,ĭ-vervoeging,1e jaar
 cupiditās,cupiditātis,het verlangen,substantief,2e klasse,C1T1
 cūrāre,cūrō,zorgen voor,werkwoord,a-vervoeging,2e jaar
@@ -91,14 +96,17 @@ domus,domūs v.,het huis,substantief,3e klasse,1e jaar
 donicum,-,"terwijl, zolang als, totdat",voegwoord,onderschikkend,C1T1
 dōnum,dōnī,het geschenk,substantief,1e klasse,1e jaar
 dormīre,dormiō,slapen,werkwoord,ī-vervoeging,2e jaar
+dubitāre,dubitō,"twijfelen, aarzelen",werkwoord,a-vervoeging,C1T2
 dum,-,"terwijl, zolang als, totdat, mits",voegwoord,onderschikkend,1e jaar
 duo,"duae, duo",2,telwoord,hoofdtelwoord,2e jaar
 dūrus,"dūra, dūrum",hard,adjectief,1e klasse,1e jaar
 dux,ducis m.,de leider,substantief,2e klasse,1e jaar
 ē/ex,+abl.,"uit, sinds, vanwege",voorzetsel,+abl.,1e jaar
 eā … quā,-,daarlangs … waarlangs,bijwoord,-,1e jaar
+efficere,"efficiō, effēcī, effectum","tot stand brengen, iemand maken tot (met BVG/DVB)",werkwoord,ĭ-vervoeging,C1T2
 effundere,"effundō, effūdī, effūsum","uitgieten, vergieten",werkwoord,consonantvervoeging,2e jaar
 egō,meī,ik,voornaamwoord,persoonlijk,2e jaar
+elephantus,elephantī,de olifant; de ivoor,substantief,1e klasse,C1T2
 ēligere,"ēligō, ēlēgī, ēlectum","uitkiezen, selecteren",werkwoord,consonantvervoeging,1e jaar
 equus,equī,het paard,substantief,1e klasse,1e jaar
 ergō,-,dus,voegwoord,nevenschikkend,1e jaar
@@ -112,6 +120,7 @@ exclāmāre,exclāmō,uitroepen,werkwoord,a-vervoeging,2e jaar
 exercitus,exercitūs,het leger,substantief,3e klasse,1e jaar
 exhaurīre,"exhauriō, exhausī, exhaustum","uitputten, leegdrinken",werkwoord,ī-vervoeging,C1T1
 facere,"faciō, fēcī, factum","maken, doen",werkwoord,ĭ-vervoeging,1e jaar
+factum,factī,"de daad, het feit",substantief,1e klasse,C1T2
 famēs,famis,de honger,substantief,2e klasse,1e jaar
 familia,familiae,de familie,substantief,1e klasse,2e jaar
 fēlix,fēlicis,"gelukkig, welvarend",adjectief,2e klasse,2e jaar
@@ -126,11 +135,13 @@ flāgitium,flāgitii,"de schanddaad, de misdaad",substantief,1e klasse,C1T1
 flagrāre,flagrō,hevig branden,werkwoord,a-vervoeging,C1T1
 flōs,flōris m.,de bloem,substantief,2e klasse,1e jaar
 fortis,"fortis, forte","sterk, dapper",adjectief,2e klasse,1e jaar
+fortitūdō,fortitūdinis,"de dapperheid, de sterkte",substantief,2e klasse,C1T2
 fortūna,fortūnae,"het lot, het geluk, de hoge positie; het ongeluk; (mv.) het vermogen, het bezit",substantief,1e klasse,1e jaar
 frangere,"frangō, frēgī, fractum",breken,werkwoord,consonantvervoeging,2e jaar
 fugāre,fugō,op de vlucht jagen,werkwoord,a-vervoeging,1e jaar
 fugere,"fugiō, fūgī",vluchten,werkwoord,ĭ-vervoeging,1e jaar
 geminī,geminōrum,de tweelingen,substantief,1e klasse,1e jaar
+gēns,gentis,"het volk, het geslacht",substantief,2e klasse,C1T2
 genus,generis,"de soort, de afkomst, het geslacht",substantief,2e klasse,2e jaar
 gerere,"gerō, gessī, gestum","dragen, doen",werkwoord,consonantvervoeging,1e jaar
 gladius,gladiī,het zwaard,substantief,1e klasse,1e jaar
@@ -139,6 +150,7 @@ habitāre,habitō,wonen,werkwoord,a-vervoeging,1e jaar
 hic,"haec, hoc","deze, dit",voornaamwoord,aanwijzend,1e jaar
 hiems,hiemis,de winter,substantief,2e klasse,2e jaar
 hinc,-,hiervandaan,bijwoord,-,2e jaar
+hodiē,-,vandaag,bijwoord,-,C1T2
 homō,hominis m.,"de mens, de man",substantief,2e klasse,1e jaar
 hostis,hostis m.,de vijand,substantief,2e klasse,1e jaar
 hūmānus,"hūmāna, hūmānum","beschaafd, menselijk",adjectief,1e klasse,1e jaar
@@ -150,12 +162,15 @@ idem,"eadem, idem",dezelfde,voornaamwoord,aanwijzend,1e jaar
 ille,"illa, illud","die, dat, hij, zij, het",voornaamwoord,aanwijzend,2e jaar
 illinc,-,daarvandaan,bijwoord,-,2e jaar
 imperāre,imperō,bevelen,werkwoord,a-vervoeging,1e jaar
+imperātor,imperātōris,"de (opper)bevelhebber, de keizer",substantief,2e klasse,C1T2
 imperium,imperiī n.,"het bevel, het gezag, de heerschappij, het rijk",substantief,1e klasse,1e jaar
 in,+abl.,"in, op",voorzetsel,+abl.,1e jaar
 in,+acc.,"naar, tegen, tot",voorzetsel,+acc.,1e jaar
 incendium,incendii,de brand,substantief,1e klasse,2e jaar
 incipere,"incipiō, incēpī, inceptum",beginnen,werkwoord,ĭ-vervoeging,1e jaar
 incolere,"incolō, incoluī, incultum","wonen in, bewonen",werkwoord,consonantvervoeging,2e jaar
+inermis,"inermis, inerme","ongewapend, weerloos, niemand kwetsend",adjectief,2e klasse,C1T2
+īnfitiāri,īnfitior,"ontkennen, tegenspreken",werkwoord,a-vervoeging,C1T2
 infrā,+acc.,lager,voorzetsel,+acc.,1e jaar
 inquam,inquam,"ik zeg, ik zei",werkwoord,onregelmatig,2e jaar
 inquit,inquit,"hij/zij zegt, hij/zij zei",werkwoord,onregelmatig,2e jaar
@@ -174,6 +189,7 @@ iste,"ista, istud","die, dat",voornaamwoord,aanwijzend,1e jaar
 ita,-,zo,bijwoord,-,C1T1
 Ītalia,Ītaliae,Italië,substantief,1e klasse,1e jaar
 itaque,-,dus,voegwoord,nevenschikkend,1e jaar
+iter,itineris o.,"de tocht, de reis, de (dag)mars, de weg, de loop",substantief,2e klasse,C1T2
 iubēre,"iubeō, iussī, iussum","bevelen, opdragen",werkwoord,e-vervoeging,1e jaar
 labī,"labor, lapsus sum",glijden,werkwoord,consonantvervoeging,2e jaar
 labōrāre,labōrō,werken,werkwoord,a-vervoeging,2e jaar
@@ -181,7 +197,7 @@ laudāre,laudō,"prijzen, eren, loven",werkwoord,a-vervoeging,2e jaar
 lēgātus,lēgātī,de gezant; de onderbevelhebber; de gouverneur,substantief,1e klasse,1e jaar
 lēx,lēgis,de wet,substantief,2e klasse,1e jaar
 lītus,lītoris,de kust,substantief,2e klasse,1e jaar
-locus,locī,"de plaats, het gebied, het terrein",substantief,1e klasse,1e jaar
+locus,"locī (mv. ook loca, -ōrum)","de plaats, het gebied, het terrein",substantief,1e klasse,1e jaar
 lupa,lupae,de wolvin,substantief,1e klasse,1e jaar
 magnus,"magna, magnum",groot,adjectief,1e klasse,2e jaar
 manēre,"maneō, mansī, mansum","blijven, wachten op",werkwoord,e-vervoeging,1e jaar
@@ -200,8 +216,10 @@ mōns,montis m.,de berg,substantief,2e klasse,1e jaar
 morī,"morior, mortuus sum",sterven,werkwoord,consonantvervoeging,1e jaar
 mōs,mōris,"de gewoonte, de zede, de levenswijze, het karakter",substantief,2e klasse,1e jaar
 multus,"multa, multum",veel,adjectief,1e klasse,1e jaar
+mūnīre,mūniō,"bouwen, versterken, beschermen",werkwoord,ī-vervoeging,C1T2
 mūrus,mūrī,de muur,substantief,1e klasse,1e jaar
 nam,-,want,voegwoord,nevenschikkend,1e jaar
+nātiō,nātiōnis,"de geboorte, de volksstam",substantief,2e klasse,C1T2
 nēc/neque,-,"en niet, ook niet, zelfs niet",voegwoord,nevenschikkend,2e jaar
 necāre,necō,doden,werkwoord,a-vervoeging,1e jaar
 necesse,necesse,noodzakelijk,adjectief,onverbuigbaar,2e jaar
@@ -228,11 +246,13 @@ octō,-,8,telwoord,hoofdtelwoord,2e jaar
 omnis,"omnis, omne","geheel, elk, ieder, alle",adjectief,2e klasse,1e jaar
 oppidum,oppidī,"de stad, de vesting",substantief,1e klasse,1e jaar
 oppugnāre,oppugnō,"aanvallen, bestormen",werkwoord,a-vervoeging,1e jaar
+ōrnātus,"ōrnāta, ōrnātum","uitgerust, sierlijk, eervol",adjectief,1e klasse,C1T2
 paene,-,bijna,bijwoord,-,2e jaar
 pānis,pānis m.,het brood,substantief,2e klasse,1e jaar
 pār,paris,"gelijk aan, opgewassen tegen",adjectief,2e klasse,2e jaar
 pārēre,"pareō, paruī, pāritum",gehoorzamen,werkwoord,e-vervoeging,2e jaar
 pars,partis,"het deel, het gedeelte, de kant",substantief,2e klasse,1e jaar
+patefacere,"patefaciō, patefēcī, patefactum","openmaken, begaanbaar maken, onthullen",werkwoord,ĭ-vervoeging,C1T2
 pater,patris,de vader,substantief,2e klasse,1e jaar
 patria,patriae,"het vaderland, de vaderstad",substantief,1e klasse,1e jaar
 paucī,"paucae, pauca",weinigen,adjectief,1e klasse,1e jaar
@@ -249,25 +269,31 @@ pervenīre,"perveniō, pervēnī, perventum","aankomen, bereiken",werkwoord,ī-v
 petere,"petō, petīvī, petītum","verlangen, vragen, halen, gaan naar, trachten te bereiken",werkwoord,consonantvervoeging,1e jaar
 piscis,piscis m.,de vis,substantief,2e klasse,2e jaar
 pōnere,"pōnō, posuī, positum","plaatsen, zetten, (neer)leggen",werkwoord,consonantvervoeging,1e jaar
+populus,populī,het volk,substantief,1e klasse,C1T2
 poscere,"poscō, poposcī","eisen, verlangen",werkwoord,consonantvervoeging,2e jaar
 posse,"possum, potuī",kunnen,werkwoord,onregelmatig,1e jaar
 post,+acc.,na,voorzetsel,+acc.,1e jaar
 post(eā),-,later,bijwoord,-,1e jaar
+post(eā)quam,-,nadat,voegwoord,onderschikkend,C1T2
 potius,-,eerder,bijwoord,-,C1T1
+praestāre,"praestō, praestitī, praestātum/praestitum","geven, overtreffen",werkwoord,a-vervoeging,C1T2
 praeter,+acc.,langs; behalve,voorzetsel,+acc.,1e jaar
 pretium,pretiī,"de prijs, de waarde",substantief,1e klasse,2e jaar
 prīmus,"prīma, prīmum",1e,telwoord,rangtelwoord,1e jaar
 proelium,proeliī,"de slag, de strijd, het gevecht",substantief,1e klasse,1e jaar
 prohibēre,"prohibeō, prohibuī, prohibitum","verhinderen, afhouden van",werkwoord,e-vervoeging,1e jaar
 prope,+acc.,"dichtbij, bijna",voorzetsel,+acc.,1e jaar
+prūdentia,prūdentiae,"de kennis, het verstand",substantief,1e klasse,C1T2
 puella,puellae,het meisje,substantief,1e klasse,1e jaar
 puer,puerī,"de jongen, het kind; de slaaf",substantief,1e klasse,1e jaar
 putāre,putō,"denken, menen, beschouwen als",werkwoord,a-vervoeging,2e jaar
 quaerere,"quaerō, quaesīvī, quaesītum","zoeken, vragen",werkwoord,consonantvervoeging,2e jaar
 quam,-,"hoe, wat; (na comp.) dan",bijwoord,-,C1T1
+quantus,"quanta, quantum",hoe groot,adjectief,1e klasse,C1T2
 quartus,"quarta, quartum",4e,telwoord,rangtelwoord,2e jaar
 quattuor,-,4,telwoord,hoofdtelwoord,2e jaar
-quī,"quae, quod","wie, welke, wat",voornaamwoord,betrekkelijk,1e jaar
+quī,"quae, quod","die, dat",voornaamwoord,betrekkelijk,1e jaar
+quī,"quae, quod",welke,voornaamwoord,vragend,2e jaar
 quidem,-,"weliswaar, wel",bijwoord,-,1e jaar
 quinque,-,5,telwoord,hoofdtelwoord,2e jaar
 quintus,"quinta, quintum",5e,telwoord,rangtelwoord,2e jaar
@@ -287,6 +313,7 @@ rēgnum,rēgnī,"het koningschap, de heerschappij, het rijk, het koninkrijk",sub
 remittere,"remittō, remīsī, remissum","loslaten, terugsturen",werkwoord,consonantvervoeging,1e jaar
 renovāre,renovō,hernieuwen,werkwoord,a-vervoeging,C1T1
 repellere,"repellō, reppulī, repulsum",terugdrijven,werkwoord,consonantvervoeging,1e jaar
+rēpere,"rēpō, rēpsī, rēptum",kruipen,werkwoord,consonantvervoeging,C1T2
 repōnere,"repōnō, reposuī, repositum","terugplaatsen, wegleggen",werkwoord,consonantvervoeging,2e jaar
 respicere,"respiciō, respēxī, respectum","terugkijken, omkijken",werkwoord,ĭ-vervoeging,2e jaar
 respondēre,"respondeō, respondī, respōnsum",antwoorden,werkwoord,e-vervoeging,2e jaar
@@ -295,6 +322,7 @@ rēx,rēgis m.,de koning,substantief,2e klasse,1e jaar
 rosa,rosae,de roos,substantief,1e klasse,1e jaar
 sacēr,"sacra, sacrum",heilig,adjectief,1e klasse,1e jaar
 saepe,-,"dikwijls, vaak",bijwoord,-,2e jaar
+saltus,saltūs,"de sprong; (meestal mv.) het bosrijk dal, het bergwoud",substantief,3e klasse,C1T2
 sānus,"sāna, sānum",gezond,adjectief,1e klasse,1e jaar
 saxum,saxī,"de steen, de rots",substantief,1e klasse,1e jaar
 scrībere,"scrībō, scrīpsī, scrīptum",schrijven,werkwoord,consonantvervoeging,1e jaar
@@ -302,6 +330,7 @@ sē,suī,zichzelf,voornaamwoord,persoonlijk,2e jaar
 secundus,"secunda, secundum",2e,telwoord,rangtelwoord,2e jaar
 sēcūrus,"sēcūra, sēcūrum","zonder zorg, onbezorgd",adjectief,1e klasse,2e jaar
 sed,-,maar,voegwoord,nevenschikkend,1e jaar
+sēiungere,"sēiungō, sēiūnxī, sēiūnctum","scheiden, uitsluiten",werkwoord,consonantvervoeging,C1T2
 septem,-,7,telwoord,hoofdtelwoord,2e jaar
 septimus,"septima, septimum",7e,telwoord,rangtelwoord,2e jaar
 servīre,serviō,dienen,werkwoord,ī-vervoeging,C1T1
@@ -327,6 +356,8 @@ superāre,superō,"overwinnen, overtreffen",werkwoord,a-vervoeging,C1T1
 suus,"sua, suum","zijn, haar, hun (eigen)",voornaamwoord,bezittelijk,2e jaar
 tacēre,"taceō, tacuī, tacitum","zwijgen, verzwijgen",werkwoord,e-vervoeging,2e jaar
 tamen,-,"toch, evenwel",bijwoord,-,C1T1
+tantus,"tanta, tantum","zo groot, zo veel",adjectief,1e klasse,C1T2
+tantus … quantus,,zo veel … als,adjectief,1e klasse,C1T2
 tectum,tectī,"het dak, het huis",substantief,1e klasse,2e jaar
 tegere,"tegō, tēxī, tēctum","bedekken, beschermen",werkwoord,consonantvervoeging,1e jaar
 tēlum,tēlī,"het werptuig, de wapens",substantief,1e klasse,1e jaar
@@ -337,10 +368,10 @@ tertius,"tertia, tertium",3e,telwoord,rangtelwoord,2e jaar
 timidus,"timida, timidum","bang, angstig",adjectief,1e klasse,2e jaar
 toga,togae,de toga,substantief,1e klasse,1e jaar
 trādere,"trādō, trādidī, trāditum","overgeven, overleveren",werkwoord,consonantvervoeging,C1T1
-trādūcere,"trādūcō, trādūxī, trādūctum",overzetten,werkwoord,consonantvervoeging,1e jaar
+trādūcere,"trādūcō, trādūxī, trādūctum","overbrengen, naar de overkant brengen, doorbrengen",werkwoord,consonantvervoeging,1e jaar
 trahere,"trahō, trāxī, tractum","trekken, slepen",werkwoord,consonantvervoeging,2e jaar
 trāicere,"trāiciō, trāiēcī, trāiectum","werpen over, laten oversteken",werkwoord,ĭ-vervoeging,1e jaar
-transferre,"transferō, transtulī, translātum",overbrengen,werkwoord,onregelmatig,2e jaar
+trānsferre,"transferō, transtulī, translātum",overbrengen,werkwoord,onregelmatig,2e jaar
 trānsīre,"trānseō, trānsiī, trānsitum",overtrekken,werkwoord,onregelmatig,1e jaar
 trānsitus,trānsitūs,"de overgang, de doortocht",substantief,3e klasse,1e jaar
 trēs,"trēs, tria",3,telwoord,hoofdtelwoord,1e jaar

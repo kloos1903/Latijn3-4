@@ -1,52 +1,57 @@
 <!doctype html>
 <html lang="nl">
-<head>
-  <meta charset="UTF-8" />
-  <title>CSV Tabel met Woordfilter</title>
-  <link rel="stylesheet" href="style.css?v=1" />
-  <link rel="stylesheet" href="woordfilter.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Woordenlijst</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+    <!-- CDN Libraries -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
-  <!-- DataTables CSS -->
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+    <script>
+      (function () {
+        const v = Date.now();
+        document.write(`<link rel="stylesheet" href="style.css?v=${v}">`);
+        document.write(`<link rel="stylesheet" href="woordfilter.css?v=${v}">`); // ← Add CSS
+        document.write(`<script src="Woordenlijst.js?v=${v}"><\/script>`);
+        document.write(`<script src="woordfilter.js?v=${v}"><\/script>`); // ← Add this back
+        document.write(`<script src="tooltip.js?v=${v}"><\/script>`);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="screen-only">
+      <a href="index.html"> HOME </a>
+    </header>
+    <h1>Woordenlijst</h1>
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Woordfilter Container -->
+    <div id="woordfilterContainer"></div>
 
-  <!-- DataTables JS -->
-  <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <!-- Table -->
+    <table id="csvTable" class="display" style="width: 100%"></table>
 
-  <!-- PapaParse -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-
-  <!-- Your JS -->
-  <script src="Woordenlijst.js"></script>
-  <script src="woordfilter.js"></script>
-</head>
-<body>
-  <h1>Woordenlijst</h1>
-
-  <!-- Woordfilter Container -->
-  <div id="woordfilterContainer"></div>
-
-  <!-- Table -->
-  <table id="csvTable" class="display" style="width: 100%"></table>
-
-  <!-- Initialize -->
-  <script>
-    $(document).ready(function() {
-      // Initialize table
-      initWoordenlijst("Woordenlijst.csv", {
-        onComplete: function() {
-          // Initialize woordfilter AFTER table is ready
-          initWoordenfilter("csvTable", "woordfilterContainer", {
-            col4Index: 3,
-            col5Index: 4,
-            col4Label: "Woordsoort",
-            col5Label: "Extra"
-          });
-        }
+    <script>
+      $(document).ready(function () {
+        // Load all data (no prefilter)
+        initWoordenlijst("Woordenlijst.csv", {
+          onComplete: function () {
+            console.log("All vocabulary loaded");
+            // Initialize word filter AFTER table is ready
+            initWoordenfilter("csvTable", "woordfilterContainer", {
+              col4Index: 3,
+              col5Index: 4,
+              col4Label: "Woordsoort",
+              col5Label: "Extra"
+            });
+          }
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>

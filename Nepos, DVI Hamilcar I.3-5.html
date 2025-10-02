@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Vocabularium — Punische oorlogen</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+            rel="stylesheet" />
+        <!-- CDN Libraries (no versioning needed) -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+        <!-- Auto-versioned Your Files -->
+        <script>
+            const v = Date.now();
+            document.write(`<link rel="stylesheet" href="style.css?v=${v}">`);
+            document.write(`<script src="Woordenlijst.js?v=${v}"><\/script>`);
+            // Add more files as needed:
+            // document.write(`<script src="woordfilter.js?v=${v}"><\/script>`);
+        </script>
+    </head>
+
+    <body data-col6="C1T1">
+        <header class="screen-only">
+            <a href="index.html"> HOME </a>
+        </header>
+        <h1>Cornelius Nepos, De viris Illustribus, Hamilcar I, 3-5</h1>
+
+        <section class="card">
+            <h2>Hamilkar</h2>
+            <p>
+                [3] Interim Karthāginiēnsēs classe apud īnsulās Aegātēs ā C. Lutātiō, cōnsule Rōmānōrum, superātī
+                statuērunt bellī facere fīnem eamque rem arbitriō permīserunt Hamilcaris. Ille etsī flăgrabat bellandī
+                cupiditāte, tamen pācī serviundum putāvit, quod patriam exhaustam sūmptibus diūtius calamitātēs ferre
+                nōn posse intellegēbat,
+            </p>
+            <p>
+                [4] sed ita ut statim mente agitāret, sī paulum modo rēs essēnt refectae, bellum renovāre Rōmānōsque
+                armīs persequī, donicum aut virtūte vīcissent aut vīctī manūs dedissent. Hōc cōnsiliō pācem conciliāvit;
+            </p>
+            <p>
+                [5] in quō tanta fuit ferōcia, cum Catulus negāret bellum compositūrum, nisi cum suīs, quī Erycem
+                tenērent, armīs relictīs Siciliā dēcēderent, ut succumbente patriā ipse peritūrum sē pōtius dīxerit,
+                quam cum tantō flāgitiō domum redīret: nōn enim suae esse virtūtis arma ā patriā acceptā adversus hostēs
+                adversāriīs trādere. Huius pertināciae cessit Catulus.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Vocabularium</h2>
+            <table id="csvTable" class="display" style="width: 100%"></table>
+
+            <script>
+                $(document).ready(function () {
+                    initWoordenlijst("./Woordenlijst.csv", {
+                        prefilterCol6: "C1T1",
+                        onComplete: function () {
+                            console.log("C1T1 vocabulary loaded successfully");
+                        }
+                    });
+                });
+            </script>
+        </section>
+    </body>
+</html>
