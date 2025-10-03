@@ -71,7 +71,7 @@
 
                 // Add custom search box with styling
                 const searchHtml = `
-                    <div class="custom-search" style="margin-bottom: 1rem;">
+                    <div class="custom-search screen-only" style="margin-bottom: 1rem;">
                         <input type="text" id="customSearchInput" placeholder="Zoeken ..."
                                style="width: 100%; max-width: 400px; padding: 0.8rem; border: 1px solid var(--border);
                                       border-radius: 8px; background: var(--bg); color: var(--text); font-size: 1rem;" />

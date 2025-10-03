@@ -35,11 +35,25 @@ strong {
   color: var(--muted);
 }
 
+/* Hide print-only content on screen */
+.print-only {
+  display: none;
+}
+
 /* ========== Layout ========== */
+.video {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical if height is set */
+  padding: 0.5rem;
+}
+
+.video-grid,
 .grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: flex-start
 }
 
 .card {
@@ -58,6 +72,12 @@ strong {
 .card p {
   line-height: 1.7;
   margin-bottom: 1rem;
+}
+
+img {
+  display: block;      /* makes margin auto work */
+  margin-left: auto;   /* center horizontally */
+  margin-right: auto;
 }
 
 /* ========== Typography ========== */
@@ -113,19 +133,7 @@ h2::after {
 /* ========== Latin Declension Specific Styles ========== */
 
 /* Main title enhancement */
-h1 {
-  border-bottom: 3px solid var(--accent-gold);
-  position: relative;
-}
 
-h1::before {
-  content: "📚";
-  position: absolute;
-  left: -3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2.5rem;
-}
 
 /* Declination sections */
 .declination-section {
@@ -407,39 +415,6 @@ button:hover {
   }
 }
 
-/* ========== Print Styles ========== */
-@media print {
-  .declination-section {
-    background: transparent !important;
-    box-shadow: none !important;
-    border: 1px solid #ccc !important;
-    page-break-inside: avoid;
-  }
-
-  .latin-declension {
-    background: transparent !important;
-    box-shadow: none !important;
-  }
-
-  .latin-declension caption {
-    background: #f0f0f0 !important;
-    color: #000 !important;
-  }
-
-  .latin-declension th {
-    background: #f8f8f8 !important;
-    color: #000 !important;
-  }
-
-  .latin-declension td {
-    color: #000 !important;
-  }
-
-  .latin-declension strong {
-    color: #800000 !important;
-  }
-}
-
 /* ========== Word Filter (Keep existing styles) ========== */
 .button-filter {
   background: var(--card);
@@ -623,3 +598,41 @@ button:hover {
   font-size: 0.9rem;
   margin: 0;
 }
+
+/* ===== Print Styles ===== */
+@media print {
+  .screen-only, .filter { display: none !important; }
+  .print-only { display: block !important; }
+
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11pt;
+    line-height: 1.4;
+    margin: 1cm;
+  }
+
+  h1, h2, h3 {
+    color: #000 !important;
+    font-family: Georgia, "Times New Roman", serif;
+    margin-bottom: 0.5em;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  strong {
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .grid {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+  }
