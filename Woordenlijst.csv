@@ -259,7 +259,7 @@ paucī,"paucae, pauca",weinigen,adjectief,1e klasse,1e jaar
 paulum/paulo,-,"een weinig, een beetje",bijwoord,-,1e jaar
 pāx,pācis,de vrede,substantief,2e klasse,C1T1
 pecūnia,pecūniae,het geld,substantief,1e klasse,1e jaar
-per,+acc.,"doorheen, gedurende",voorzetsel,+acc.,2e jaar
+per,+acc.,"door, over, gedurende, door middel van, bij",voorzetsel,+acc.,2e jaar
 perīculum,perīculī,het gevaar,substantief,1e klasse,2e jaar
 perīre,"pereō, periī, peritum",te gronde gaan,werkwoord,onregelmatig,C1T1
 permittere,"permittō, permīsī, permīssum","toestaan, loslaten",werkwoord,consonantvervoeging,C1T1
@@ -411,3 +411,39 @@ volāre,volō,vliegen,werkwoord,a-vervoeging,1e jaar
 vōs,vestrum,jullie,voornaamwoord,persoonlijk,2e jaar
 vulnerāre,vulnerō,verwonden,werkwoord,a-vervoeging,1e jaar
 vulnus,vulneris,de wond,substantief,2e klasse,1e jaar
+ac,,"en, ook",voegwoord,nevenschikkend,C1T3
+adeo,-,zozeer,bijwoord,,C1T3
+afficere,"afficiō, affēcī, affectum","voorzien, vervullen, aandoen, indruk maken op",werkwoord,ĭ-vervoeging,C1T3
+aliquot,,"enige, een aantal",adjectief,onverbuigbaar,C1T3
+bene,-,goed,bijwoord,,C1T3
+circumvenīre,"circumveniō, convēnī, conventum","omsingelen, omgeven, in het nauw brengen",werkwoord,ī-vervoeging,C1T3
+collēga,collēgae,"de collega, de ambtsgenoot",substantief,1e klasse,C1T3
+cōnflīgere,"cōnflīgō, cōnflīxī, cōnflīctum","slaan, strijden",werkwoord,consonantvervoeging,C1T3
+cōnserere,"cōnserō, cōnseruī, cōnsertum","leveren, samenvoegen",werkwoord,consonantvervoeging,C1T3
+cōnsulāris,cōnsulāris,de voormalige consul,substantief,2e klasse,C1T3
+dēcernere,"dēcernō, dēcrēvī, dēcrētum","oordelen, beslissen, toewijzen",werkwoord,consonantvervoeging,C1T3
+dēligere,"dēligō, dēlēgī, dēlēctum",(uit)kiezen,werkwoord,consonantvervoeging,C1T3
+dexter,"dextra, dextrum",rechter-,adjectief,1e klasse,C1T3
+dimittere,"dimittō, dimīsī, dimissum","wegzenden, laten gaan, kwijtschelden",werkwoord,consonantvervoeging,C1T3
+fūgāre,fūgō,op de vlucht jagen,werkwoord,a-vervoeging,C1T3
+"gravis,","gravis, grave","zwaar, ernstig",adjectief,2e klasse,C1T3
+hinc,-,"van hier, van nu af aan",bijwoord,,C1T3
+ibi,-,daar,bijwoord,,C1T3
+inde,-,"daarvandaan, sindsdien, daarna, vandaar, daarom",bijwoord,,C1T3
+īnsidiae,īnsidiārum,de hinderlaag,substantief,1e klasse,C1T3
+lectīca,lectīcae,de draagstoel,substantief,1e klasse,C1T3
+morbus,"morba, morbum",ziek,adjectief,1e klasse,C1T3
+obviam,-,tegemoet,bijwoord,,C1T3
+occidere,"occidō, occidī, occāsum","vallen, ondergaan, sneuvelen",werkwoord,consonantvervoeging,C1T3
+occupāre,occupō,"bezetten, in beslag nemen",werkwoord,a-vervoeging,C1T3
+oculus,oculī,het oog,substantief,1e klasse,C1T3
+pellere,"pellō, pepulī, pulsum","stoten, verdrijven",werkwoord,consonantvervoeging,C1T3
+petere,"petō, petī(v)ī, petītum","verlangen, vragen, halen, gaan naar, trachten te bereiken",werkwoord,consonantvervoeging,C1T3
+praetereā,-,bovendien,bijwoord,,C1T3
+praetor,praetōris,"de praetor, hoge ambtenaar verantwoordelijk voor justitie en hoogste rechter",substantief,2e klasse,C1T3
+premere,"premō, pressī, pressum","(neer)drukken, onderdrukken",werkwoord,consonantvervoeging,C1T3
+prōflīgāre,prōflīgō,"verslaan, vernietigen",werkwoord,a-vervoeging,C1T3
+saucius,"saucia, saucium","gewond, geraakt",adjectief,1e klasse,C1T3
+superior,"superior, superius",vorig,adjectief,2e klasse,C1T3
+uterque,"utraque, utrumque","elk van beiden, beide apart",voornaamwoord,onbepaald,C1T3
+valetūdō,valetūdinis,"de gezondheid, de toestand",substantief,2e klasse,C1T3

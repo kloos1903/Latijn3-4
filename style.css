@@ -65,13 +65,25 @@ strong {
   padding: 1rem;
 }
 
-.card:last-child {
-  margin-top: 2rem;
-}
-
 .card p {
   line-height: 1.7;
   margin-bottom: 1rem;
+}
+
+.vb-zin {
+  display: inline-block;
+  background: linear-gradient(180deg, var(--accent-gold), #b48d52);
+  border: 2px solid var(--accent-red);
+  margin-left: 2em;
+  color: #1a1208;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  padding: 0em 0.5em;
+  font-style: italic;
+}
+
+.vb-zin strong {
+  color: var(--accent-red)
 }
 
 img {
@@ -81,7 +93,7 @@ img {
 }
 
 /* ========== Typography ========== */
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: var(--text);
   font-family: var(--font-head, serif);
   text-transform: uppercase;
@@ -113,6 +125,13 @@ h3 {
   margin-bottom: 0.3rem;
 }
 
+h4 {
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  margin-top: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
 h1::after, h2::after {
   content: "";
   display: block;
@@ -128,183 +147,6 @@ h1::after {
 h2::after {
   background: linear-gradient(90deg, var(--accent-gold), transparent 70%);
   height: 2px;
-}
-
-/* ========== Latin Declension Specific Styles ========== */
-
-/* Main title enhancement */
-
-
-/* Declination sections */
-.declination-section {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  margin-bottom: 3rem;
-  padding: 2rem;
-  position: relative;
-}
-
-.declination-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  border-radius: 12px 12px 0 0;
-}
-
-/* Declination type specific colors */
-.declination-section:nth-child(1)::before,
-.declination-section[data-type="first"]::before {
-  background: linear-gradient(90deg, var(--accent-gold), transparent);
-}
-
-.declination-section:nth-child(2)::before,
-.declination-section[data-type="second"]::before {
-  background: linear-gradient(90deg, var(--accent-red), transparent);
-}
-
-.declination-section:nth-child(3)::before,
-.declination-section[data-type="third"]::before {
-  background: linear-gradient(90deg, var(--accent-purple), transparent);
-}
-
-/* Declination titles */
-.declination-title {
-  color: var(--accent-gold);
-  font-family: var(--font-head, serif);
-  font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.declination-title::after {
-  content: "";
-  display: block;
-  width: 80%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-gold), transparent);
-  margin: 0.5rem auto 0;
-}
-
-/* Info boxes */
-.declination-info {
-  background: rgba(212, 177, 106, 0.1);
-  border: 1px solid rgba(212, 177, 106, 0.3);
-  border-left: 4px solid var(--accent-gold);
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-}
-
-.declination-info h3 {
-  color: var(--accent-gold);
-  font-family: var(--font-head, serif);
-  font-size: 1.1rem;
-  margin-top: 0;
-  text-transform: uppercase;
-}
-
-.declination-info ul {
-  margin: 1rem 0 0 0;
-  padding-left: 1.5rem;
-}
-
-.declination-info li {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
-}
-
-.declination-info em {
-  color: var(--accent-red);
-  font-style: italic;
-  font-weight: bold;
-}
-
-/* Tables container */
-.tables-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-/* Latin declension tables */
-.latin-declension {
-  background: rgba(26, 23, 21, 0.8);
-  border: 1px solid var(--border);
-  border-collapse: collapse;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  margin: 0;
-  max-width: 450px;
-  overflow: hidden;
-  width: 100%;
-}
-
-.latin-declension caption {
-  background: linear-gradient(135deg, var(--card), rgba(58, 49, 41, 0.8));
-  border-bottom: 2px solid var(--accent-gold);
-  color: var(--text);
-  font-family: var(--font-head, serif);
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  padding: 1rem;
-  text-transform: uppercase;
-}
-
-.latin-declension th {
-  background: linear-gradient(180deg, rgba(212, 177, 106, 0.15), rgba(212, 177, 106, 0.05));
-  border: 1px solid var(--border);
-  color: var(--text);
-  font-family: var(--font-head, serif);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  padding: 0.8rem 1rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.latin-declension td {
-  border: 1px solid var(--border);
-  padding: 0.8rem 1rem;
-  text-align: left;
-  transition: background-color 0.2s ease;
-}
-
-.latin-declension td:first-child {
-  background: rgba(58, 49, 41, 0.3);
-  color: var(--text);
-  font-family: var(--font-head, serif);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.latin-declension tbody tr:nth-child(even) {
-  background: rgba(26, 23, 21, 0.6);
-}
-
-.latin-declension tbody tr:hover {
-  background: rgba(212, 177, 106, 0.1);
-  transform: scale(1.02);
-  transition: all 0.2s ease;
-}
-
-/* Latin text emphasis */
-.latin-declension strong {
-  color: var(--accent-red);
-  font-weight: 800;
 }
 
 /* Footer styling */
@@ -391,19 +233,6 @@ button:hover {
 
   h1::before {
     display: none;
-  }
-
-  .tables-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .latin-declension {
-    max-width: 100%;
-  }
-
-  .declination-section {
-    padding: 1rem;
   }
 
   footer > div {
