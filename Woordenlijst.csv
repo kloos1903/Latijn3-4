@@ -56,8 +56,8 @@ classis,classis,de vloot,substantief,2e klasse,C1T1
 cōgere,"cōgō, coēgī, coactum","verzamelen, dwingen",werkwoord,consonantvervoeging,2e jaar
 collis,collis m.,de heuvel,substantief,2e klasse,1e jaar
 collum,collī,de nek,substantief,1e klasse,1e jaar
-compōnere,"compōnō, composuī, compositum","bijeenzetten, ordenen",werkwoord,consonantvervoeging,C1T1
-cōnārī,cōnor,"proberen, zich inspannen",werkwoord,a-vervoeging,C1T2
+compōnere,"compōnō, composuī, compositum","(samen) plaatsen, opstellen, oprichten, verzinnen, tot bedaren brengen, ordenen",werkwoord,consonantvervoeging,C1T1
+cōnārī,"cōnor, cōnātus sum","proberen, zich inspannen",werkwoord,a-vervoeging,C1T2
 concidere,"concidō, concīdī, -","instorten, verdwijnen, het onderspit delven",werkwoord,consonantvervoeging,C1T2
 conciliāre,conciliō,"gunstig stemmen, verschaffen, tot stand brengen",werkwoord,a-vervoeging,C1T1
 condere,"condō, condidī, conditum","stichten, opbergen, verbergen",werkwoord,consonantvervoeging,1e jaar
@@ -149,7 +149,7 @@ habēre,"habeō, habuī, habitum","hebben, houden",werkwoord,e-vervoeging,1e jaa
 habitāre,habitō,wonen,werkwoord,a-vervoeging,1e jaar
 hic,"haec, hoc","deze, dit",voornaamwoord,aanwijzend,1e jaar
 hiems,hiemis,de winter,substantief,2e klasse,2e jaar
-hinc,-,hiervandaan,bijwoord,-,2e jaar
+hinc,-,"van hier, van nu af aan, als gevolg daarvan",bijwoord,-,2e jaar
 hodiē,-,vandaag,bijwoord,-,C1T2
 homō,hominis m.,"de mens, de man",substantief,2e klasse,1e jaar
 hostis,hostis m.,de vijand,substantief,2e klasse,1e jaar
@@ -164,7 +164,7 @@ illinc,-,daarvandaan,bijwoord,-,2e jaar
 imperāre,imperō,bevelen,werkwoord,a-vervoeging,1e jaar
 imperātor,imperātōris,"de (opper)bevelhebber, de keizer",substantief,2e klasse,C1T2
 imperium,imperiī n.,"het bevel, het gezag, de heerschappij, het rijk",substantief,1e klasse,1e jaar
-in,+abl.,"in, op",voorzetsel,+abl.,1e jaar
+in,+abl.,"in, op, tijdens",voorzetsel,+abl.,1e jaar
 in,+acc.,"naar, tegen, tot",voorzetsel,+acc.,1e jaar
 incendium,incendii,de brand,substantief,1e klasse,2e jaar
 incipere,"incipiō, incēpī, inceptum",beginnen,werkwoord,ĭ-vervoeging,1e jaar
@@ -176,7 +176,7 @@ inquam,inquam,"ik zeg, ik zei",werkwoord,onregelmatig,2e jaar
 inquit,inquit,"hij/zij zegt, hij/zij zei",werkwoord,onregelmatig,2e jaar
 insidēre,"insidēo, insēdī, insessum","zich houden aan, grijpen, in bezit nemen, vasthouden, bezetten",werkwoord,e-vervoeging,1e jaar
 insula,insulae,het eiland,substantief,1e klasse,C1T1
-intelligere,"intellegō, intellexī, intellectum","inzien, begrijpen",werkwoord,consonantvervoeging,C1T1
+intellegere/intelligere,"intellegō/intelligō, intellexī, intellectum","inzien, begrijpen",werkwoord,consonantvervoeging,C1T1
 inter,+acc.,"tussen, temidden van",voorzetsel,+acc.,1e jaar
 interficere,"interficiō, interfēcī, interfectum",doden,werkwoord,ĭ-vervoeging,1e jaar
 interim,-,"intussen, voorlopig",bijwoord,-,1e jaar
@@ -208,7 +208,7 @@ mēns,mentis,"de geest, het verstand, de gezindheid",substantief,2e klasse,1e ja
 mensa,mensae,de tafel,substantief,1e klasse,2e jaar
 meus,"mea, meum",mijn,voornaamwoord,bezittelijk,1e jaar
 mīles,mīlitis m.,de soldaat,substantief,2e klasse,1e jaar
-mille,"(mv.) millia, millium",1000,telwoord,hoofdtelwoord,2e jaar
+mille,"(mv.) milia, milium",1000,telwoord,hoofdtelwoord,2e jaar
 mittere,"mittō, mīsī, missum","laten gaan, sturen, zenden",werkwoord,consonantvervoeging,1e jaar
 modo,-,"slechts, zojuist, (+gen.) op de manier van",bijwoord,-,C1T1
 mollis,"mollis, molle","zacht, tam",adjectief,2e klasse,2e jaar
@@ -416,7 +416,7 @@ adeo,-,zozeer,bijwoord,,C1T3
 afficere,"afficiō, affēcī, affectum","voorzien, vervullen, aandoen, indruk maken op",werkwoord,ĭ-vervoeging,C1T3
 aliquot,,"enige, een aantal",adjectief,onverbuigbaar,C1T3
 bene,-,goed,bijwoord,,C1T3
-circumvenīre,"circumveniō, convēnī, conventum","omsingelen, omgeven, in het nauw brengen",werkwoord,ī-vervoeging,C1T3
+circumvenīre,"circumveniō, circumvēnī, circumventum","omsingelen, omgeven, in het nauw brengen",werkwoord,ī-vervoeging,C1T3
 collēga,collēgae,"de collega, de ambtsgenoot",substantief,1e klasse,C1T3
 cōnflīgere,"cōnflīgō, cōnflīxī, cōnflīctum","slaan, strijden",werkwoord,consonantvervoeging,C1T3
 cōnserere,"cōnserō, cōnseruī, cōnsertum","leveren, samenvoegen",werkwoord,consonantvervoeging,C1T3
@@ -425,9 +425,7 @@ dēcernere,"dēcernō, dēcrēvī, dēcrētum","oordelen, beslissen, toewijzen",
 dēligere,"dēligō, dēlēgī, dēlēctum",(uit)kiezen,werkwoord,consonantvervoeging,C1T3
 dexter,"dextra, dextrum",rechter-,adjectief,1e klasse,C1T3
 dimittere,"dimittō, dimīsī, dimissum","wegzenden, laten gaan, kwijtschelden",werkwoord,consonantvervoeging,C1T3
-fūgāre,fūgō,op de vlucht jagen,werkwoord,a-vervoeging,C1T3
-"gravis,","gravis, grave","zwaar, ernstig",adjectief,2e klasse,C1T3
-hinc,-,"van hier, van nu af aan",bijwoord,,C1T3
+gravis,"gravis, grave","zwaar, ernstig",adjectief,2e klasse,C1T3
 ibi,-,daar,bijwoord,,C1T3
 inde,-,"daarvandaan, sindsdien, daarna, vandaar, daarom",bijwoord,,C1T3
 īnsidiae,īnsidiārum,de hinderlaag,substantief,1e klasse,C1T3
@@ -447,3 +445,42 @@ saucius,"saucia, saucium","gewond, geraakt",adjectief,1e klasse,C1T3
 superior,"superior, superius",vorig,adjectief,2e klasse,C1T3
 uterque,"utraque, utrumque","elk van beiden, beide apart",voornaamwoord,onbepaald,C1T3
 valetūdō,valetūdinis,"de gezondheid, de toestand",substantief,2e klasse,C1T3
+longus,"longa, longum","lang, uitgestrekt, langdurig",adjectief,1e klasse,C1T4
+ēnumerāre,ēnumerō,"berekenen, optellen, opsommen",werkwoord,a-vervoeging,C1T4
+quārē,-,waarom,bijwoord,,C1T4
+satis,-,genoeg; (+esse) volstaan,bijwoord,,C1T4
+dictum,dictī,"het woord, het gezegde, het bevel, de belofte",substantief,1e klasse,C1T4
+quamdiū,-,(zolang) als,bijwoord,,C1T4
+aciēs,aciēī,"de scherpte, de slagorde, het (opgestelde) leger",substantief,3e klasse,C1T4
+resistere,"resistō, restitī, -","stilstaan, (achter)blijven, zich verzetten (dat. tegen)",werkwoord,consonantvervoeging,C1T4
+pugna,pugnae,"het gevecht, de slaglinie",substantief,1e klasse,C1T4
+campus,campī,"het veld, de vlakte, de open ruimte",substantief,1e klasse,C1T4
+invictus,"invicta, invictum","onoverwonnen, onoverwinnelijk, onverwoestbaar",adjectief,1e klasse,C1T4
+dēfendere,"dēfendō, dēfendī, dēfēnsum","afweren, verdedigen (ab: tegen), beschermen (ab: voor)",werkwoord,consonantvervoeging,C1T4
+revocāre,revocō,"terugroepen opnieuw (op)roepen, hernieuwen, laten komen",werkwoord,a-vervoeging,C1T4
+iterum,-,"voor de tweede keer, opnieuw, aan de andere kant",bijwoord,,C1T4
+facultās,facultātis,"de mogelijkheid, de vaardigheid, het redenaarstalent, de voorraad, (mv.) de middelen",substantief,2e klasse,C1T4
+impraesentiārum,-,voor het ogenblik,bijwoord,,C1T4
+valēns,valentis,"sterk, effectief",adjectief,2e klasse,C1T4
+congredī,"congredior, congressus sum","samenkomen, strijden",werkwoord,consonantvervoeging,C1T4
+inde,-,"daarvandaan, sindsdien, daarna, vandaar, daarom",bijwoord,,C1T4
+colloquium,colloquiī,het gesprek,substantief,1e klasse,C1T4
+convenire,"conveniō, convēnī, conventum","samenkomen, overeenkomen, passen (dat.: bij)",werkwoord,ī-vervoeging,C1T4
+condiciō,condiciōnis,"de voorwaarde, de toestand, de overeenkomst",substantief,2e klasse,C1T4
+incrēdibilis,"incrēdibilis, incrēdibile",ongelooflijk,adjectief,2e klasse,C1T4
+bīduum,bīdūī,(periode van) twee dagen,substantief,1e klasse,C1T4
+abesse,"absum, āfuī, āfutūrum","afwezig zijn, verwijderd zijn, niet deelnemen (ab: aan)",werkwoord,onregelmatig,C1T4
+circiter,-,"ongeveer, rondom",bijwoord,,C1T4
+passus,passūs,"de stap, de dubbele pas (ca. 1,5m); mille passūs/milia passuum: een Romeinse mijl (ca. 1,5 km)",substantief,3e klasse,C1T4
+trecentī,"trecentae, trecenta",300,telwoord,hoofdtelwoord,C1T4
+fuga,fugae,"de vlucht, de verbanning, de haast, de afkeer",substantief,1e klasse,C1T4
+simul,-,"samen,tegelijk",bijwoord,,C1T4
+excēdere,"excēdō, excessī, excessum","weggaan, overschrijden, uitlopen",werkwoord,consonantvervoeging,C1T4
+īnsidiārī,"īnsidiōr, īnsidiātus sum","in een hinderlaag liggen, loeren (dat.: op)",werkwoord,a-vervoeging,C1T4
+effugere,"effugiō, effūgī, -","ontsnappen (acc.: aan), mijden, (onpers.) ontgaan",werkwoord,ĭ-vervoeging,C1T4
+opprimere,"opprimō, oppressī, oppressum","onderdrukken, overweldigen, neerdrukken",werkwoord,consonantvervoeging,C1T4
+colligere,"colligō, collēgī, collectum","verzamelen, verkrijgen, concluderen",werkwoord,consonantvervoeging,C1T4
+relinquere,"relinquō, relīquī, relictum","achterlaten, (over)laten, (pass.) overblijven, verlaten, opgeven",werkwoord,consonantvervoeging,C1T1
+reliquus,"reliqua, reliquum","overig, overgebleven, toekomstig",adjectief,1e klasse,C1T4
+dīlēctus,dīlēctūs,"de lichting (van soldaten), de verliezing",substantief,3e klasse,C1T4
+contrahere,"contrahō, contrāxī, contractum","samentrekken, verzamelen, veroorzaken, (zaken) aangaan",werkwoord,consonantvervoeging,C1T4

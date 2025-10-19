@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Vocabularium — Punische oorlogen</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+            rel="stylesheet" />
+        <!-- CDN Libraries (no versioning needed) -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+        <!-- Auto-versioned Your Files -->
+        <script>
+            const v = Date.now();
+            document.write(`<link rel="stylesheet" href="style.css?v=${v}">`);
+            document.write(`<script src="Woordenlijst.js?v=${v}"><\/script>`);
+            // Add more files as needed:
+            // document.write(`<script src="woordfilter.js?v=${v}"><\/script>`);
+        </script>
+    </head>
+
+    <body data-col6="C1T1">
+        <header class="screen-only">
+            <a href="index.html"> HOME </a>
+        </header>
+        <h1>Cornelius Nepos, De viris Illustribus, Hannibal </h1>
+
+        <section class="card">
+            <h2>Hannibal V-VI</h2>
+            <p>
+                [V.4] Longum est omnia ēnumerāre proelia. Quārē hoc ūnum satis erit dictum, ex quō intellegī possit, quantus ille fuerit: quamdiū in Italiā fuit, nēmō eī in aciē restitit, nēmō adversus eum post Cannēnsem pugnam in campō castra posuit.
+            </p>
+            <p>
+                [VI.1] Hinc invictus patriam dēfēnsum revocātus bellum gessit adversus P. Scīpiōnem, fīlium ēius Scīpiōnis, quem ipse prīmō apud Rhodanum, iterum apud Padum, tertiō apud Trebiam fugārat.
+            </p>
+            <p>
+                [2] Cum hōc exhaustīs iam patriae facultātibus cupīvit impraesentiārum bellum compōnere, quō valentior posteā congrederētur. Inde colloquium convēnit, condiciōnēs nōn convēnērunt.
+            </p>
+            <p>
+                [3] Post id factum paucīs diēbus apud Zamam cum eōdem cōnflīxit; pulsus (incrēdibile dictū) bīduō et duābus noctibus Hadrūmētum pervēnit, quod abest ab Zamā circiter mīlia passuum trecenta.
+            </p>
+            <p>
+                [4] In hāc fugā Numidae, quī simul cum eō ex aciē excesserant, īnsidiātī sunt eī, quōs nōn sōlum effūgit, sed etiam ipsōs oppressit. Hadrūmētī reliquōs ē fugā collēgit, novīs dīlēctibus paucīs diēbus multōs contrāxit.
+            </p>
+        </section>
+        
+        <section class="card">
+            <a href=https://upload.wikimedia.org/wikipedia/commons/4/47/Battle_of_Zama-battleplan.png>
+          <img src=Zama.png alt="De slag bij Zama">
+          </a>
+          <p style="text-align: center"><a href="https://commons.wikimedia.org/wiki/File:Battle_of_Zama-battleplan.png">Schema van de slag bij Zama</a>
+        </section>
+
+        <section class="card">
+            <h2>Vocabularium</h2>
+            <table id="csvTable" class="display" style="width: 100%"></table>
+
+            <script>
+                $(document).ready(function () {
+                    initWoordenlijst("./Woordenlijst.csv", {
+                        prefilterCol6: "C1T4",
+                        onComplete: function () {
+                            console.log("C1T1 vocabulary loaded successfully");
+                        }
+                    });
+                });
+            </script>
+        </section>
+    </body>
+</html>
