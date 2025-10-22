@@ -38,6 +38,11 @@ body {
 strong {
   color: var(--accent-gold);
   font-weight: bold;
+  font-style: italic;
+}
+
+h1 strong, h2 strong, h3 strong, h4 strong {
+  font-style: normal;
 }
 
 .muted {
@@ -93,6 +98,10 @@ strong {
 
 .vb-zin strong {
   color: var(--accent-red)
+}
+
+.bk {
+  color: var(--accent-blue-light);
 }
 
 img {
@@ -252,10 +261,17 @@ th, .number {
   color: var(--accent-gold-dark);
 }
 
-.uitgang {
+.ug {
   color: var(--accent-red-light);
   font-weight: bold;
   font-style: normal;
+  text-transform: lowercase;
+}
+
+.kl {
+  color: var(--accent-green-light);
+  font-weight: bold;
+  font-style: italic;
   text-transform: lowercase;
 }
 
@@ -515,14 +531,16 @@ button:hover {
     margin: 1cm;
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     color: #000 !important;
     font-family: Georgia, "Times New Roman", serif;
     margin-bottom: 0.5em;
+    page-break-after: avoid;
   }
 
-  section {
+  table, figure {
     page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   strong {
