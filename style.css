@@ -102,6 +102,8 @@ h1 strong, h2 strong, h3 strong, h4 strong {
 
 .bk {
   color: var(--accent-blue-light);
+  font-weight: normal;
+  font-style: normal;
 }
 
 img {
@@ -226,7 +228,10 @@ thead, .number{
 
 .tabelhoofd {
   background: var(--accent-gold-dark);
-  color: var(--text)
+  color: var(--text);
+  font-family: var(--font-head, serif);
+  font-size: medium;
+
 }
 
 table {
@@ -557,8 +562,16 @@ button:hover {
     width: 100%;
   }
 
-  .uitgang {
+  .ug {
     color: var(--accent-red)
+  }
+
+  .bk {
+    color: var(--accent-blue)
+  }
+
+  .kl {
+    color: var(--accent-green)
   }
 
   .card {
@@ -568,4 +581,28 @@ button:hover {
     padding: 0 !important;
     margin: 0 !important;
   }
-}
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  .vb-zin {
+    box-shadow: none;
+    border: none;
+    display: inline;
+    margin-left: auto;
+  }
+
+  th, .number {
+    background-color: var(--accent-marble-light);
+    color: var(--accent-gold-dark);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .tabelhoofd, {
+    background-color: var(--accent-gold-light);
+    color: var(--accent-marble-dark);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
