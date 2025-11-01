@@ -63,11 +63,14 @@
                     searching: true, // Critical: Enable searching for filters to work
                     info: false,
                     dom: 't', // Hide default search box but keep search functionality
+                    autoWidth: false, // Don't force inline widths
                     language: {
                         emptyTable: "Geen gegevens beschikbaar",
                         zeroRecords: "Geen overeenkomende records gevonden"
                     }
                 });
+
+                table.columns.adjust();
 
                 // Add custom search box with styling
                 const searchHtml = `

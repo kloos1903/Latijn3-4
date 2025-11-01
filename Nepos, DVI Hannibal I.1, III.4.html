@@ -17,6 +17,7 @@
         <script>
             (function () {
                 const v = Date.now();
+                window.appVersion = v;
                 document.write(`<link rel="stylesheet" href="style.css?v=${v}">`);
                 document.write(`<script src="Woordenlijst.js?v=${v}"><\/script>`);
                 document.write(`<script src="tooltip.js?v=${v}"><\/script>`);
@@ -69,21 +70,25 @@
             <table id="csvTable" class="display" style="width: 100%"></table>
 
             <script>
-                $(document).ready(function () {
-                    // Apply C1T1 prefilter
-                    initWoordenlijst("./Woordenlijst.csv", {
-                        prefilterCol6: "C1T2", // ← This filters to only C1T1 rows
-                        onComplete: function () {
-                            initWoordenfilter("csvTable", "woordfilterContainer", {
-                                col4Index: 3,
-                                col5Index: 4,
-                                col4Label: "Woordsoort",
-                                col5Label: "Extra"
-                            });
-                        }
-                    });
+            $(document).ready(function () {
+                const csvBase = "./Woordenlijst.csv";
+                const sep = csvBase.includes('?') ? '&' : '?';
+                const csvUrl = csvBase + sep + 'v=' + (window.appVersion || Date.now());
+
+                // Apply C1T1 prefilter
+                initWoordenlijst(csvUrl, {
+                    prefilterCol6: "C1T3",
+                    onComplete: function () {
+                        initWoordenfilter("csvTable", "woordfilterContainer", {
+                            col4Index: 3,
+                            col5Index: 4,
+                            col4Label: "Woordsoort",
+                            col5Label: "Extra"
+                        });
+                    }
                 });
-            </script>
+            });
+        </script>
         </section>
     </body>
 </html>

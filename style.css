@@ -41,7 +41,10 @@ strong {
   font-style: italic;
 }
 
-h1 strong, h2 strong, h3 strong, h4 strong {
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong {
   font-style: normal;
 }
 
@@ -57,8 +60,10 @@ h1 strong, h2 strong, h3 strong, h4 strong {
 /* ========== Layout ========== */
 .video {
   display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertical if height is set */
+  justify-content: center;
+  /* horizontal */
+  align-items: center;
+  /* vertical if height is set */
   padding: 0.5rem;
 }
 
@@ -67,7 +72,7 @@ h1 strong, h2 strong, h3 strong, h4 strong {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  align-items: flex-start
+  align-items: flex-start;
 }
 
 .card {
@@ -90,7 +95,7 @@ h1 strong, h2 strong, h3 strong, h4 strong {
   border: 2px solid var(--accent-red);
   margin-left: 2em;
   color: #1a1208;
-  box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   padding: 0em 0.5em;
   font-style: italic;
@@ -107,13 +112,18 @@ h1 strong, h2 strong, h3 strong, h4 strong {
 }
 
 img {
-  display: block;      /* makes margin auto work */
-  margin-left: auto;   /* center horizontally */
+  display: block;
+  /* makes margin auto work */
+  margin-left: auto;
+  /* center horizontally */
   margin-right: auto;
 }
 
 /* ========== Typography ========== */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--text);
   font-family: var(--font-head, serif);
   text-transform: uppercase;
@@ -152,7 +162,8 @@ h4 {
   margin-bottom: 0.3rem;
 }
 
-h1::after, h2::after {
+h1::after,
+h2::after {
   content: "";
   display: block;
   width: 100%;
@@ -188,7 +199,7 @@ footer h3 {
   text-transform: uppercase;
 }
 
-footer > div {
+footer>div {
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
@@ -197,7 +208,7 @@ footer > div {
   margin-top: 1.5rem;
 }
 
-footer > div > div {
+footer>div>div {
   background: rgba(212, 177, 106, 0.08);
   border: 1px solid rgba(212, 177, 106, 0.2);
   border-radius: 8px;
@@ -213,6 +224,7 @@ footer strong {
 }
 
 /* ========== Tables ========== */
+
 .number {
   writing-mode: vertical-rl;
   padding: 2px 8px;
@@ -220,7 +232,8 @@ footer strong {
   vertical-align: middle;
 }
 
-thead, .number{
+thead,
+.number {
   background: var(--accent-gold);
   font-family: var(--font-head, serif);
   font-size: medium;
@@ -251,7 +264,8 @@ td {
   padding: 2px 8px;
 }
 
-th, .number {
+th,
+.number {
   color: var(--border);
   font-weight: bold;
   padding: 6px 8px;
@@ -281,9 +295,9 @@ th, .number {
 }
 
 .tables-container {
-  display:flex; 
-  justify-content:center; 
-  gap:20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* ========== Links ========== */
@@ -329,11 +343,11 @@ button:hover {
     display: none;
   }
 
-  footer > div {
+  footer>div {
     flex-direction: column;
   }
 
-  footer > div > div {
+  footer>div>div {
     min-width: auto;
   }
 }
@@ -522,28 +536,47 @@ button:hover {
   margin: 0;
 }
 
+@page {
+  margin: 1cm;
+}
+
 /* ===== Print Styles ===== */
 @media print {
-  .screen-only, .filter { display: none !important; }
-  .print-only { display: block !important; }
 
-  html, body {
+  .screen-only,
+  .filter {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  html,
+  body {
     background: #fff !important;
     color: #000 !important;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 11pt;
     line-height: 1.4;
-    margin: 1cm;
   }
 
-  h1, h2, h3, h4 {
+  p {
+    text-align: justify;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
     color: #000 !important;
     font-family: Georgia, "Times New Roman", serif;
     margin-bottom: 0.5em;
     page-break-after: avoid;
   }
 
-  table, figure {
+  table,
+  figure {
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -559,6 +592,10 @@ button:hover {
   }
 
   img {
+    width: 50%;
+  }
+
+  img.map {
     width: 100%;
   }
 
@@ -593,16 +630,65 @@ button:hover {
     margin-left: auto;
   }
 
-  th, .number {
-    background-color: var(--accent-marble-light);
-    color: var(--accent-gold-dark);
+  #csvTable,
+  #csvTable *,
+  table.display#csvTable,
+  table.display#csvTable * {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact;
+    /* ensure rules applied in WebKit/Chromium */
+    print-color-adjust: exact;
+  }
+
+  table#csvTable thead th,
+  table.display#csvTable thead th,
+  table#csvTable thead .number th,
+  .number {
+    background-color: var(--accent-marble-light) !important;
+    color: var(--accent-gold-dark) !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
-  .tabelhoofd, {
+  .tabelhoofd {
     background-color: var(--accent-gold-light);
     color: var(--accent-marble-dark);
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+
+  #csvTable {
+    table-layout: auto;
+    width: auto;
+    max-width: 100%;
+    border: transparent;
+    background-color: transparent;
+  }
+
+  #csvTable th,
+  #csvTable td {
+    font-size: 10pt;
+    padding: 4px 6px;
+  }
+
+  #csvTable tr td {
+    font-size: 11pt;
+  }
+
+  /* hide DataTables sort arrows/indicators (pseudo-elements) */
+  table.dataTable thead th.sorting:before,
+  table.dataTable thead th.sorting:after,
+  table.dataTable thead th.sorting_asc:before,
+  table.dataTable thead th.sorting_asc:after,
+  table.dataTable thead th.sorting_desc:before,
+  table.dataTable thead th.sorting_desc:after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}

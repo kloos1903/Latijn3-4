@@ -1,70 +1,90 @@
 <!doctype html>
 <html lang="nl">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Vocabularium — Punische oorlogen</title>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:wght@400;500;600&display=swap"
-            rel="stylesheet" />
-        <!-- CDN Libraries (no versioning needed) -->
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
-        <!-- Auto-versioned Your Files -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vocabularium — Punische oorlogen</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <!-- CDN Libraries (no versioning needed) -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <!-- Auto-versioned Your Files -->
+    <script>
+        (function () {
+            const v = Date.now();
+            window.appVersion = v;
+            document.write(`<link rel="stylesheet" href="style.css?v=${v}">`);
+            document.write(`<script src="Woordenlijst.js?v=${v}"><\/script>`);
+            document.write(`<script src="tooltip.js?v=${v}"><\/script>`);
+        })();
+    </script>
+</head>
+
+<body data-col6="C1T1">
+    <header class="screen-only">
+        <a href="index.html"> HOME </a>
+    </header>
+    <h1>Cornelius Nepos, De viris Illustribus, Hannibal I, 1 & III, 4</h1>
+
+    <section class="card">
+        <h2>Hannibal IV</h2>
+        <p>[1] Cōnflīxerat apud Rhodanum cum P. Cornēliō Scīpiōne cōnsule eumque pepulerat. Cum hōc eōdem Clastidiī apud
+            Padum dēcernit sauciumque inde ac fugātum dīmittit. </p>
+        <p>[2] Tertiō īdem Scīpiō cum collēgā Ti. Longō apud Trebiam adversus eum vēnit. Cum iīs manum cōnseruit,
+            utrōsque prōflīgāvit. </p>
+        <p>[3] Inde per Ligurēs Appennīnum trānsiit, petēns Etrūriam. Hōc in itinere adeō gravī morbō afficitur
+            oculōrum, ut posteā numquam dextrō aequē bene ūsus sit. Quā valētūdine cum etiamnum premerētur lectīcāque
+            ferrētur, C. Flāminium cōnsulem apud Trasumēnum cum exercitū īnsidiīs circumventum occidit, neque multō post
+            C. Centēnium praetōrem cum dēlēctā manū saltūs occupantem.</p>
+        <p>[4] Hinc in Āpūliam pervēnit. ibi obviam eī vēnērunt duo cōnsulēs, C. Terentius et L. Aemilius. Utriusque
+            exercitūs ūnō proeliō fugāvit, Paulum cōnsulem occidit et aliquot praetereā cōnsulārēs, in eīs Cn. Servīlium
+            Geminum, quī superiōre annō fuerat cōnsul.</p>
+
+    </section>
+
+    <section class="card">
+        <a
+            href="https://commons.wikimedia.org/wiki/File:Hannibal%27s_Travels_during_the_Second_Punic_War.png#/media/File:Hannibal's_Travels_during_the_Second_Punic_War.png">
+            <img src="Hannibal's_Travels_during_the_Second_Punic_War.png"
+                alt="De route die Hannibal aflegde tijdens de 2de Punische Oorlog." width=50%>
+        </a>
+        <p style="text-align: center"><a
+                href="https://commons.wikimedia.org/wiki/File:Hannibal%27s_Travels_during_the_Second_Punic_War.png">Harrias,
+                Hannibal's Travels during the Second Punic War</a>, <a
+                href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</p>
+    </section>
+
+    <section class="card">
+        <h2>Vocabularium</h2>
+        <table id="csvTable" class="display" style="width: 100%"></table>
+
         <script>
-            (function () {
-                const v = Date.now();
-                document.write(`<link rel="stylesheet" href="style.css?v=${v}">`);
-                document.write(`<script src="Woordenlijst.js?v=${v}"><\/script>`);
-                document.write(`<script src="tooltip.js?v=${v}"><\/script>`);
-            })();
-        </script>
-    </head>
-    <body data-col6="C1T1">
-        <header class="screen-only">
-            <a href="index.html"> HOME </a>
-        </header>
-        <h1>Cornelius Nepos, De viris Illustribus, Hannibal I, 1 & III, 4</h1>
+            $(document).ready(function () {
+                const csvBase = "./Woordenlijst.csv";
+                const sep = csvBase.includes('?') ? '&' : '?';
+                const csvUrl = csvBase + sep + 'v=' + (window.appVersion || Date.now());
 
-        <section class="card">
-            <h2>Hannibal IV</h2>
-            <p>[1] Cōnflīxerat apud Rhodanum cum P. Cornēliō Scīpiōne cōnsule eumque pepulerat. Cum hōc eōdem Clastidiī apud Padum dēcernit sauciumque inde ac fugātum dīmittit. </p>
-            <p>[2] Tertiō īdem Scīpiō cum collēgā Ti. Longō apud Trebiam adversus eum vēnit. Cum iīs manum cōnseruit, utrōsque prōflīgāvit. </p>
-            <p>[3] Inde per Ligurēs Appennīnum trānsiit, petēns Etrūriam. Hōc in itinere adeō gravī morbō afficitur oculōrum, ut posteā numquam dextrō aequē bene ūsus sit. Quā valētūdine cum etiamnum premerētur lectīcāque ferrētur, C. Flāminium cōnsulem apud Trasumēnum cum exercitū īnsidiīs circumventum occidit, neque multō post C. Centēnium praetōrem cum dēlēctā manū saltūs occupantem.</p>
-            <p>[4] Hinc in Āpūliam pervēnit. ibi obviam eī vēnērunt duo cōnsulēs, C. Terentius et L. Aemilius. Utriusque exercitūs ūnō proeliō fugāvit, Paulum cōnsulem occidit et aliquot praetereā cōnsulārēs, in eīs Cn. Servīlium Geminum, quī superiōre annō fuerat cōnsul.</p>
-
-        </section>
-        
-         <section class="card">
-            <a href="https://commons.wikimedia.org/wiki/File:Hannibal%27s_Travels_during_the_Second_Punic_War.png#/media/File:Hannibal's_Travels_during_the_Second_Punic_War.png">
-          <img src="Hannibal's_Travels_during_the_Second_Punic_War.png" alt="De route die Hannibal aflegde tijdens de 2de Punische Oorlog." width=50%>
-          </a>
-          <p style="text-align: center"><a href="https://commons.wikimedia.org/wiki/File:Hannibal%27s_Travels_during_the_Second_Punic_War.png">Harrias, Hannibal's Travels during the Second Punic War</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</p>
-        </section>
-        
-        <section class="card">
-            <h2>Vocabularium</h2>
-            <table id="csvTable" class="display" style="width: 100%"></table>
-
-            <script>
-                $(document).ready(function () {
-                    // Apply C1T1 prefilter
-                    initWoordenlijst("./Woordenlijst.csv", {
-                        prefilterCol6: "C1T3", // ← This filters to only C1T1 rows
-                        onComplete: function () {
-                            initWoordenfilter("csvTable", "woordfilterContainer", {
-                                col4Index: 3,
-                                col5Index: 4,
-                                col4Label: "Woordsoort",
-                                col5Label: "Extra"
-                            });
-                        }
-                    });
+                // Apply C1T1 prefilter
+                initWoordenlijst(csvUrl, {
+                    prefilterCol6: "C1T3",
+                    onComplete: function () {
+                        initWoordenfilter("csvTable", "woordfilterContainer", {
+                            col4Index: 3,
+                            col5Index: 4,
+                            col4Label: "Woordsoort",
+                            col5Label: "Extra"
+                        });
+                    }
                 });
-            </script>
-        </section>
-    </body>
+            });
+        </script>
+    </section>
+</body>
+
 </html>

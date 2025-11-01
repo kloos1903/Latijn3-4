@@ -16,6 +16,7 @@
         <!-- Auto-versioned Your Files -->
         <script>
             const v = Date.now();
+            window.appVersion = v;
             document.write(`<link rel="stylesheet" href="style.css?v=${v}">`);
             document.write(`<script src="Woordenlijst.js?v=${v}"><\/script>`);
             // Add more files as needed:
@@ -60,15 +61,25 @@
             <table id="csvTable" class="display" style="width: 100%"></table>
 
             <script>
-                $(document).ready(function () {
-                    initWoordenlijst("./Woordenlijst.csv", {
-                        prefilterCol6: "C1T4",
-                        onComplete: function () {
-                            console.log("C1T4 vocabulary loaded successfully");
-                        }
-                    });
+            $(document).ready(function () {
+                const csvBase = "./Woordenlijst.csv";
+                const sep = csvBase.includes('?') ? '&' : '?';
+                const csvUrl = csvBase + sep + 'v=' + (window.appVersion || Date.now());
+
+                // Apply C1T1 prefilter
+                initWoordenlijst(csvUrl, {
+                    prefilterCol6: "C1T3",
+                    onComplete: function () {
+                        initWoordenfilter("csvTable", "woordfilterContainer", {
+                            col4Index: 3,
+                            col5Index: 4,
+                            col4Label: "Woordsoort",
+                            col5Label: "Extra"
+                        });
+                    }
                 });
-            </script>
+            });
+        </script>
         </section>
     </body>
 </html>
