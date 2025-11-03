@@ -223,6 +223,15 @@ footer strong {
   text-transform: uppercase;
 }
 
+vert {
+  font-size: smaller;
+  color: var(--accent-gold-dark);
+}
+
+vert.strong {
+  color: var(--accent-red-light);
+}
+
 /* ========== Tables ========== */
 
 .number {
@@ -537,7 +546,7 @@ button:hover {
 }
 
 @page {
-  margin: 1cm;
+  margin: 1.5cm;
 }
 
 /* ===== Print Styles ===== */
@@ -556,8 +565,8 @@ button:hover {
   body {
     background: #fff !important;
     color: #000 !important;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 11pt;
+    font-family: var(--font-text, Georgia, serif);
+    font-size: 12pt;
     line-height: 1.4;
   }
 
@@ -573,6 +582,21 @@ button:hover {
     font-family: Georgia, "Times New Roman", serif;
     margin-bottom: 0.5em;
     page-break-after: avoid;
+  }
+
+  h1 {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, var(--accent-red), transparent) 1 round;
+  }
+
+  h2 {
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(90deg, var(--accent-gold), transparent) 1 round;
+  }
+
+  h3 {
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(90deg, var(--accent-purple), transparent) 1 round;
   }
 
   table,
@@ -623,13 +647,6 @@ button:hover {
     page-break-before: always;
   }
 
-  .vb-zin {
-    box-shadow: none;
-    border: none;
-    display: inline;
-    margin-left: auto;
-  }
-
   #csvTable,
   #csvTable *,
   table.display#csvTable,
@@ -646,16 +663,16 @@ button:hover {
   table#csvTable thead th,
   table.display#csvTable thead th,
   table#csvTable thead .number th,
-  .number {
+  .number, th {
     background-color: var(--accent-marble-light) !important;
     color: var(--accent-gold-dark) !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
-  .tabelhoofd {
-    background-color: var(--accent-gold-light);
-    color: var(--accent-marble-dark);
+  th.tabelhoofd {
+    background-color: var(--accent-gold-light) !important;
+    color: var(--accent-marble-dark) !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
