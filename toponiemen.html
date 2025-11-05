@@ -28,10 +28,7 @@
     <header class="screen-only">
       <a href="index.html"> HOME </a>
     </header>
-    <h1>Woordenlijst</h1>
-
-    <!-- Woordfilter Container -->
-    <div id="woordfilterContainer"></div>
+    <h1>Toponiemen</h1>
 
     <!-- Table -->
     <table id="csvTable" class="display" style="width: 100%"></table>
@@ -39,7 +36,7 @@
     <script>
       $(document).ready(function () {
         // Load all data (no prefilter)
-        initWoordenlijst("Woordenlijst.csv", {
+        initWoordenlijst("toponiemen.csv", {
           onComplete: function () {
             console.log("All vocabulary loaded");
             // Initialize word filter AFTER table is ready
