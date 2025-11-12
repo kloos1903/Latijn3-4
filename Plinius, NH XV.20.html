@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vocabularium — Punische oorlogen</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <!-- CDN Libraries (no versioning needed) -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <!-- Auto-versioned Your Files -->
+    <script>
+        (function () {
+            const v = Date.now();
+            window.appVersion = v;
+            document.write(`<link rel="stylesheet" href="style.css?v=${v}">`);
+            document.write(`<script src="Woordenlijst.js?v=${v}"><\/script>`);
+            document.write(`<script src="tooltip.js?v=${v}"><\/script>`);
+        })();
+    </script>
+</head>
+
+<body data-col6="C1T1">
+    <header class="screen-only">
+        <a href="index.html"> HOME </a>
+    </header>
+    <h1>Plinius Maior, Naturalis Historia XV.20</h1>
+    <section class="card">
+        <h2>Inleiding</h2>
+        <p>Na de overwinning op Hannibal leek voor Rome een tijd van vrede aangebroken. Toch bleef niet iedereen gerust.
+            Marcus Porcius Cato, beter bekend als Cato de Oudere, was een senator met een streng en behoudsgezind
+            karakter. Hij stond bekend om zijn eenvoud, zijn morele ernst en zijn wantrouwen tegenover alles wat
+            buitenlands was. Terwijl velen in de Senaat dachten dat Carthago voorgoed verslagen was, bleef Cato
+            overtuigd dat de vijand nog niet onschadelijk was. In deze tekst zien we hoe hij dat overtuigend wist te
+            laten voelen aan zijn medesenatoren.</p>
+    </section>
+
+    <section class="card">
+        <h2>Hannibal XII</h2>
+        <p>Sed ā Catōne appellāta iam tum Āfricāna admonet Āfricae ad ingēns documentum ūsō eō pōmō. Namque perniciālī
+            odiō Carthāginis flagrāns nepōtumque sēcūritātis ānxius, cum clāmāret omnī senātū Carthāginem dēlendam,
+            adtulit quōdam diē in cūriam praecocem ex eā prōvinciā fīcum ostendēnsque patribus: "Interrogō vōs, inquit,
+            quandō hanc pōmum dēmptam pūtētis ex arbore." Cum inter omnēs recentem esse cōnstāret: "Atquī tertium,
+            inquit, ante diem scītōte dēcerptam Carthāgine. Tam prope ā moeniīs habēmus hostem!" Statimque sūmptum est
+            Pūnicum tertium bellum, quō Carthāgō dēlēta est, quamquam Catōne annō sequente raptō.</p>
+
+    </section>
+
+
+    <section class="card page-break" style="page-break-inside: avoid;">
+        <h2>Vocabularium</h2>
+        <table id="csvTable" class="display" style="width: 100%; page-break-inside: auto;"></table>
+
+        <script>
+            $(document).ready(function () {
+                const csvBase = "./Woordenlijst.csv";
+                const sep = csvBase.includes('?') ? '&' : '?';
+                const csvUrl = csvBase + sep + 'v=' + (window.appVersion || Date.now());
+
+                // Apply C1T1 prefilter
+                initWoordenlijst(csvUrl, {
+                    prefilterCol6: "C1T6",
+                    onComplete: function () {
+                        initWoordenfilter("csvTable", "woordfilterContainer", {
+                            col4Index: 3,
+                            col5Index: 4,
+                            col4Label: "Woordsoort",
+                            col5Label: "Extra"
+                        });
+                    }
+                });
+            });
+        </script>
+    </section>
+</body>
+
+</html>
