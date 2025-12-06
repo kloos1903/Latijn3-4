@@ -309,6 +309,10 @@ th,
   gap: 20px;
 }
 
+strong.ul {
+  text-decoration: underline;
+}
+
 /* ========== Links ========== */
 a {
   color: var(--accent-gold);
@@ -537,6 +541,62 @@ button:hover {
   opacity: 0;
 }
 
+/* Maak link-icoontjes even hoog als de tekst */
+.link-icon {
+  display: inline-block;
+  font-size: inherit;      /* icoonmaat volgt tekstgrootte */
+  line-height: 1;
+  vertical-align: middle;  /* uitlijnen met tekst */
+  margin: 0 0.25rem;       /* optionele ruimte */
+}
+
+.link-icon svg {
+  width: auto;             /* behoud aspect ratio */
+  height: 1em;             /* even hoog als de tekst */
+  display: block;
+}
+
+/* kleine correctie als je wil dat de icoon iets lager staat */
+.link-icon--low svg {
+  transform: translateY(0.08em);
+}
+
+/* Print: zorg dat de kleur goed uitkomt */
+@media print {
+  .link-icon { color: #000 !important; } /* zwart in print indien gewenst */
+  .link-icon svg { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* Eerste twee kolommen: geen regel-omslag, gebruik ellipsis bij overflow */
+#csvTable th:nth-child(1),
+#csvTable td:nth-child(1),
+#csvTable th:nth-child(2),
+#csvTable td:nth-child(2) {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Drie­de kolom: mag wél wrappen en staat altijd bovenaan in de cel */
+#csvTable th:nth-child(3),
+#csvTable td:nth-child(3) {
+  white-space: normal !important;
+  vertical-align: top !important;
+}
+
+/* Indien cellen innerlijke block-elementen hebben */
+#csvTable td:nth-child(1) > *,
+#csvTable td:nth-child(2) > * {
+  white-space: nowrap !important;
+}
+
+/* Zorg dat de tabel kolombreedtes door content bepaald worden */
+#csvTable {
+  table-layout: auto !important;
+  width: auto !important;
+  max-width: 100% !important;
+}
+
 /* Empty State */
 .filter-row p {
   color: var(--muted);
@@ -633,6 +693,10 @@ button:hover {
 
   .kl {
     color: var(--accent-green)
+  }
+
+  .ul {
+    color: color: #000 !important;
   }
 
   .card {

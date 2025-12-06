@@ -31,14 +31,14 @@
   <header class="screen-only">
     <a href="index.html"> HOME </a>
   </header>
-  <h1>Toponiemen</h1>
+  <h1>Personen</h1>
 
   <!-- Table -->
   <table id="csvTable" class="display" style="width: 100%"></table>
 
   <script>
     $(document).ready(function () {
-      initWoordenlijst("toponiemen.csv", {
+      initWoordenlijst("personen.csv", {
         onComplete: function () {
           const dt = $('#csvTable').DataTable ? $('#csvTable').DataTable() : null;
           if (dt) {
